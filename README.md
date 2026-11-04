@@ -144,6 +144,19 @@ D338544, D338545 from Phabricator) applied on top. Only the three fixes above di
 still go to the focused disabled control, so page key handlers on it still run (2 sends from 2
 Enters in `keydown-self-disable-textarea`).
 
+### Status of the differences
+
+No difference needs a new Gecko bug:
+
+- Implicit submission from a disabled checkbox or radio and arrow keys on a disabled radio: fixed
+  by D338542, not yet landed.
+- The `base-select` picker staying open: fixed by D338544, not yet landed.
+- Space not scrolling the page from a focused disabled control: the PR doesn't say. It's a
+  question for whatwg/html#13170, not a Gecko bug.
+- Page key listeners on a focused disabled control running on a second Enter (section 4): this
+  follows from the PR's key event steps and is raised on whatwg/html#13159. If the PR changes to
+  retarget key events, Gecko would need the matching change in bug 2087206.
+
 ## 4. Why a second Enter repeats the page's action
 
 Under the PR, the user agent must not perform control-specific keyboard actions on a focused
