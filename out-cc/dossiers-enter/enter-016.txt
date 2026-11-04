@@ -1,0 +1,86 @@
+group enter-016: 2 pages on 1 hosts
+example URL: https://www.marriage.com/advice/relationship/get-your-passion-back-after-the-honeymoon-phase/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+  showNewChatButton(false);
+   document.getElementById('ai_ques').value = '';
+   updateSendBtnState();
+
+	 scrollToBottom();
+
+    const inputTextbox = document.getElementById('ai_ques');
+	 inputTextbox.disabled = true;
+	 setSendBtnLoading(true);
+
+	 function enableTextbox() {
+        inputTextbox.disabled = false;
+        updateSendBtnState();
+    }
+
+    (function type() {
+        if (i < text.length) {
+            newAnswer.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, speed); 
+        }else {
+            enableTextbox(); 
+        }
+    })(); 
+}
+
+ document.getElementById('ai_ques').addEventListener('input', updateSendBtnState);
+
+ document.getElementById('ai_ques').addEventListener('keydown', function(event) {
+     
+     if (event.key === 'Enter') {
+         event.preventDefault();
+         getQues();
+     }
+ });
+ 
+ document.getElementById('sendBtn').addEventListener('click', getQues);
+
+// Function to get a cookie by name
+func
+
+--- snippet 1 from a second page (https://www.marriage.com/advice/physical-intimacy/4-essential-tips-to-improve-physical-intimacy-in-a-marriage/) ---
+  showNewChatButton(false);
+   document.getElementById('ai_ques').value = '';
+   updateSendBtnState();
+
+	 scrollToBottom();
+
+    const inputTextbox = document.getElementById('ai_ques');
+	 inputTextbox.disabled = true;
+	 setSendBtnLoading(true);
+
+	 function enableTextbox() {
+        inputTextbox.disabled = false;
+        updateSendBtnState();
+    }
+
+    (function type() {
+        if (i < text.length) {
+            newAnswer.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, speed); 
+        }else {
+            enableTextbox(); 
+        }
+    })(); 
+}
+
+ document.getElementById('ai_ques').addEventListener('input', updateSendBtnState);
+
+ document.getElementById('ai_ques').addEventListener('keydown', function(event) {
+     
+     if (event.key === 'Enter') {
+         event.preventDefault();
+         getQues();
+     }
+ });
+ 
+ document.getElementById('sendBtn').addEventListener('click', getQues);
+
+// Function to get a cookie by name
+func

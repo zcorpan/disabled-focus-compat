@@ -1,0 +1,24 @@
+group blur-025: 1 pages on 1 hosts
+example URL: https://www.prismlayer.ai/demo?source=buyers-close
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+', !ok);
+      return ok;
+    }
+    form.querySelectorAll('.field').forEach(function (f) {
+      var input = f.querySelector('.field__control');
+      if (!input) return;
+      input.addEventListener('blur', function () { validate(f); });
+      input.addEventListener('input', function () { if (f.classList.contains('is-bad')) validate(f); });
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var allOk = true;
+      form.querySelectorAll('.field').forEach(function (f) { if (!validate(f)) allOk = false; });
+      if (!allOk) return;
+      err.style.display = 'none';
+      btn.disabled = true;
+      btn.classList.add('btn--busy');
+      document.getElementById('btnGlyph').innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stro
+

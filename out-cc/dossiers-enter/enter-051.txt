@@ -1,0 +1,19 @@
+group enter-051: 1 pages on 1 hosts
+example URL: https://flyx.in/flights-from-mykonos-greece-to-cologne-germany.html
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+="fx-fare-benefits">'+meta.join('')+'</ul>';
+      var choose=function(){fxSelectActualFare(fare,card);};
+      card.addEventListener('click',choose);card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();choose();}});
+      container.appendChild(card);
+      if(index===0){fxSelectActualFare(fare,card);}
+    });
+    var status=document.getElementById('fxFareLoadStatus');if(status){status.textContent=statusText||((cleaned.length===1?'1 live fare type':cleaned.length+' live fare types')+' available');}
+  }
+  var fxFareRequestSeq=0;
+  window.fxOpenFaresModal=function(flightCard,fareBoxId){
+    if(!flightCard){return;}
+    var requestId=++fxFareRequestSeq;
+    var submit=document.getElementById('fxModalSubmit');if(submit){submit.disabled=true;submit.removeAttribute('data-direct-url');}
+    ['formKey','formIndex','formAirline','formFlightNo','formDepTime','formArrTime','formStops','formAmount'].forEach(function(id){var field=document.getE
+

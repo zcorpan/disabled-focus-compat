@@ -1,0 +1,38 @@
+group key-017: 1 pages on 1 hosts
+example URL: https://moroni.ru/product/pokraska-v-dva-i-bolee-czvetov-obuvi/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ openModal(button);
+  });
+
+  modal.querySelectorAll('[data-moroni-one-click-close]').forEach(function (element) {
+    element.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+      closeModal();
+    }
+  });
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    quantityField.value = getQuantity();
+    status.textContent = 'Оформляем заказ…';
+    status.className = 'moroni-one-click-status is-loading';
+    submitButton.disabled = true;
+
+    fetch(window.moroniOneClick.ajaxUrl, {
+      method: 'POST',
+      credentials: 'same-origin',
+      body: new FormData(form)
+    })
+      .then(function (response) {
+        return response.js
+

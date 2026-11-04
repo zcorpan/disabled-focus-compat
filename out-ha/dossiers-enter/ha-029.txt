@@ -1,0 +1,45 @@
+group ha-029: html body https://www.epey.com/
+on 1 root pages: https://www.epey.com/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+(){
+	
+	var typingTimer;
+	var doneTypingInterval = 100; 
+	var $input = $('.genel_arama');
+
+	$input.on('keyup', function () {
+	  clearTimeout(typingTimer);
+	  typingTimer = setTimeout(doneTyping, doneTypingInterval);
+	});
+	
+	$input.on('keydown', function (e) {
+			
+		clearTimeout(typingTimer);
+		if (e.keyCode == 13 && ($input.val() == "" || $input.val().length < 3)) {
+			e.preventDefault();
+			return false;
+		}
+	});
+	
+	
+	function doneTyping () {
+	  $(".genel_sonuc").show();
+		var str = $(".genel_arama").val();
+		if(str.length>2) {
+		if(submit.disabled == true) {submit.disabled = false; console.log("submit.disabled = false");	}
+		$(".genel_sonuc").load('https://www.epey.com/kat/aramayap/', {aranan:str, bolum:'genel'});
+		$('html').click(function(){
+			//$(".genel_sonuc").load("https://www.epey.com/kat/aramayap/");
+			$(".genel_sonuc").hide();
+		});
+		} else {
+			submit.disabled = true;
+		}
+	};
+	submit.disabled = true;
+});
+</script>
+
+<form action="https://www.epey.com/ara/" method="get">
+<input aria-label="arama"  class="arama genel_arama" type="text" value="" name="ara" id="ara" a

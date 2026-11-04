@@ -1,0 +1,60 @@
+group active-005: 2 pages on 1 hosts
+example URL: https://radios.pro/radio/14478-super-radio-brasil-940-am
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+    setTimeout(function() { descInput.focus(); }, 80);
+        }
+    }
+
+    function closeModal() {
+        // Se o foco ainda está dentro do modal, devolve para o botão de abrir
+        if (document.activeElement && modal.contains(document.activeElement) && openBtn) {
+            openBtn.focus();
+        }
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('radio-report-modal-open');
+        if (form) {
+            form.reset();
+        }
+        if (submitBtn) {
+            submitBtn.disabled = true;
+        }
+    }
+
+    openBtn.addEventListener('click', function() {
+        openModal();
+    });
+
+    if (backdrop) {
+        backdrop.addEventListener('click', function() {
+            closeModal()
+
+--- snippet 1 from a second page (https://radios.pro/radio/16921-radio-antenne-steiermark-968-fm) ---
+    setTimeout(function() { descInput.focus(); }, 80);
+        }
+    }
+
+    function closeModal() {
+        // Se o foco ainda está dentro do modal, devolve para o botão de abrir
+        if (document.activeElement && modal.contains(document.activeElement) && openBtn) {
+            openBtn.focus();
+        }
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('radio-report-modal-open');
+        if (form) {
+            form.reset();
+        }
+        if (submitBtn) {
+            submitBtn.disabled = true;
+        }
+    }
+
+    openBtn.addEventListener('click', function() {
+        openModal();
+    });
+
+    if (backdrop) {
+        backdrop.addEventListener('click', function() {
+            closeModal()

@@ -1,0 +1,34 @@
+group enter-042: 1 pages on 1 hosts
+example URL: https://neuro.wiki/trials/movement/sunrise-pd/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+      if (window.innerWidth > 768) { document.getElementById('chatPanel').classList.add('open'); }
+    
+    document.getElementById('chatInput').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendChatMessage();
+        }
+    });
+
+    window.sendChatMessage = function() {
+        if (chatBusy) return;
+        const input = document.getElementById('chatInput');
+        const question = input.value.trim();
+        if (!question) return;
+        if (!CHAT_IS_ADMIN && chatRemaining <= 0) return;
+
+        input.value = '';
+        appendMessage('user', question);
+        chatHistory.push({ role: 'user', content: question });
+
+        chatBusy = true;
+        document.getElementById('chatSend').disabled = true;
+        showTyping();
+
+        fetch('/wp-json/trialeditor/v1/ai-chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-WP
+

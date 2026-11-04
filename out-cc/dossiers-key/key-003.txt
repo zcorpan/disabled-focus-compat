@@ -1,0 +1,39 @@
+group key-003: 2 pages on 2 hosts
+example URL: https://tautau.sigmanursing.org/members/profile?UserKey=9d19efbe-b5ba-4b70-9b51-9a727112d85c
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+#MainCopy_ctl29_modalTermsAndConditions_Continue').prop('disabled', false);
+                            } else {
+                                $('#MainCopy_ctl29_modalTermsAndConditions_Continue').prop('disabled', true);
+                            }
+                        });
+
+                        $('#MainCopy_ctl29_modalImpersonation_tbImpersonationDescription').keyup(function () {
+                            if (this.value == '') {
+                                $('#MainCopy_ctl29_modalImpersonation_StartSession').prop('disabled', true);
+               
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+dConditions_Continue').prop('disabled', true);
+                            }
+                        });
+
+                        $('#MainCopy_ctl29_modalImpersonation_tbImpersonationDescription').keyup(function () {
+                            if (this.value == '') {
+                                $('#MainCopy_ctl29_modalImpersonation_StartSession').prop('disabled', true);
+                            } else {
+                                $('#MainCopy_ctl29_modalImpersonation_StartSession').prop('disabled', false);
+                            }
+                
+
+--- snippet 1 from a second page (https://community.aaii.com/network/members/profile?UserKey=d569f1c7-5e00-45a3-b532-7cc2c5e4ada0) ---
+#MainCopy_ctl29_modalTermsAndConditions_Continue').prop('disabled', false);
+                            } else {
+                                $('#MainCopy_ctl29_modalTermsAndConditions_Continue').prop('disabled', true);
+                            }
+                        });
+
+                        $('#MainCopy_ctl29_modalImpersonation_tbImpersonationDescription').keyup(function () {
+                            if (this.value == '') {
+                                $('#MainCopy_ctl29_modalImpersonation_StartSession').prop('disabled', true);
+               

@@ -1,0 +1,88 @@
+group blur-000: 4 pages on 4 hosts
+example URL: https://archivio.asimmetrie.it/spaziotempo-in-movimento.html
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ord.on('focus', function ()
+		{
+			var el = jQuery(this);
+
+			if (el.val() === 'Cerca...')
+			{
+				el.val('');
+			}
+		});
+
+		// If the current value is empty, set the previous value.
+		searchword.on('blur', function ()
+		{
+			var el = jQuery(this);
+
+			if (!el.val())
+			{
+				el.val(value);
+			}
+		});
+
+		jQuery('#mod-finder-searchform142').on('submit', function (e)
+		{
+			e.stopPropagation();
+			var advanced = jQuery('#mod-finder-advanced142');
+
+			// Disable select boxes with no value selected.
+			if (advanced.length)
+			{
+				advanced.find('select').each(function (index, el)
+				{
+					var el = jQuery(el);
+
+					if (!el.val())
+					{
+						el.attr('disabled', 'disabled');
+					}
+				});
+			}
+		});});
+	
+
+--- snippet 1 from a second page (https://www.diariosextaregion.cl/noticias/35009-carabineros-de-santa-cruz-participo-en-reuniones-de-seguridad-junto-a-vecinos) ---
+rd.on('focus', function ()
+		{
+			var el = jQuery(this);
+
+			if (el.val() === 'Buscar...')
+			{
+				el.val('');
+			}
+		});
+
+		// If the current value is empty, set the previous value.
+		searchword.on('blur', function ()
+		{
+			var el = jQuery(this);
+
+			if (!el.val())
+			{
+				el.val(value);
+			}
+		});
+
+		jQuery('#mod-finder-searchform305').on('submit', function (e)
+		{
+			e.stopPropagation();
+			var advanced = jQuery('#mod-finder-advanced305');
+
+			// Disable select boxes with no value selected.
+			if (advanced.length)
+			{
+				advanced.find('select').each(function (index, el)
+				{
+					var el = jQuery(el);
+
+					if (!el.val())
+					{
+						el.attr('disabled', 'disabled');
+					}
+				});
+			}
+		});});
+	

@@ -1,0 +1,25 @@
+group blur-014: 1 pages on 1 hosts
+example URL: https://konfuzio.com/en/developer-enablement/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+al-time validation
+ ['kfEmail', 'kfFirstName', 'kfLastName', 'kfCompany', 'kfChallenge', 'kfUrgency'].forEach(id => {
+ const field = document.getElementById(id);
+ if (field) {
+ field.addEventListener('blur', () => validateField(field));
+ field.addEventListener('input', () => clearError(field));
+ }
+ });
+ // Submit handler
+ form.addEventListener('submit', async function(e) {
+ e.preventDefault(); 
+ if (!validateForm()) return; 
+ const btn = document.getElementById('kfSubmitBtn');
+ btn.classList.add('loading');
+ btn.disabled = true; 
+ try {
+ const data = {
+ firstName: document.getElementById('kfFirstName').value,
+ lastName: document.getElementById('kfLastName').value,
+ name: `${document.getElementById('kfFirstName').value} ${do
+

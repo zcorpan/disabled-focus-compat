@@ -1,0 +1,27 @@
+group enter-043: 1 pages on 1 hosts
+example URL: https://www.petershop.com/en/filterby/languages/?&value=19
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+alues input[type=checkbox]");
+    var chk=ag.querySelectorAll(".filterby-attr-values input[type=checkbox]:checked");
+    if(all.length>0 && all.length===chk.length){
+      chk.forEach(function(c){c.disabled=true;});
+    }
+  });
+});
+
+// Expand/collapse on toggle div click or Enter/Space
+form.querySelectorAll(".filterby-attr-toggle").forEach(function(btn){
+  function toggle(){
+    var ag=btn.closest(".filterby-attr-group");
+    ag.classList.toggle("filterby-attr-group--open");
+    ag.classList.toggle("filterby-attr-group--closed");
+  }
+  btn.addEventListener("click",toggle);
+  btn.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();toggle();}});
+});
+
+// Group checkbox: check/uncheck all children + auto-expand
+form.querySelectorAll(".filterby-attr-group").forEach(function(ag){
+
+

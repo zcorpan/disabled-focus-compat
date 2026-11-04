@@ -1,0 +1,6 @@
+group blur-024: 1 pages on 1 hosts
+example URL: https://rozklady.powiatwodzislawski.pl/rozklad-037_20260301-20-2-1.html
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+useSelect){r.text(r.text()+" ("+q+")")}else{var n=V("<span />",{"class":"ui-timepicker-duration"});n.text(" ("+q+")"),r.append(n)}}f>k&&(t>=v[k][1]&&(k+=1),v[k]&&t>=v[k][0]&&t<v[k][1]&&(ac.useSelect?r.prop("disabled",!0):r.addClass("ui-timepicker-disabled"))),ab.append(r)}if(aa.data("timepicker-input",ad),ad.data("timepicker-list",aa),ac.useSelect){ad.val()&&ab.val(Q(C(ad.val()),ac)),ab.on("focus",function(){V(this).data("timepicker-input").trigger("showTimepicker")}),ab.on("blur",function(){V(this).data("timepicker-input").trigger("hideTimepicker")}),ab.on("change",function(){I(ad,V(this).val(),"select")}),I(ad,ab.val(),"initial"),ad.hide().after(ab)}else{var i=ac.appen
+

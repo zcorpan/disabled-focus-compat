@@ -1,0 +1,25 @@
+group key-039: 1 pages on 1 hosts
+example URL: https://powelltricities.com/homes-for-sale/nka-allison-way-lot-404-richland-wa-99352/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+t.getElementById('pwlInfoMsg').textContent = '';
+    document.getElementById('pwlInfoMsg').className = 'pwl-modal-msg';
+    document.getElementById('pwlInfoForm').reset();
+}
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { pwlCloseShowing(); pwlCloseInfo(); }
+});
+
+/* ── Form submission helper ─────────────────────────────────── */
+function pwlSubmitForm(formId, submitId, msgId, closeFn) {
+    var form   = document.getElementById(formId);
+    var btn    = document.getElementById(submitId);
+    var msg    = document.getElementById(msgId);
+    var label  = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending\u2026';
+    fetch(pwlAjax, { method: 'POST', body: new FormData(form) })
+        .then(function(r) { return r.json(); })
+        .then(function(res) {
+            if (
+

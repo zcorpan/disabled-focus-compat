@@ -1,0 +1,56 @@
+group enter-009: 2 pages on 1 hosts
+example URL: https://flower.kh.ua/myaka-igrashka-vedmedik-flafi.html
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+
+
+      if (filter_description) {
+        url += '&description=true';
+      }
+
+      location = url;
+    });
+
+  $('#header-search-btn input[name=\'search\']').bind('keydown', function (e) {
+    if (e.keyCode == 13) {
+      $('#button-search').trigger('click');
+    }
+  });
+
+  $('select[name=\'category_id\']').on('change', function () {
+    if (this.value == '0') {
+      $('input[name=\'sub_category\']').prop('disabled', true);
+    } else {
+      $('input[name=\'sub_category\']').prop('disabled', false);
+    }
+  });
+
+  $('select[name=\'category_id\']').trigger('change');
+
+
+--- snippet 1 from a second page (https://flower.kh.ua/ru/povod/14-fevralya/) ---
+
+
+      if (filter_description) {
+        url += '&description=true';
+      }
+
+      location = url;
+    });
+
+  $('#header-search-btn input[name=\'search\']').bind('keydown', function (e) {
+    if (e.keyCode == 13) {
+      $('#button-search').trigger('click');
+    }
+  });
+
+  $('select[name=\'category_id\']').on('change', function () {
+    if (this.value == '0') {
+      $('input[name=\'sub_category\']').prop('disabled', true);
+    } else {
+      $('input[name=\'sub_category\']').prop('disabled', false);
+    }
+  });
+
+  $('select[name=\'category_id\']').trigger('change');
+

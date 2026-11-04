@@ -1,0 +1,53 @@
+group enter-028: 1 pages on 1 hosts
+example URL: https://eliteauctions.org/catalogue/D02EDD3B94458A236E3419E9D7C0E153/1DAD09680FE122841B8E6C1F4CC703F8/specialist-collectables-auction-to-include-collectables-g/?action=1&searchCategory=49B01EFEA7FD3CF506727559FAA98767
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
++ '">')
+                    $('#categoryFilterSelect').val('');
+                }
+            });
+            $('form#SearchForm').on('submit', function(e) {
+                $('#btnSubmitSearch').prop('disabled',true);
+            });
+
+            $(window).on("pageshow", function(){
+                $('#btnSearchGo').prop('disabled',false);
+                $('#btnSubmitSearch').prop('disabled',false);
+            });
+
+            $('#searchTermWide').on('keydown',function(e){
+                if(e.keyCode == 13){
+                    e.preventDefault();
+                    $('#btnSearchGo').click();
+                }
+            });
+
+
+            
+            $("#searchOptionCat1Mobile, 
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
++ '">')
+                    $('#categoryFilterSelect').val('');
+                }
+            });
+            $('form#SearchForm').on('submit', function(e) {
+                $('#btnSubmitSearch').prop('disabled',true);
+            });
+
+            $(window).on("pageshow", function(){
+                $('#btnSearchGo').prop('disabled',false);
+                $('#btnSubmitSearch').prop('disabled',false);
+            });
+
+            $('#searchTermWide').on('keydown',function(e){
+                if(e.keyCode == 13){
+                    e.preventDefault();
+                    $('#btnSearchGo').click();
+                }
+            });
+
+
+            
+            $("#searchOptionCat1Wide, #s
+

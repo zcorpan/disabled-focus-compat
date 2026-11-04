@@ -1,0 +1,6 @@
+group blur-022: 1 pages on 1 hosts
+example URL: https://docs.jitterbit.com/pt/design-studio/design-studio-reference/connectors/microsoft-dynamics-crm-connector/microsoft-dynamics-crm-connector-update/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+taLayer=window.dataLayer||[],n("js",new Date),n("config","G-K0Y9N6KW8K"),document.addEventListener("DOMContentLoaded",function(){if(document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document.forms.feedback){var e,a=document.forms.feedback;for(e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}"undefined"!=typeof location$&&location$.subscribe(function(e){n("config","G-K0Y9N6KW8K",{page_path:e.pa
+

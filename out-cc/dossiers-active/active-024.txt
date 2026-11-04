@@ -1,0 +1,6 @@
+group active-024: 1 pages on 1 hosts
+example URL: https://www.anismile.jp/item/8940449068/%E3%83%92%E3%83%AD%E3%81%9F%E3%81%BE%21%E3%83%92%E3%83%AD%E3%81%8F%E3%82%93%20%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B8%E3%82%AA%E3%83%A9%E3%83%9E/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+f (!input) { return; } const now = Date.now(); const withinGuardWindow = now < this._initialFocusGuardUntil; const recentUserGesture = (now - this._lastUserGestureAt) < 300; const isActive = document.activeElement === input; if (withinGuardWindow && !recentUserGesture) { try { if (isActive) { input.blur(); }  input.disabled = true; const remaining = Math.max(0, this._initialFocusGuardUntil - now); window.setTimeout(() => { input.disabled = false; }, remaining); } catch (err) { console.warn("[AniSmileHead] focus-guard failed:",
+

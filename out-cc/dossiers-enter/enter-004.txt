@@ -1,0 +1,50 @@
+group enter-004: 5 pages on 5 hosts
+example URL: https://www.mojazabava.net/en/prazniki-in-posebni-dogodki/dekliscina-in-fantovscina
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ (popupTimeOut !== null) {
+                    clearTimeout(popupTimeOut);
+                    popupTimeOut = null;
+                    popupAutoOpened = false;
+                }
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    submitPopupBasketCoupon();
+                }
+            });
+            $('body').on('click', '.coupon-remove', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var $badge = $(this).closest('.coupon-badge');
+                var code = $(this).data('code');
+                if (!code) return;
+                $(this).prop('disabled', true);
+                $.ajax({
+                    url: ShopamineEvents.baseUrl + '/do/handleItemList',
+                    method: 'POST',
+                    data: {
+                        csrf: Shopa
+
+--- snippet 1 from a second page (https://www.lincos.si/nova_zaloga/i_1064538_cistilo-za-zavore-5l-w-rth) ---
+ (popupTimeOut !== null) {
+                    clearTimeout(popupTimeOut);
+                    popupTimeOut = null;
+                    popupAutoOpened = false;
+                }
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    submitPopupBasketCoupon();
+                }
+            });
+            $('body').on('click', '.coupon-remove', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var $badge = $(this).closest('.coupon-badge');
+                var code = $(this).data('code');
+                if (!code) return;
+                $(this).prop('disabled', true);
+                $.ajax({
+                    url: ShopamineEvents.baseUrl + '/do/handleItemList',
+                    method: 'POST',
+                    data: {
+                        csrf: Shopa

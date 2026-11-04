@@ -1,0 +1,46 @@
+group enter-017: 2 pages on 1 hosts
+example URL: https://www.rbantiques.com/index.php?route=product/search&tag=Outdoor%20Sculpture
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+
+
+$('#content input[name=\'search\']').keydown(function(e) {
+  if (e.keyCode == 13) {
+    $('#button-search').trigger('click');
+  }
+});
+
+$('select[name=\'category_id\']').bind('change', function() {
+  if (this.value == '0') {
+    $('input[name=\'sub_category\']').attr('disabled', 'disabled');
+    $('input[name=\'sub_category\']').removeAttr('checked');
+  } else {
+    $('input[name=\'sub_category\']').removeAttr('disabled');
+  }
+});
+
+$('select[name=\'category_id\']').trigger('change');
+
+
+
+--- snippet 1 from a second page (https://www.rbantiques.com/index.php?route=product/search&tag=Outdoor%20Seating) ---
+
+
+$('#content input[name=\'search\']').keydown(function(e) {
+  if (e.keyCode == 13) {
+    $('#button-search').trigger('click');
+  }
+});
+
+$('select[name=\'category_id\']').bind('change', function() {
+  if (this.value == '0') {
+    $('input[name=\'sub_category\']').attr('disabled', 'disabled');
+    $('input[name=\'sub_category\']').removeAttr('checked');
+  } else {
+    $('input[name=\'sub_category\']').removeAttr('disabled');
+  }
+});
+
+$('select[name=\'category_id\']').trigger('change');
+
+

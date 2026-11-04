@@ -1,0 +1,38 @@
+group key-023: 1 pages on 1 hosts
+example URL: https://dindersi.com/icerik/ilk-orta-efsane-ornek-pdf-c344
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+"E-Posta bulunamadı.");
+								}
+							}
+						}								
+					},
+					error: function( jqXhr, textStatus, errorThrown ){
+						console.log( errorThrown );
+					}
+				});	
+			}
+		});		
+
+		$("#email").keyup(function(e, info) {								
+			$('#responsePass').html('');
+			$('#responsePass').hide();
+		});
+		
+		
+		$("#login-button").click(function(e, info) {		
+			// $("#login-form")[0].checkValidity()
+			e.preventDefault();
+			if (!$("#login-form").valid()) {
+				// Eksik Bilgi Var
+			} else {
+				// debugger;
+				$('#login-button').html('<i id="updateFaLoad" class="ace-icon fa fa-spinner fa-spin orange bigger-110 hidden-xs"></i> Giriş yapılıyor');										
+				$('#login-button').prop("disabled", true);
+				
+				var myform = $('#login-form');
+				var formData 	= new FormData(myform[0]);
+				formData.append( 'load', 'musteri' );
+				formData.append( 'type', 'login_tema2' );
+				formData.append( 'iv
+

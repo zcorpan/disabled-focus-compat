@@ -1,0 +1,70 @@
+group enter-008: 2 pages on 1 hosts
+example URL: http://www.finansy.ru/bizmark/index.php?parent=rubricator&child=getresearch&id=1945
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+                  jLisena('#question-bg').addClass('hide');
+                    }
+                });
+                jLisena('input[id^="question_"]').keypress(function(e) {
+                    if(e.which == 13) {
+                        jLisena(this).blur();
+                        jLisena('#question_submit').focus().click();
+                    }
+                });
+                jLisena('#question_submit').click(
+                function() {
+                    this.disabled=true;
+                    var error = 0;
+                    jLisena('#question_fio').removeClass('error-field').siblings('span.error-text').remove();
+                    if (! jLisena('#question_fio').va
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+ddClass('hide');
+                                }
+                            });
+                            jLisena('input[id^="buy_"]').keypress(function(e) {
+                                if(e.which == 13) {
+                                    jLisena(this).blur();
+                                    jLisena('#buy_submit').focus().click();
+                                }
+                            });
+                            jLisena('#buy_submit').click(
+                            function() {
+                                this.disabled=true;
+                                var error = 0;
+                                jLisena('#buy_name').removeClass('error-field1').siblings('span.error-text1').remove();
+                               
+
+--- snippet 3 (inline script or handler attribute, +-200 chars) ---
+dClass('hide');
+                                }
+                            });
+                            jLisena('input[id^="sale_"]').keypress(function(e) {
+                                if(e.which == 13) {
+                                    jLisena(this).blur();
+                                    jLisena('#sale_submit').focus().click();
+                                }
+                            });
+                            jLisena('#sale_submit').click(
+                            function() {
+                                this.disabled=true;
+                                var error = 0;
+                                jLisena('#sale_fio').removeClass('error-field1').siblings('span.error-text1').remove();
+                               
+
+--- snippet 1 from a second page (http://www.finansy.ru/bizmark/index.php?parent=rubricator&child=getresearch&id=21323) ---
+                  jLisena('#question-bg').addClass('hide');
+                    }
+                });
+                jLisena('input[id^="question_"]').keypress(function(e) {
+                    if(e.which == 13) {
+                        jLisena(this).blur();
+                        jLisena('#question_submit').focus().click();
+                    }
+                });
+                jLisena('#question_submit').click(
+                function() {
+                    this.disabled=true;
+                    var error = 0;
+                    jLisena('#question_fio').removeClass('error-field').siblings('span.error-text').remove();
+                    if (! jLisena('#question_fio').va

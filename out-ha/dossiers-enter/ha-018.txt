@@ -1,0 +1,5 @@
+group ha-018: script body https://khelojeeto.dbcorp.in/build/assets/main-Cx-peSnD.js
+on 1 root pages: https://khelojeeto.dbcorp.in/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+getElementById("username");if(!e||e.disabled)return;const t=document.getElementById("employeeLookupStatus"),n=document.getElementById("employeeLookupError"),r=document.getElementById("employeeVerifiedBadge"),s=document.getElementById("createAdminBtn");let i="",o=!1;e.addEventListener("keydown",d=>{d.key==="Enter"&&(d.preventDefault(),l())}),e.addEventListener("blur",l),e.addEventListener("input",()=>{e.value.trim()!==i&&(r.classList.add("d-none"),s.disabled=!0)});function l(){const d=e.value.trim();n.textContent="",!(!d||d===i||o)&&(o=!0,t.textContent="Looking up employee...",r.classList.add("d-none"),s.disabled=!0,$.ajax({url:window.ADMIN_MANAGEMENT_CONFI

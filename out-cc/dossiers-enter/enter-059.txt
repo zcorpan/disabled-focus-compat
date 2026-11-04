@@ -1,0 +1,22 @@
+group enter-059: 1 pages on 1 hosts
+example URL: https://www.cadouri.ro/etajera-transparenta-autoadeziva-fara-gaurire
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+
+    $(document).ready(function () {
+
+        $("#Password").keydown(function (event) {
+            if (event.keyCode == 13) {
+                $("#rplogin").click();
+                return false;
+            }
+        });
+
+        $("#rpregistered").click(function () {
+            $("#rpregistered").prop('disabled', true);
+
+            var postData = {
+                RegisterEmail: $("#RegisterEmail").val(),
+                RegisterPassword: $("#RegisterPassword").val(),
+                RegisterConfirmPassword:
+

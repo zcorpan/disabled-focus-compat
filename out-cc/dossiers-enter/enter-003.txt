@@ -1,0 +1,53 @@
+group enter-003: 10 pages on 10 hosts
+example URL: https://www.orobacenter.com/index.php?route=product/search&tag=Shadteh+Arabic+notebook+5+pieces+100+sheets
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+\'description\']:checked').prop('value');
+
+	if (filter_description) {
+		url += '&description=true';
+	}
+
+	location = url;
+});
+
+$('#content input[name=\'search\']').bind('keydown', function(e) {
+	if (e.keyCode == 13) {
+		$('#button-search').trigger('click');
+	}
+});
+
+$('select[name=\'category_id\']').on('change', function() {
+	if (this.value == '0') {
+		$('input[name=\'sub_category\']').prop('disabled', true);
+	} else {
+		$('input[name=\'sub_category\']').prop('disabled', false);
+	}
+});
+
+$('select[name=\'category_id\']').trigger('change');
+
+--- snippet 1 from a second page (https://www.avantage-travel.com.ua/index.php?route=product/search&tag=%D0%9E%D1%82%D0%B4%D1%8B%D1%85-%D0%B2-%D0%BE%D1%82%D0%B5%D0%BB%D0%B5-Hilton-Sharjah-5%2A) ---
+me=\'description\']:checked').prop('value');
+	if (filter_description) {
+		url += '&description=true';
+	}
+	location = url;
+});
+$('#content input[name=\'search\']').bind('keydown', function(e) {
+	if (e.keyCode == 13) {
+		$('#button-search').trigger('click');
+	}
+});
+$('select[name=\'category_id\']').on('change', function() {
+	if (this.value == '0') {
+		$('input[name=\'sub_category\']').prop('disabled', true);
+	} else {
+		$('input[name=\'sub_category\']').prop('disabled', false);
+	}
+});
+$('select[name=\'category_id\']').trigger('change');
+
+   
+function get_revpopup_cart_quantity(product_id) {
+	input_val 

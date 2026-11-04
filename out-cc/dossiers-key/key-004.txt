@@ -1,0 +1,32 @@
+group key-004: 2 pages on 1 hosts
+example URL: https://www.tonga-soa.com/annonces/detail/mariage/108090.html
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+
+$(document).ready(function() {
+$(document).on('keyup', '#formlog_sby', function(event){
+  var keypressed = event.which;
+  var input_val = $(this).val();
+  var is_success = true;
+  if(keypressed == 9){
+    is_success = IsEmail(input_val);   
+    if(!is_success){
+	  $('#formlog_submit').prop('disabled',true); /* $('formlog_submit').css('cursor', not-allowed); */
+      $(this).focus(); $('#error').html('Email incomplet <br>');
+    }else{
+	$('#error').html('<br>'); /* $('formlog_submit').css('cursor', 
+
+--- snippet 1 from a second page (https://www.tonga-soa.com/annonces/detail/mariage/108494.html) ---
+
+$(document).ready(function() {
+$(document).on('keyup', '#formlog_sby', function(event){
+  var keypressed = event.which;
+  var input_val = $(this).val();
+  var is_success = true;
+  if(keypressed == 9){
+    is_success = IsEmail(input_val);   
+    if(!is_success){
+	  $('#formlog_submit').prop('disabled',true); /* $('formlog_submit').css('cursor', not-allowed); */
+      $(this).focus(); $('#error').html('Email incomplet <br>');
+    }else{
+	$('#error').html('<br>'); /* $('formlog_submit').css('cursor', 

@@ -1,0 +1,35 @@
+group blur-010: 1 pages on 1 hosts
+example URL: https://www.pdaxrom.org/node/102
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+addEventListener("focus", function() {
+                activeEditor = wrapper;
+            }, false);
+        }
+
+        editor.addEventListener("input", sync, false);
+        editor.addEventListener("blur", sync, false);
+
+        const form = wrapper.closest("form");
+        if (form) {
+            form.addEventListener("submit", function() {
+                if (!wrapper.classList.contains("mode-plain")) {
+                    sync();
+                }
+            }, false);
+        }
+
+        if (wrapper.classList.contains("mode-markdown")) {
+            const buttons = wrapper.querySelectorAll(".wysiwyg-toolbar button");
+            buttons.forEach(function(btn) {
+                btn.disabled = true;
+            });
+        }
+
+        sync();
+    });
+
+    if (formatSelect) {
+        formatSelect.addEventListener("change", function() {
+            const wrapper = document.querySelector(".wysiwyg[
+

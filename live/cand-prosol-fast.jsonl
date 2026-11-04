@@ -1,0 +1,1 @@
+{"id": "enter-006-prosol-fast", "url": "https://www.prosol-farben.de/farbtoene/195/", "selector": "#ajax-search-input", "text": "lack", "keys": ["Enter", "Enter"], "gap": 0.2, "note": "CC enter-006: keyup Enter disables input, runs AJAX search"}

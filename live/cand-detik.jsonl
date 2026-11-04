@@ -1,0 +1,3 @@
+{"id": "enter-002-detik-news", "url": "https://news.detik.com/", "selector": "#search-text", "text": "banjir", "keys": ["ArrowDown", "Enter", "Enter"], "gap": 0.3, "note": "CC enter-002 / HA ha-019: Enter with highlighted suggestion disables input and clicks link"}
+{"id": "enter-002-detik-sport", "url": "https://sport.detik.com/", "selector": "#search-text", "text": "liga", "keys": ["ArrowDown", "Enter", "Enter"], "gap": 0.3, "note": "HA ha-024, same code as enter-002"}
+{"id": "enter-002-detik-search-plain", "url": "https://news.detik.com/", "selector": "#search-text", "text": "banjir", "keys": ["Enter", "Enter"], "gap": 0.3, "note": "enter-002 without suggestion"}

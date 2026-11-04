@@ -1,0 +1,52 @@
+group active-000: 40 pages on 37 hosts
+example URL: https://knirps.de/85399knphap-knirps-schutzhuelle-protector.html
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ute("disabled");
+                }
+                if (btn.hasAttribute("data-prev")) {
+                    btn.style.visibility = hasNoOverflow ? "hidden" : null;
+                    isAtStart ? btn.setAttribute("disabled", "") : btn.removeAttribute("disabled");
+                }
+            });
+            if (this.pager) {
+                this.pager.style.visibility = hasNoOverflow ? "hidden" : null;
+            }
+            if (!this.initialLoad) {
+                this.el.dispatchEvent(
+                    new CustomEvent("slideChange", {
+                        detail: this.getInViewItems()
+                    })
+                );
+            } else {
+                this.initialLoad = false;
+            }
+            if (document.activeElement.parentElement.hasAttribute("data-pager")) {
+                const activeItems = this.pager.querySelectorAll('[tabindex="0"]');
+                if (activeItems.length) {
+                 
+
+--- snippet 1 from a second page (https://www.barrdisplay.com/standard-jiffy-steamer-replacement-hose.html) ---
+ute("disabled");
+                }
+                if (btn.hasAttribute("data-prev")) {
+                    btn.style.visibility = hasNoOverflow ? "hidden" : null;
+                    isAtStart ? btn.setAttribute("disabled", "") : btn.removeAttribute("disabled");
+                }
+            });
+            if (this.pager) {
+                this.pager.style.visibility = hasNoOverflow ? "hidden" : null;
+            }
+            if (!this.initialLoad) {
+                this.el.dispatchEvent(
+                    new CustomEvent("slideChange", {
+                        detail: this.getInViewItems()
+                    })
+                );
+            } else {
+                this.initialLoad = false;
+            }
+            if (document.activeElement.parentElement.hasAttribute("data-pager")) {
+                const activeItems = this.pager.querySelectorAll('[tabindex="0"]');
+                if (activeItems.length) {
+                 

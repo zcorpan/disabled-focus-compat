@@ -1,0 +1,30 @@
+group ha-007: script body https://masutabe.info/js/common.js
+on 2 root pages: https://masutabe.info/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+
+		}, 'slow');
+	});
+
+	$(document).on('click', '#search input[type="text"]', function(e) {
+		e.stopPropagation();
+	});
+
+	$(document).on('focus', '#search input[type="text"]', function(e) {
+		$('#search ul').show();
+	});
+
+	$(document).on('keypress', '#search input[type="text"]', function(e) {
+		if (e.which == 13) {
+			$(this).prop('disabled', true);
+			var word = $(this).val();
+			location.href = '/search/' + word + '/';
+			return false;
+		}
+	});
+
+	$(document).on('click', '#search li a', function(e) {
+		e.stopPropagation();
+	});
+
+	$(document).

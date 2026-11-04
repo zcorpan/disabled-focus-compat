@@ -1,0 +1,75 @@
+group enter-049: 1 pages on 1 hosts
+example URL: https://www.visegrad24.com/articles/the-beginning-of-the-end-for-iran-s-regime
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+r') { e.preventDefault(); signupEmailBtn.click(); }
+          });
+        }
+        if (signupPasswordInput) {
+          signupPasswordInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') { e.preventDefault(); signupEmailBtn.click(); }
+          });
+        }
+
+        // --- OTP verification ---
+        var otpVerifyBtn = document.getElementById('otp-verify-btn');
+        if (otpVerifyBtn) {
+          otpVerifyBtn.addEventListener('click', async function() {
+            hideError('otp-error');
+            var otp = document.getElementById('otp-input').value.trim();
+            if (!otp || otp.length !== 6) {
+              showError('otp-error', 'Please enter the 6-digit code.');
+              return;
+            }
+
+            otpVerifyBtn.disabled = true;
+
+            try {
+              var res = await fetch('/api/auth/verify-otp', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+
+        }
+
+        // OTP enter key
+        var otpInput = document.getElementById('otp-input');
+        if (otpInput) {
+          otpInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') { e.preventDefault(); otpVerifyBtn.click(); }
+          });
+        }
+
+        // Resend OTP
+        var otpResendBtn = document.getElementById('otp-resend-btn');
+        if (otpResendBtn) {
+          otpResendBtn.addEventListener('click', async function() {
+            hideError('otp-error');
+            otpResendBtn.disabled = true;
+            otpResendBtn.textContent = 'Sending...';
+
+            try {
+              await fetch('/api/auth/resend-otp?email=' + encodeURIComponent(signupEmail), {
+                method: 'POST'
+  
+
+--- snippet 3 (inline script or handler attribute, +-200 chars) ---
+    var verifyOtpInput = document.getElementById('verify-otp-input');
+        if (verifyOtpInput && verifyOtpBtn) {
+          verifyOtpInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') { e.preventDefault(); verifyOtpBtn.click(); }
+          });
+        }
+
+        var verifyResendBtn = document.getElementById('verify-resend-btn');
+        if (verifyResendBtn) {
+          verifyResendBtn.addEventListener('click', async function() {
+            hideError('verify-otp-error');
+            verifyResendBtn.disabled = true;
+            verifyResendBtn.textContent = 'Sending...';
+            try {
+              await fetch('/api/auth/resend-otp?email=' + encodeURIComponent(currentUserEmail), {
+                method: 'P
+

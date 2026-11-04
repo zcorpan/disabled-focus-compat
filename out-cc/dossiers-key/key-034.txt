@@ -1,0 +1,31 @@
+group key-034: 1 pages on 1 hosts
+example URL: https://www.diwan-consulting.com/strategy
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ia-hidden", "true");
+  };
+
+  // fermer overlay/croix
+  modal.addEventListener("click", (e) => {
+    if (e.target && e.target.dataset.close === "true") closeModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn ? submitBtn.textContent : "";
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending..."; }
+
+    try {
+      const formData = new FormData(form);
+
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        he
+

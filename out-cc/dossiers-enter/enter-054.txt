@@ -1,0 +1,18 @@
+group enter-054: 1 pages on 1 hosts
+example URL: https://albaselco.com/products/scar-hair-color-spray-black-125ml
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+e();
+        else { const code = discountInput.value.trim(); if (code) await this.applyDiscountCode(code); }
+      });
+      discountInput.addEventListener('keypress', async (e) => {
+        if (e.key === 'Enter' && !storedCode) { const code = discountInput.value.trim(); if (code) await this.applyDiscountCode(code); }
+      });
+    }
+  }
+  async applyDiscountCode(code) {
+    try {
+      const applyBtn = document.getElementById('apply-discount-btn');
+      if (applyBtn) { applyBtn.disabled = true; applyBtn.innerHTML = '<span class="spinner-border spinner-border-sm"></span>'; }
+      const response = await fetch('/api/v2/website/cart/active-discount-code', { method: 'POST', headers: { 'Conten
+

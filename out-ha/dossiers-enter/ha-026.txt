@@ -1,0 +1,5 @@
+group ha-026: script body https://www.ana.co.jp/common-layout2/js/asw-main.bundle.js?202608211553
+on 1 root pages: https://www.ana.co.jp/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+ument.querySelectorAll(".asw-local-select #biz-lang input[name=languageButton]")).forEach(g=>{g.addEventListener("click",()=>{this.enableSubmitBtn()},!1)}),[].slice.call(document.querySelectorAll(".asw-local-select #biz-lang .asw-local-select-btn-jamp")).forEach(g=>{g.addEventListener("keyup",y=>{y.keyCode===13&&this.enableSubmitBtn()},!1)})}enableSubmitBtn(){let g=document.getElementById("biz-submit-btn");g!==null&&(g.classList.remove("asw-button__link--disable"),g.removeAttribute("disabled"),g.tabIndex=0)}disableSubmitBtn(){let g=document.getElementById("biz-submit-btn");g!==null&&(g.classList.add("asw-button__link--disable"),g.setAttribute("disabled",!0),g.tabIndex=-1)}open(){this.setEvent(),this.languageButtonSet()}}document.addEventListener("DOMContentLoaded",()=>{const N=new _;N.init(),N.open()})},7119(){const _="asw-tag-search__result-list";c

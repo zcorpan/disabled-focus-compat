@@ -1,0 +1,9 @@
+group ha-012: script body https://www.mothercare.co.id/static/version1741963345/frontend/Codilar/mothercare/id_ID/Swissup_Breeze/js/components/ui/collapsible.min.js
+on 2 root pages: https://rabanlupin.com/, https://rabanpurple.com/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+index',-1);this.element.attr('data-collapsible',true);this.content.attr('role','tabpanel');if(this.header.parent().attr('role')!=='presentation'){this.header.parent().attr('role','tablist');}
+if(this.options.active){this.open();}else{this.close();}
+this._on({'keydown [data-trigger]':function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();this.toggle();}}.bind(this)});},init:function(){this.disabled=false;},destroy:function(){if(!this.options.active){this.close();}
+this._super();},isActive:function(){return this.content.attr('aria-hidden')==='false';},isEnabled:function(){return!this.disabled;},isDropdown:function(){return this.content.css('position')==='absolute';},disable:function(){this.disabled=true;},enable:function(){this.disabled=false;},open:function(){this._trigger('beforeOpen');if(this.options.ajaxContent){this.loadContent();}
+if(this.options.openedState){this.element.addClass(this.options

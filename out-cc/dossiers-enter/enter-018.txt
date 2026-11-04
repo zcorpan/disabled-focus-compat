@@ -1,0 +1,31 @@
+group enter-018: 1 pages on 1 hosts
+example URL: https://zingxe.vn/tin-dang/lexus-rx-300-2022-5953
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+
+    document.getElementById('ConfirmPasswordSignUp').onkeydown = function(e){
+        if (e.keyCode === 13) {
+            SubmitFormSignUp();
+        }
+    };
+
+    document.getElementById('passwordSignUp').onkeydown = function (e) {
+        if (e.keyCode === 13) {
+            SubmitFormSignUp();
+        }
+    };
+    document.getElementById('EmailSignUp').onkeydown = function (e) {
+        if (e.keyCode === 13) {
+            SubmitFormSignUp();
+        }
+    };
+
+    function SubmitFormSignUp() {
+        $("#errorMessageSignUp").html("");
+        $("#MessageSignUp").html("");
+        $("#btnSubmitSignUp").prop("disabled", true);
+        var email = $("#EmailSignUp").val();
+        var pass = $("#passwordSignUp").val();
+        var confirm = $("#ConfirmPasswordSignUp").val();
+        var phoneNum = $("#PhoneNumberSignUp
+

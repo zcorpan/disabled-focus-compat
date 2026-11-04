@@ -1,0 +1,27 @@
+group key-015: 1 pages on 1 hosts
+example URL: https://www.ecartelera.com/series/the-orville/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+#promo #textopromo");
+	if(textopromo) textopromo.innerHTML = "Puntuacion no valida";
+}
+var criticaCuerpo = document.getElementById('CriticaCuerpo');
+if(criticaCuerpo){
+	criticaCuerpo.addEventListener('keyup', function(){
+		var titulo = document.getElementById('TituloCritica').value;
+		var car = this.value.length;
+		var nota = document.getElementById('sliderdial').value;
+		console.log("CAR "+car+" Tit "+titulo+" Nota "+nota);
+		var guardarBtn = document.getElementById('CriticaGuardar');
+		var msgCar = document.querySelectorAll('.msg-car');
+		if(car>=200 && titulo!="" && nota!=-1){
+			if(guardarBtn) guardarBtn.disabled = false;
+			msgCar.forEach(function(el){ el.innerHTML = ""; });
+		}else{
+			if(guardarBtn) guardarBtn.disabled = true;
+			msgCar.forEach(function(el){ el.innerHTML = "Faltan datos para enviar la crítica. La crítica debe tener puntuación y al menos 200 caracteres para ser válida"; });
+		}
+	});
+}
+document.querySelecto
+

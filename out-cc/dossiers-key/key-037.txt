@@ -1,0 +1,46 @@
+group key-037: 1 pages on 1 hosts
+example URL: https://bibletree.healthyeduministry.com/main/detail.jsp?date=2026-08-12&target=high&lang=vi
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+tn'), document.getElementById('navNextBtnLg')];
+
+    prevBtns.forEach(function(btn) {
+        if (btn && !prevDate) {
+            btn.classList.add('opacity-30', 'cursor-not-allowed');
+            btn.disabled = true;
+        }
+    });
+    nextBtns.forEach(function(btn) {
+        if (btn && (!nextDate || !canGoNext)) {
+            btn.classList.add('opacity-30', 'cursor-not-allowed');
+            btn.disabled = true;
+        }
+    });
+
+    // 데스크톱: 키보드 화살표 지원
+    document.addEventListener('keydown', function(e) {
+        // 입력 필드에서는 무시
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+        if (e.key === 'ArrowLeft') {
+            e.preventDefault(
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+sabled = true;
+        }
+    });
+    nextBtns.forEach(function(btn) {
+        if (btn && (!nextDate || !canGoNext)) {
+            btn.classList.add('opacity-30', 'cursor-not-allowed');
+            btn.disabled = true;
+        }
+    });
+
+    // 데스크톱: 키보드 화살표 지원
+    document.addEventListener('keydown', function(e) {
+        // 입력 필드에서는 무시
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+        if (e.key === 'ArrowLeft') {
+            e.preventDefault(
+

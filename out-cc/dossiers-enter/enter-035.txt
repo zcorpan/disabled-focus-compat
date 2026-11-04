@@ -1,0 +1,30 @@
+group enter-035: 1 pages on 1 hosts
+example URL: https://filcin.com/film/3417/%D8%B4%D9%87%D8%B1-%DA%AF%D9%86%D8%A7%D9%87
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ilcin').on('keyup',function(evt){
+	$('.search-btn-filcin').keyup(throttle(function(e){
+		var search_input = $(this);
+		if(search_input.val().length){
+			val=toPersianChar(search_input.val());
+			if(e.which == 13) {
+				window.location.replace('/search/more/'+val)
+		    }
+			$('.see-all-link-text-fsn').html('مشاهده همه نتایج مربوط به ”'+val+'“');        	
+			$('.see-all-link-a-fsn').attr('href', '/search/more/'+val);        	
+
+			$.ajax({
+				url: '/search/index',
+				type: 'post',
+				// headers: {Connection: 'Keep-Alive'},
+				data: {
+				         keyword: val , 
+				        
+				         _csrf : 'cWI1LXBtTGseMEJPHTwELTcrAnUBDz4hGC1lXzQVeRISLAd1Gl8CMQ=='
+				     },
+		        beforeSend: function() {
+					// search_input.prop('disabled', true);
+
+		            $('.halndler-fsn .search-result-tpl-nyn05 .items-nyn05').mCustomScrollbar('destroy'); //Destroy
+		            // $('.halndler-fsn .search-result-tpl-nyn05 .items-nyn05').mCustomScrol
+

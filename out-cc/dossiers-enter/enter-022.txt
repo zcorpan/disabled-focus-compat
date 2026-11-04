@@ -1,0 +1,35 @@
+group enter-022: 1 pages on 1 hosts
+example URL: https://911group.com.vn/tuyen-dung
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+max = result.attr('max') 
+		if (!isNaN(qtypro) ){
+			let qty = qtypro  + 1
+			if(max && qty > +max){
+				qty = max
+				alertInvalidQty(qty)
+				
+			}
+			result.val(qty);
+			 parent.find('.button_qty').prop("disabled", true);	
+			updateQuantity(qty,variantId)
+		} 
+		return false;
+	
+	})
+	 $(`${productAction}[data-variant-id]`).each(function(){
+		 	if(!window.cart && !window.cart.items) return
+	 		const variantId = $(this).data('variantId')
+			const result = $(this).find(qty)
+			result.keypress(e => {
+			  if (e.keyCode == 13)  return false
+				
+			})
+			result.on('input',()=>{
+				var max = result.attr('max') 
+				var qty = 	result.val();
+			if(max && qty > +max){
+				qty = max
+				result.val(max);
+				alert
+

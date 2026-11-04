@@ -1,0 +1,6 @@
+group blur-026: 1 pages on 1 hosts
+example URL: https://www.diagonalimoveis.com.br/venda/casa-em-condominio/regiao-jardim-leonor
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+lickAfter: function (node, a, item, event) { }, onSubmit: function (node, form, item, event) { if(item[0]) { $("#filter_location").val(item[0].slug); } }, }, debug: true, }); $("#filter_location").on("blur", function(e) { var these = this; setTimeout(function(){ if(!Typeahead["#filter_location"].items[0]) { these.value = ''; $(these).closest(".typeahead__container").removeClass("cancel result loading"); } }, 200); }); $("#search-form").on("submit", function(e) { e.preventDefault(); if(!$("#filter_status")[0].value && !$("#filter_reference")[0].value) { alert("Favor selecionar um tipo de Negociação"); return; } inputs = []; let finalUrl = $(":input.head-filters", this).map(function(){ this.disabled = true; inputs.push(this); if(!!this.value) { return this.value; } }).get().join('/'); if(!finalUrl) { finalUrl = "imoveis" }; $(":input", this).map(function(){ if(!this.value) { this.disabled = true; input
+

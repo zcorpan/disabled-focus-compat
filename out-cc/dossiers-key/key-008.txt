@@ -1,0 +1,34 @@
+group key-008: 1 pages on 1 hosts
+example URL: https://www.eatoncustomjewelers.com/product/white-gold-fishtail-cross
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+  maxPreDecimalPlaces: 12
+        });
+        $(".info-captcha").numeric({
+            allowPlus: false,
+            maxPreDecimalPlaces: 2
+        });
+
+        var emailInput;
+        $(document).on("keyup", ".info-email", function () {
+            emailInput = $(this).val();
+            if (validateEmail(emailInput)) {
+                $(this).css({
+                    color: "#2e7d32",
+                    background: "#f1f8e9",
+                    border: "1px solid #2e7d32"
+                });
+                $('.info-submit').prop('disabled', false);
+            } else {
+                $(this).css({
+                    color: "#c62828",
+                    background: "#ffebee",
+                    border: "1px solid #c62828"
+                });
+                $('.info-submit').prop('disabled', true);
+                // alert("not a valid email address");
+            }
+        });
+        function validateEmail(email) {
+            var pattern = /^([a-zA-Z0-9_.+-~])+\@(([a-zA-Z0-9-])+\.)+([a-zA-
+

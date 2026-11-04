@@ -1,0 +1,5 @@
+group ha-014: script body https://banking.westpac.com.au/wbc/banking/scripts/titan/0001combined.js.58d9a46c5d8e6ff42246974dd707f668610bc332.js
+on 1 root pages: https://banking.westpac.com.au/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+pReady",[E]);if(ab){E.appendTo(az.context);if(w&&!a1){E.addClass("dw-trans");setTimeout(function(){E.removeClass("dw-trans").find(".dw").removeClass(a0)},350)}}else{if(H.is("div")){H.html(E)}else{E.insertAfter(H)}}J("onMarkupInserted",[E]);aP=true;if(ab){a(window).on("keydown.dw",function(a2){if(a2.keyCode==13){aL.select()}else{if(a2.keyCode==27){aL.cancel()}}});if(az.scrollLock){E.on("touchmove",function(a2){if(V){a2.preventDefault()}})}a("input,select,button",D).each(function(){if(!this.disabled){if(a(this).attr("autocomplete")){a(this).data("autocomplete",a(this).attr("autocomplete"))}a(this).addClass("dwtd").prop("disabled",true).attr("autocomplete","off")}});aL.position();x("orientationchange.dw resize.dw",false);x("scroll.dw",true)}E.on("DOMMouseScroll mousewheel",".dwwl",ak).on("keydown",".dwwl",ah).on("keyup",".dwwl",ai)

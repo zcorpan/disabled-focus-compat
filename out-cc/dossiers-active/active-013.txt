@@ -1,0 +1,36 @@
+group active-013: 1 pages on 1 hosts
+example URL: https://kw-peak.de/photovoltaik-anlage-schortens-308-kw-peak/page/9/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+f (e.key === 'End'){
+          e.preventDefault();
+          items[items.length-1].focus();
+        }
+        if (e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          document.activeElement.click();
+        }
+        if (e.key === 'Escape'){
+          e.preventDefault();
+          close();
+          button.focus();
+        }
+      });
+  
+      select.addEventListener('change', function(){
+        button.textContent = selectedLabel();
+        Array.prototype.forEach.call(menu.children, function(li){
+          li.classList.toggle('is-active', li.getAttribute('data-value') === select.value);
+          li.setAttribute('aria-selected', li.classList.contains('is-active') ? 'true' : 'false');
+        });
+      });
+  
+      if (select.disabled){
+        button.setAttribute('disabled','disabled');
+      }
+    }
+  
+    /* ==========================================================
+       DOMContentLoaded – Initialisierung
+    =========================================================
+

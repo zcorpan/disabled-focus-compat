@@ -1,0 +1,7 @@
+group enter-041: 1 pages on 1 hosts
+example URL: https://www.proimprint.com/iLive-Imprinted-Cup-Shape-Wireless-Bluetooth-Speakers
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+y = "table-cell";$('.increment-error-msg-tr').css('display','contents');document.getElementById('error_warinc').innerHTML=txtr;$('.largeqty-wrap').show();} else {document.getElementById("quantitytxt").disabled=true;document.getElementById("quantitytxt").style.display = "none";document.getElementById("quantity").disabled=false;document.getElementById('error_warinc').innerHTML='';$('.increment-error-msg-tr').css('display','none');$('.largeqty-wrap').hide();}document.getElementById("error-pro").innerHTML="";}var assortminqty=0; var imagecolors = 0; var assortincrument=0;function isNumberKeyforenter(evt,val){var charCode = (evt.which) ? evt.which : event.keyCode
+var actualkey=String.fromCharCode(charCode);if(charCode==13){changequantity(val);} else {if (charCode > 31 && (charCode < 48 || charCode > 57)){return false;} else {return true;}}}function checkvalidate(){if((document.getElementById("country_id").
+

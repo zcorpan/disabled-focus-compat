@@ -1,0 +1,37 @@
+group active-008: 1 pages on 1 hosts
+example URL: https://ruanekdot.ru/news/nochnoj_zvonok/2024-05-28-48496
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+click', function(e) {
+ if (!section.contains(e.target)) {
+ closeSearch();
+ }
+ });
+
+ input.addEventListener('blur', function() {
+ if (this.value.trim() === '') {
+ setTimeout(function() {
+ if (document.activeElement !== btn) {
+ closeSearch();
+ }
+ }, 200);
+ }
+ });
+
+ var savedQuery = sessionStorage.getItem('searchQuery');
+ if (savedQuery) {
+ input.value = savedQuery;
+ sessionStorage.removeItem('searchQuery');
+ }
+
+ if (form) {
+ form.addEventListener('submit', function() {
+ var query = input.value.trim();
+ if (query) sessionStorage.setItem('searchQuery', query);
+ btn.disabled = true;
+ });
+ }
+ }
+ })();
+
+

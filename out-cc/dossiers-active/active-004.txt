@@ -1,0 +1,38 @@
+group active-004: 3 pages on 3 hosts
+example URL: https://openbioinformaticsjournal.com/VOLUME/11/PAGE/140/ABSTRACT/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+nswer.disabled = false;
+        } catch (error) {
+            captchaQuestion.textContent = 'Unable to load CAPTCHA';
+            captchaQuestion.classList.add('is-loading');
+            captchaAnswer.disabled = true;
+            showStatus('CAPTCHA could not be loaded. Please refresh and try again.', 'error');
+        }
+    }
+
+    function openModal() {
+        lastFocusedElement = document.activeElement;
+        clearStatus();
+        toggleEbmFields(isEbmMode());
+        overlay.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.classL
+
+--- snippet 1 from a second page (https://openconstructionbuildingtechnologyjournal.com/VOLUME/7/PAGE/208/) ---
+nswer.disabled = false;
+        } catch (error) {
+            captchaQuestion.textContent = 'Unable to load CAPTCHA';
+            captchaQuestion.classList.add('is-loading');
+            captchaAnswer.disabled = true;
+            showStatus('CAPTCHA could not be loaded. Please refresh and try again.', 'error');
+        }
+    }
+
+    function openModal() {
+        lastFocusedElement = document.activeElement;
+        clearStatus();
+        toggleEbmFields(isEbmMode());
+        overlay.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.classL

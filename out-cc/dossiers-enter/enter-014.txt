@@ -1,0 +1,58 @@
+group enter-014: 2 pages on 2 hosts
+example URL: https://commoditiescontrol.com/eagritrader/revamp/auth/login.php?referer=L2VhZ3JpdHJhZGVyL3JldmFtcC9wcml2YXRlLXJlc291cmNlcy90b3BzdG9yaWVzX25ld3NkZXRhaWwucGhwP3R5cGU9TUtOJml0ZW1pZD02OTU1MzMmY29taWQ9LDEsMiwzLDQsNiw3LDgsOSwxMCwxMSwxMiwmY2lkMT0sMSwyLDMsNCw2LDcsOCw5LDEwLDExLDEyLCZ2YXJpZXR5aWQ9LDEsMiwzLDExLDMyLDMzLDM0LDgsMjAsMTIsMTMsMTQsMTUsMTYsMTcsMjEsMjIsMTIzLDEyNCwxMjUsMTI2LDEzMCwyNCwyNSwyNiwyOCwxMjcsNCw2LDcsNDUsNDYsNDcsNzEsMTMzLDEzNCw5LDEwLDM2LDM3LDgxLDgyLDgzLDg0LDg1LDEzMSwxMzIsMzksNDAsMTM1LDQxLDQyLDQzLCZ2YXJpZD0w
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+nt =
+                    "Please enter a valid Email Id.";
+                inputField.classList.add("is-invalid");
+                inputField.classList.remove("is-valid");
+                createpasswd.disabled = true;
+            } else {
+                validEmail.textContent = "";
+                inputField.classList.remove("is-invalid");
+                inputField.classList.add("is-valid");
+                createpasswd.disabled = false;
+            }
+        }
+
+        function handleEnter(event, validationFunction) {
+            event.preventDefault();
+
+            if (event.key === "Enter") {
+                validationFunction();
+            }
+        }
+
+        function ForgotPassord() {
+            showSection("resetPw");
+        }
+
+        function resetpasswordbtn()
+
+--- snippet 1 from a second page (https://www.commoditiescontrol.com/eagritrader/revamp/auth/login.php?referer=L2VhZ3JpdHJhZGVyL3JldmFtcC9wcml2YXRlLXJlc291cmNlcy90b3BzdG9yaWVzX25ld3NkZXRhaWwucGhwP3R5cGU9RFNQJml0ZW1pZD0xODUyMDImY29taWQ9LDEsJmNpZDE9JlZhcmlldHlJZD0sMSwyLCZ2YXJpZD0w) ---
+nt =
+                    "Please enter a valid Email Id.";
+                inputField.classList.add("is-invalid");
+                inputField.classList.remove("is-valid");
+                createpasswd.disabled = true;
+            } else {
+                validEmail.textContent = "";
+                inputField.classList.remove("is-invalid");
+                inputField.classList.add("is-valid");
+                createpasswd.disabled = false;
+            }
+        }
+
+        function handleEnter(event, validationFunction) {
+            event.preventDefault();
+
+            if (event.key === "Enter") {
+                validationFunction();
+            }
+        }
+
+        function ForgotPassord() {
+            showSection("resetPw");
+        }
+
+        function resetpasswordbtn()

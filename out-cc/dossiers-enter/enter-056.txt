@@ -1,0 +1,11 @@
+group enter-056: 1 pages on 1 hosts
+example URL: https://www.puradoro.ro/eticheta-produs/ceai-pentru-psoriazis-deniplant/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+qo-send').prop('disabled',!1);const input=document.getElementById('pqo-input');if(input&&!orderPlaced){setTimeout(function(){input.focus()},80)}}
+function disableChatInput(){$('#pqo-input, #pqo-send').prop('disabled',!0)}
+function abortUnavailableProduct(message){orderPlaced=!0;const msg=message||'Produsul nu este în stoc.';appendMessage('bot',msg);messages.push({role:'assistant',content:msg});disableChatInput();clearQuickReplies()}
+function inStockPreviousProducts(lookup){const prev=lookup&&lookup.previous_order;if(!prev||!prev.products||!prev.products.length){return[]}
+return prev.products.filter(function(p){return p.in_stock!==!1})}
+function bindEvents(){$('#pqo-chat-close').on('click',closeChat).on('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();closeChat()}});$('#pqo-overlay').on('click',function(e){if($(e.target).is('#pqo-overlay'))closeChat();});$('#pqo-send').on('click',function(){sendUserMe
+

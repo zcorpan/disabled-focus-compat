@@ -1,0 +1,37 @@
+group enter-019: 1 pages on 1 hosts
+example URL: https://dicionario.priberam.org/anorretite
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+}
+          if ($("head").data("SearchWord")) location.reload();
+        }
+
+        selectors.on('click', selectVariant);
+        
+        selectors.on('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ' || e.keyCode === 13 || e.keyCode === 32) {
+            e.preventDefault();
+            selectVariant.call(this);
+          }
+        });
+
+        
+        
+        
+        (function(){
+          var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+          var $btn   = $('#voiceSearchBtn');
+          var $input = $tb;
+
+          if (!$btn.length || !$input.length) return;
+
+          if (!SR) {
+            $btn.prop('disabled', true)
+                .attr('title', 'Pesquisa por voz não suportada neste navegador');
+            return;
+          }
+          $btn.prop('disabled', false);
+
+          function currentLocale(){
+
+

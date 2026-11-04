@@ -1,0 +1,53 @@
+group enter-025: 1 pages on 1 hosts
+example URL: https://music.1mm.hk/raqueldarnell
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+s/add-queue', {qdata: object});
+    }, 2000);
+}
+
+function registerCommentreplay(value, id, commentid, event, element) {
+    if (!value || !id || !commentid) {
+        return false;
+    }
+    if(event.which == 13) {
+        element.attr('disabled', "true");
+        $.post('https://music.1mm.hk/endpoints/register-comment-replay', {id: id, value: value, cid:commentid}, function(data) {
+            if (data.status == 300) {
+                $('#login_box'
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+ $.get('https://music.1mm.hk/endpoints/delete-comment-replay', {id: comment_id});
+}
+
+function registerComment(value, id, event, element) {
+	if (!value || !id) {
+		return false;
+	}
+    //fix
+	if(event.which == 13) {
+		element.attr('disabled', "true");
+		time = "";
+		timeSeconds = "";
+		if (Amplitude.getActiveSongMetadata().id == id) {
+			time = Amplitude.audio().currentTime;
+		    timeSeconds = $('.amplitude-song-played-progress').val();
+		}
+		w
+
+--- snippet 3 (inline script or handler attribute, +-200 chars) ---
+alert('Error found while creating the payment, please try again later.');
+    	}
+    });
+}
+function registerBlogComment(value, id, event, element) {
+	if (!value || !id) {
+		return false;
+	}
+	if(event.which == 13) {
+		element.attr('disabled', "true");
+        $.post('https://music.1mm.hk/endpoints/register-blog-comment', {id: id, value: value}, function(data) {
+        	if (data.status == 300) {
+                $('#login_box').modal('show');
+   
+

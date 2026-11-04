@@ -1,0 +1,30 @@
+group ha-023: script body https://site1.sbisec.co.jp/JavaScript/WPLCommon.js?20260912
+on 1 root pages: https://site1.sbisec.co.jp/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+
+  }
+  window.open( strURL,"realcal","width=" + iWidth + ", height=" + iHeight + ",status=" + bStatus + ", toolbar=" + bToolBar + ",resizable=" + bResizable + ", scrollbars=" + bScrollBar + ",left=" + leftPos + ", top=" + iTop).focus();
+}
+
+function appendparameter()
+{
+  var e = window.event;
+  if(e.keyCode == 13)
+  {
+    var element = document.createElement('input'); 
+    element.name = "ACT_place"; 
+    element.type = "hidden"; 
+    element.value = ""; 
+    document.FORM.appendChild(element);
+  }
+}
+
+function kingakuSeigen(bonus_kbn){
+	if (bonus_kbn == 0){
+		document.FORM.payment_bonus.disabled = true;
+		document.FORM.reserve_mm_b1.disabled = true;
+		document.FORM.reserve_dd_b1.disabled = true;
+		document.FORM.reserve_mm_b2.disabled = true;
+		document.FORM.reserve_dd_b2.disabled = true;
+	}else if 

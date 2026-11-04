@@ -1,0 +1,67 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>disabled focus compat</title>
+<style>
+  body { height: 5000px; }
+  .base, .base::picker(select) { appearance: base-select; }
+</style>
+<form id="form" action="javascript:void 0">
+  <p><button type="button" id="button">button</button>
+  <p><button id="submit">submit</button>
+  <p><input id="text" value="x">
+  <p><textarea id="textarea">x</textarea>
+  <p><select id="select"><option>a</option><option>b</option><option>c</option></select>
+  <p><select id="multiple" multiple><option>a</option><option>b</option></select>
+  <p><input type="checkbox" id="checkbox">
+  <p><input type="radio" name="r" id="radio"><input type="radio" name="r" id="radio2">
+  <p><input type="date" id="date">
+  <p><input type="number" id="number" value="1">
+  <p><input type="range" id="range">
+  <p><fieldset id="fieldset"><button type="button" id="fsbutton">fs button</button></fieldset>
+  <p><select id="base" class="base"><option>a</option><option>b</option><option>c</option></select>
+  <p><button type="button" id="after">after</button>
+</form>
+<script>
+const log = [];
+const t0 = performance.now();
+function push(s) { log.push(s); }
+for (const type of ["focus", "blur", "focusin", "focusout", "change", "input", "click", "keydown", "submit", "beforeinput"]) {
+  document.addEventListener(type, e => {
+    const t = e.target;
+    const name = t.id ? "#" + t.id : t.nodeName;
+    push(`${type}@${name}`);
+    if (type === "submit") e.preventDefault();
+  }, true);
+}
+function name(el) { return el ? (el.id ? "#" + el.id : el.nodeName) : String(el); }
+function frames() { return new Promise(r => requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(r, 50)))); }
+window.state = (id) => {
+  const el = document.getElementById(id);
+  return {
+    active: name(document.activeElement),
+    hasFocus: document.hasFocus(),
+    focus: el.matches(":focus"),
+    focusVisible: el.matches(":focus-visible"),
+    disabled: el.matches(":disabled"),
+    value: "value" in el ? el.value : null,
+    checked: "checked" in el ? el.checked : null,
+    selectedIndex: "selectedIndex" in el ? el.selectedIndex : null,
+    open: id === "base" ? el.matches(":open") : null,
+    scrollY: Math.round(scrollY),
+    log: log.splice(0),
+  };
+};
+window.disable = async (id) => {
+  log.splice(0);
+  (id === "fsbutton" ? document.getElementById("fieldset") : document.getElementById(id)).disabled = true;
+  push("--disabled--");
+  await frames();
+};
+window.reset = () => {
+  for (const el of document.querySelectorAll("[disabled]")) el.disabled = false;
+  document.activeElement?.blur();
+  scrollTo(0, 0);
+  form.reset();
+  log.splice(0);
+};
+</script>

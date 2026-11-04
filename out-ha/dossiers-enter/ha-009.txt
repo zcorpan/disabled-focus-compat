@@ -1,0 +1,26 @@
+group ha-009: html body https://www.jobbank.gc.ca/
+on 2 root pages: https://www.jobbank.gc.ca/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+c21_code);
+		buttonObject.removeAttr('disabled');
+		selectedObjectText = displaykeyNOCTitle(item);
+		// trigger event change
+		nocCodeObject.change();
+		inputObject.trigger("select",["Custom","Event"]);
+	}
+	$(element).on('keypress', function(evt, item) {
+		var t1 = $(inputObject).val();  
+		if (evt.which == 13 ) {
+			if (t1!=selectedObjectText) {
+				$(buttonObject).prop("disabled", true);
+				messageObject.text("");
+				clearinputNOCTitle();
+				return false;
+			} else {
+				$(buttonObject).prop("disabled", false);
+				$(buttonObject).click();
+				return true;
+			}
+			return false;
+

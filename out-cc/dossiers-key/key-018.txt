@@ -1,0 +1,28 @@
+group key-018: 1 pages on 1 hosts
+example URL: http://etraveler.pl/dlaczego-warto-podrozowac-festiwal-podrozniczy-okno-na-swiat,artykul.html?material_id=511b548efbaeddce7a000000&ciastko=1&52b416c7116a57f82508a4b3-zdjecie=3&53562eb280557db17fc51ffc-strona=6
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+pole.parentNode.getElementsByTagName('strong')[0] || GR('utworzElement', pole, 'strong', {'class': 'schowaj'}, 'po');
+        Zdarzenia.zaczep(pole, 'blur', walidacja);
+        Zdarzenia.zaczep(pole, 'keyup', walidacja);
+        Zdarzenia.zaczep(pole.form, 'submit', submit);
+        submity.aktywuj = function() {
+            var i, ln = this.length;
+            wysylkaAktywna = true;
+            for (i = 0; i < ln; i++) {
+                this[i].disabled = false;
+                GR('usunCssClass', this[i], 'nieAktywny');
+            }
+        }
+        submity.deaktywuj = function() {
+            var i, ln = this.length;
+            wysylkaAktywna = false;
+            for (i = 0; i < ln; i++) {
+                this[i].disabled = true;
+                GR('dodajCssClass', this[i], 'nieAktywny');
+            }
+        }
+        for (i = 0, ln = pole.form.elements.length; i < ln; i++) {
+            el = pole.form.elements[i];
+       
+

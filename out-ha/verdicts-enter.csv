@@ -1,0 +1,36 @@
+group,verdict,note
+ha-000,unrelated,
+ha-003,unrelated,
+ha-005,unrelated,
+ha-008,unrelated,
+ha-012,unrelated,
+ha-013,unrelated,
+ha-015,unrelated,
+ha-016,unrelated,
+ha-023,unrelated,
+ha-026,unrelated,
+ha-027,unrelated,
+ha-030,unrelated,
+ha-031,unrelated,
+ha-033,unrelated,
+ha-034,unrelated,
+ha-001,guarded,
+ha-002,guarded,
+ha-004,guarded,
+ha-022,guarded,
+ha-006,double-action,"logged-in account-label rename input: keyup Enter disables the input and POSTs; a second Enter repeats the same POST (idempotent rename); confirmed from snippet; needs login, not live-tested"
+ha-007,double-action,search input: delegated keypress Enter disables it and sets location.href; a second Enter restarts the same navigation; confirmed from snippet
+ha-009,not-focused,
+ha-010,not-focused,
+ha-011,not-focused,
+ha-017,not-focused,
+ha-018,not-focused,
+ha-020,not-focused,
+ha-021,not-focused,
+ha-025,not-focused,
+ha-028,not-focused,
+ha-029,not-focused,
+ha-032,not-focused,
+ha-014,unclear,"banking date picker disables all page controls on open; window Enter handler; logged-in, not testable"
+ha-019,unclear,news site search suggestions: Enter disables the input and clicks a link; listener element unclear
+ha-024,unclear,same code as ha-019

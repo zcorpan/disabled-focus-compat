@@ -1,0 +1,11 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>sanity</title>
+<input id="q">
+<script>
+q.addEventListener("keydown", e => {
+  if (e.key !== "Enter") return;
+  q.disabled = true;
+  fetch("data:text/plain,x").finally(() => setTimeout(() => { q.disabled = false; }, 5000));
+});
+</script>

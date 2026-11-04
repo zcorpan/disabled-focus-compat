@@ -1,0 +1,8 @@
+group enter-000: 26 pages on 23 hosts
+example URL: https://shop.hat-web.jp/items/81421415
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+Number(S)?(s.setAttribute("aria-hidden","true"),l.setAttribute("aria-invalid","false"),d.removeAttribute("disabled"),!0):(s.setAttribute("aria-hidden","false"),l.setAttribute("aria-invalid","true"),d.setAttribute("disabled","disabled"),!1)},N=function(){j()&&(X(),o.submit())},M=function(t){function e(e){return!(e.which&&13===e.which||e.keyCode&&13===e.keyCode)||(e.preventDefault(),t(),!1)}return d.addEventListener("click",t),l.addEventListener("keypress",e),function(){d.removeEventListener("click",t),l.removeEventLis
+
+--- snippet 1 from a second page (https://shop.hat-web.jp/items/85766217) ---
+Number(S)?(s.setAttribute("aria-hidden","true"),l.setAttribute("aria-invalid","false"),d.removeAttribute("disabled"),!0):(s.setAttribute("aria-hidden","false"),l.setAttribute("aria-invalid","true"),d.setAttribute("disabled","disabled"),!1)},N=function(){j()&&(X(),o.submit())},M=function(t){function e(e){return!(e.which&&13===e.which||e.keyCode&&13===e.keyCode)||(e.preventDefault(),t(),!1)}return d.addEventListener("click",t),l.addEventListener("keypress",e),function(){d.removeEventListener("click",t),l.removeEventLis

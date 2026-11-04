@@ -1,0 +1,6 @@
+group enter-048: 1 pages on 1 hosts
+example URL: https://thriveagency.com/news/the-pros-and-cons-of-google-smart-bidding/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+Storage.setItem("croImage_url",r)}window.location.href="https://thriveagency.com/contact/"}e.addEventListener("click",function(e){e.preventDefault();i()});l.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();i()}});l.addEventListener("input",function(){if(l.value.trim().length===0){a.textContent="Please enter your website link";a.style.display="block"}else{a.textContent="";a.style.display="none"}})})});jQuery(document).ready(function(){function e(){var e=jQuery(".email-submit");var t=e.html();var n=e.data("loading-text");e.html(n).prop("disabled",true);setTimeout(function(){e.html(t).prop("disabled",false)},1e3)}jQuery(".email-submit").on("click",e);jQuery(".email-field").on("keydown",function(t){if(t.key==="Enter"){t.preventDefault();e()}})});
+

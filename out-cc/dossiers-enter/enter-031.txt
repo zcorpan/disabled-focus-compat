@@ -1,0 +1,57 @@
+group enter-031: 1 pages on 1 hosts
+example URL: https://www.ojornalistaapp.com.br/podcast/141073/top-dead-center-podcast
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+searchBar.css('margin-top',$('.navbar').height());
+			})
+		},
+		handleSeeMore: function(e) {
+			console.log(e);
+			var href = e.currentTarget.href;
+			e.preventDefault();
+			this.selectors.searchInput.prop("disabled", true);
+			window.location.href = href;
+		},
+		initEvents: function() {
+			var self = this;
+
+			$(".search-backdrop").click(function(){
+				searchOverlay.toggleOverlay(false)
+			})			
+
+			this.selectors.searchInput.on('input', function(event) {
+				clearInterval(self.state.timer);
+				self.state.timer = setTimeout(function() {
+					self.handleInput(event)
+				},500)
+			})
+
+			this.selectors.searchInput.on('keyup', function (e) {
+				if (e.keyCode === 13) {
+					self.selectors.searchInput.prop("disabled", true);
+					window.location.href = `${self.settings.browseUrl}${self.selectors.searchInput.val()}`
+				}
+			});
+
+			this.calcHeaderHe
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+{
+				clearInterval(self.state.timer);
+				self.state.timer = setTimeout(function() {
+					self.handleInput(event)
+				},500)
+			})
+
+			this.selectors.searchInput.on('keyup', function (e) {
+				if (e.keyCode === 13) {
+					self.selectors.searchInput.prop("disabled", true);
+					window.location.href = `${self.settings.browseUrl}${self.selectors.searchInput.val()}`
+				}
+			});
+
+			this.calcHeaderHeight();
+		},
+		formatDuration: function(secs) {
+			return 	this.padNumb
+

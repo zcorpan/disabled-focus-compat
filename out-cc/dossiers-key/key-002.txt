@@ -1,0 +1,58 @@
+group key-002: 2 pages on 1 hosts
+example URL: https://competishun.com/a-particle-is-placed-at-the-point-a-of-a-frictionless-track-abc-as-shown-in-figure-it-is-gently-pushed-toward-right-the-speed-of-the-particle-when-it-reaches-the-point-b-is-a-hrefhttp-competishun-com/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ck
+    document.getElementById('jeeReportModal').addEventListener('click', function(e) {
+        if (e.target === this) closeReportModal();
+    });
+
+    // ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeReportModal();
+    });
+
+    // Form Submission → saves as WP comment
+    function submitReportForm(e) {
+        e.preventDefault();
+
+        var form = e.target;
+        var submitBtn = form.querySelector('.jee-modal-submit');
+        var originalText = submitBtn.textContent;
+
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        var formData = new FormData(form);
+        var data = {};
+        formData.forEach(function(v, k) { data[k] = v; });
+
+        fetch('https://competishun.com/wp-admin/admin-ajax.php', 
+
+--- snippet 1 from a second page (https://competishun.com/let-f-r-rightarrow-r-be-defined-as-fxe-x-sin-x-if-f01-rightarrow-r-is-a-differentiable-function-such-that-fxint_0x-ft-d-t-then-the-value-of-int_01leftfprimexfxright-ex-d-t-lies-in-the-interval/) ---
+ck
+    document.getElementById('jeeReportModal').addEventListener('click', function(e) {
+        if (e.target === this) closeReportModal();
+    });
+
+    // ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeReportModal();
+    });
+
+    // Form Submission → saves as WP comment
+    function submitReportForm(e) {
+        e.preventDefault();
+
+        var form = e.target;
+        var submitBtn = form.querySelector('.jee-modal-submit');
+        var originalText = submitBtn.textContent;
+
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        var formData = new FormData(form);
+        var data = {};
+        formData.forEach(function(v, k) { data[k] = v; });
+
+        fetch('https://competishun.com/wp-admin/admin-ajax.php', 

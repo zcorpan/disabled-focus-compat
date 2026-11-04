@@ -1,0 +1,3 @@
+{"id": "enter-006-prosol", "url": "https://www.prosol-farben.de/farbtoene/195/", "selector": "#ajax-search-input", "text": "lack", "keys": ["Enter", "Enter"], "gap": 1.0, "note": "CC enter-006: keyup Enter disables input, runs AJAX search"}
+{"id": "enter-015-kamo", "url": "https://kamo.com/catalog/p/86225710/Windsor-Bearing-Handle-Adj-Washer/", "selector": "input[id$=txtSearch]", "text": "washer", "keys": ["Enter", "Enter"], "gap": 0.3, "note": "CC enter-015: disables search box, sets location.href"}
+{"id": "ha-007-masutabe", "url": "https://masutabe.info/", "selector": "#search input[type=\"text\"]", "text": "test", "keys": ["Enter", "Enter"], "gap": 0.3, "note": "HA ha-007: keypress Enter disables input, sets location.href"}

@@ -1,0 +1,8 @@
+group blur-017: 1 pages on 1 hosts
+example URL: https://advocaciaparaconcursos.com.br/glossario/5-dicas-para-se-preparar-para-concursos-publicos-em-2025/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+se setErr('nome','');var d=tel.value.replace(/\D/g,'');if(d.length<10||d.length>11){setErr('telefone','Telefone invalido (com DDD).');ok=!1}else setErr('telefone','');return ok}
+nome.addEventListener('blur',function(){if(nome.value)setErr('nome',nome.value.trim().length<2?'Informe seu nome.':'');});tel.addEventListener('blur',function(){var d=tel.value.replace(/\D/g,'');if(tel.value)setErr('telefone',(d.length<10||d.length>11)?'Telefone invalido (com DDD).':'');});form.addEventListener('submit',function(e){e.preventDefault();if(form.website.value)return;if(!validate())return;if(!lgpd.checked){alert('Marque o consentimento LGPD para continuar.');return}
+submit.disabled=!0;submit.innerHTML='<span class="crm-spin"></span>Enviando...';var _src=g("utm_source"),_camp=g("utm_campaign");if(!_src&&document.body&&document.body.className.split(/\s+/).indexOf("single-post")>=0){
+

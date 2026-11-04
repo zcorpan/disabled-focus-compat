@@ -1,0 +1,47 @@
+group key-016: 1 pages on 1 hosts
+example URL: https://irisdtf.com/products/minnesotallife-design-dtf-ready-to-press
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+false;
+        
+        document.querySelectorAll('.popup-option').forEach(opt => opt.classList.remove('selected'));
+        selectedSurface = null;
+        selectedGangSheet = null;
+        step1Next.disabled = true;
+        step2Next.disabled = true;
+        step1Next.textContent = 'Next';
+        step2Next.textContent = 'Next';
+      }, 200);
+    }
+    
+    closeButton.addEventListener('click', closePopup);
+    
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && popupContainer.style.display === 'flex') {
+        closePopup();
+      }
+    });
+    
+    popupContainer.addEventListener('click', function(e) 
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+erySelectorAll('.popup-option').forEach(opt => opt.classList.remove('selected'));
+        selectedSurface = null;
+        selectedGangSheet = null;
+        step1Next.disabled = true;
+        step2Next.disabled = true;
+        step1Next.textContent = 'Next';
+        step2Next.textContent = 'Next';
+      }, 200);
+    }
+    
+    closeButton.addEventListener('click', closePopup);
+    
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && popupContainer.style.display === 'flex') {
+        closePopup();
+      }
+    });
+    
+    popupContainer.addEventListener('click', function(e) 
+

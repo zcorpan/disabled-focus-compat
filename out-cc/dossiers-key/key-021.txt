@@ -1,0 +1,23 @@
+group key-021: 1 pages on 1 hosts
+example URL: https://wopilates.com/pilates-reformer-maintenance-guide/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+-menu,header .menu')){
+      e.preventDefault();
+      openPopup();
+    }
+  });
+  overlay.addEventListener('click',function(e){if(e.target===overlay)closePopup();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closePopup();});
+  if(closeBtn)closeBtn.addEventListener('click',closePopup);
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){form.reportValidity();return;}
+    var sb=form.querySelector('.wop-submit-btn');
+    sb.textContent='Sending...';sb.disabled=true;
+    var data={
+      action:'wop_inquiry_submit',
+      name:document.getElementById('wop_name').value,
+      email:document.getElementById('wop_email').value,
+      phone:document.getElementBy
+

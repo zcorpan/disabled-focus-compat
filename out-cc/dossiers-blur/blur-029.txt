@@ -1,0 +1,20 @@
+group blur-029: 1 pages on 1 hosts
+example URL: https://hub.taalim.org/milaf
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+lor = '#b91c1c'; pprValidationMsg.innerHTML = 'لم يتم العثور على المنخرط. الرجاء التسجيل أولاً: <a href="/Gestion/register.php">نموذج التسجيل</a>'; }
+                    if(submitBtnNew) submitBtnNew.disabled = true;
+                }
+            }).catch(()=>{
+                if(pprValidationMsg) { pprValidationMsg.style.color = '#b91c1c'; pprValidationMsg.textContent = 'خطأ أثناء التحقق. حاول لاحقاً.'; }
+            });
+        }, 500);
+
+        pprInput.addEventListener('input', doValidateNew);
+        pprInput.addEventListener('blur', doValidateNew);
+    }
+
+    if (newIssueForm) {
+        newIssueForm.addEventListener('submit', function(e){
+            const submitBtn = newIssueForm.querySelector('button[type="submit"]
+

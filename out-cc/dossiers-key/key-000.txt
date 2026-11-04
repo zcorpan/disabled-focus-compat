@@ -1,0 +1,30 @@
+group key-000: 6 pages on 1 hosts
+example URL: https://zn.ua/SCIENCE/astronomy_otkryli_samuyu_udalennuyu_ot_zemli_galaktiku_video.html
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+lock_art_'+absnum+' .comment_text_inp[data-type="main"]').on('click',function(){
+            if(!test_to_user()){
+                $('#comment_block_art_'+absnum+' .comment_text_inp[data-type="main"]').attr("disabled","disabled");
+                login_func_comment();
+            }
+        });
+
+        $('#comment_block_art_'+absnum+' .comment_text_inp[data-type="main"]').on('keyup',function(event){
+            var text = $(this).val();
+            if(text.length > 0 && limit_text > 0){
+                if(test_comment_text(text)){
+                    $('#comment_block_art
+
+--- snippet 1 from a second page (https://zn.ua/WORLD/mir-dolzhen-otverhnut-jadernuju-politiku-rossii-no-ne-ihnorirovat-opasnost-the-guardian.html) ---
+lock_art_'+absnum+' .comment_text_inp[data-type="main"]').on('click',function(){
+            if(!test_to_user()){
+                $('#comment_block_art_'+absnum+' .comment_text_inp[data-type="main"]').attr("disabled","disabled");
+                login_func_comment();
+            }
+        });
+
+        $('#comment_block_art_'+absnum+' .comment_text_inp[data-type="main"]').on('keyup',function(event){
+            var text = $(this).val();
+            if(text.length > 0 && limit_text > 0){
+                if(test_comment_text(text)){
+                    $('#comment_block_art

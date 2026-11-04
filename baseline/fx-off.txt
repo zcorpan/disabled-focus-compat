@@ -1,0 +1,125 @@
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:161.0) Gecko/20100101 Firefox/161.0
+button/script
+  before: act=#button focus=1 ev=[focus@#button,focusin@#button]
+  afterDisable: act=BODY focus=0 ev=[--disabled--,blur@#button,focusout@#button]
+  type z: act=BODY focus=0 keydown@BODY
+  space: act=BODY focus=0 scroll=678 keydown@BODY
+  down: act=BODY focus=0 scroll=731 keydown@BODY
+  enter: act=BODY focus=0 scroll=731 keydown@BODY
+  tab: act=#submit keydown@BODY ev=[focus@#submit,focusin@#submit]
+submit/script
+  before: act=#submit focus=1 ev=[focus@#submit,focusin@#submit]
+  afterDisable: act=BODY focus=0 ev=[--disabled--,blur@#submit,focusout@#submit]
+  type z: act=BODY focus=0 keydown@BODY
+  space: act=BODY focus=0 scroll=679 keydown@BODY
+  down: act=BODY focus=0 scroll=731 keydown@BODY
+  enter: act=BODY focus=0 scroll=731 keydown@BODY
+  tab: act=#text keydown@BODY ev=[focus@#text,focusin@#text]
+text/script
+  before: act=#text focus=1 value=x ev=[focus@#text,focusin@#text]
+  afterDisable: act=BODY focus=0 value=x ev=[--disabled--,blur@#text,focusout@#text]
+  type z: act=BODY focus=0 value=x keydown@BODY
+  space: act=BODY focus=0 value=x scroll=679 keydown@BODY
+  down: act=BODY focus=0 value=x scroll=731 keydown@BODY
+  enter: act=BODY focus=0 value=x scroll=731 keydown@BODY
+  tab: act=#textarea value=x keydown@BODY ev=[focus@#textarea,focusin@#textarea]
+textarea/script
+  before: act=#textarea focus=1 value=x ev=[focus@#textarea,focusin@#textarea]
+  afterDisable: act=BODY focus=0 value=x ev=[--disabled--,blur@#textarea,focusout@#textarea]
+  type z: act=BODY focus=0 value=x keydown@BODY
+  space: act=BODY focus=0 value=x scroll=679 keydown@BODY
+  down: act=BODY focus=0 value=x scroll=731 keydown@BODY
+  enter: act=BODY focus=0 value=x scroll=731 keydown@BODY
+  tab: act=#select value=x keydown@BODY ev=[focus@#select,focusin@#select]
+select/script
+  before: act=#select focus=1 value=a ev=[focus@#select,focusin@#select]
+  afterDisable: act=BODY focus=0 value=a ev=[--disabled--,blur@#select,focusout@#select]
+  type z: act=BODY focus=0 value=a keydown@BODY
+  space: act=BODY focus=0 value=a scroll=679 keydown@BODY
+  down: act=BODY focus=0 value=a scroll=730 keydown@BODY
+  enter: act=BODY focus=0 value=a scroll=731 keydown@BODY
+  tab: act=#multiple value=a keydown@BODY ev=[focus@#multiple,focusin@#multiple]
+multiple/script
+  before: act=#multiple focus=1 selectedIndex=-1 ev=[focus@#multiple,focusin@#multiple]
+  afterDisable: act=BODY focus=0 selectedIndex=-1 ev=[--disabled--,blur@#multiple,focusout@#multiple]
+  type z: act=BODY focus=0 selectedIndex=-1 keydown@BODY
+  space: act=BODY focus=0 selectedIndex=-1 scroll=679 keydown@BODY
+  down: act=BODY focus=0 selectedIndex=-1 scroll=731 keydown@BODY
+  enter: act=BODY focus=0 selectedIndex=-1 scroll=731 keydown@BODY
+  tab: act=#checkbox selectedIndex=-1 keydown@BODY ev=[focus@#checkbox,focusin@#checkbox]
+checkbox/script
+  before: act=#checkbox focus=1 value=on ev=[focus@#checkbox,focusin@#checkbox]
+  afterDisable: act=BODY focus=0 value=on ev=[--disabled--,blur@#checkbox,focusout@#checkbox]
+  type z: act=BODY focus=0 value=on keydown@BODY
+  space: act=BODY focus=0 value=on scroll=679 keydown@BODY
+  down: act=BODY focus=0 value=on scroll=731 keydown@BODY
+  enter: act=BODY focus=0 value=on scroll=731 keydown@BODY
+  tab: act=#radio value=on scroll=21 keydown@BODY ev=[focus@#radio,focusin@#radio]
+radio/script
+  before: act=#radio focus=1 value=on ev=[focus@#radio,focusin@#radio]
+  afterDisable: act=BODY focus=0 value=on ev=[--disabled--,blur@#radio,focusout@#radio]
+  type z: act=BODY focus=0 value=on keydown@BODY
+  space: act=BODY focus=0 value=on scroll=679 keydown@BODY
+  down: act=BODY focus=0 value=on scroll=730 keydown@BODY
+  enter: act=BODY focus=0 value=on scroll=731 keydown@BODY
+  tab: act=#radio2 value=on scroll=21 keydown@BODY ev=[focus@#radio2,focusin@#radio2]
+date/script
+  before: act=#date focus=1 ev=[focus@#date,focusin@#date]
+  afterDisable: act=BODY focus=0 ev=[--disabled--,blur@#date,focusout@#date]
+  type z: act=BODY focus=0 keydown@BODY
+  space: act=BODY focus=0 scroll=679 keydown@BODY
+  down: act=BODY focus=0 scroll=730 keydown@BODY
+  enter: act=BODY focus=0 scroll=731 keydown@BODY
+  tab: act=#number scroll=99 keydown@BODY ev=[focus@#number,focusin@#number]
+number/script
+  before: act=#number focus=1 value=1 ev=[focus@#number,focusin@#number]
+  afterDisable: act=BODY focus=0 value=1 ev=[--disabled--,blur@#number,focusout@#number]
+  type z: act=BODY focus=0 value=1 keydown@BODY
+  space: act=BODY focus=0 value=1 scroll=679 keydown@BODY
+  down: act=BODY focus=0 value=1 scroll=731 keydown@BODY
+  enter: act=BODY focus=0 value=1 scroll=731 keydown@BODY
+  tab: act=#range value=1 scroll=138 keydown@BODY ev=[focus@#range,focusin@#range]
+range/script
+  before: act=#range focus=1 value=50 ev=[focus@#range,focusin@#range]
+  afterDisable: act=BODY focus=0 value=50 ev=[--disabled--,blur@#range,focusout@#range]
+  type z: act=BODY focus=0 value=50 keydown@BODY
+  space: act=BODY focus=0 value=50 scroll=679 keydown@BODY
+  down: act=BODY focus=0 value=50 scroll=730 keydown@BODY
+  enter: act=BODY focus=0 value=50 scroll=731 keydown@BODY
+  tab: act=#fsbutton value=50 scroll=190 keydown@BODY ev=[focus@#fsbutton,focusin@#fsbutton]
+fsbutton/script
+  before: act=#fsbutton focus=1 ev=[focus@#fsbutton,focusin@#fsbutton]
+  afterDisable: act=BODY focus=0 ev=[--disabled--,blur@#fsbutton,focusout@#fsbutton]
+  type z: act=BODY focus=0 keydown@BODY
+  space: act=BODY focus=0 scroll=679 keydown@BODY
+  down: act=BODY focus=0 scroll=731 keydown@BODY
+  enter: act=BODY focus=0 scroll=731 keydown@BODY
+  tab: act=#base scroll=240 keydown@BODY ev=[focus@#base,focusin@#base]
+base/script
+  before: act=#base focus=1 value=a ev=[focus@#base,focusin@#base]
+  afterDisable: act=BODY focus=0 value=a ev=[--disabled--,blur@#base,focusout@#base]
+  type z: act=BODY focus=0 value=a keydown@BODY
+  space: act=BODY focus=0 value=a scroll=678 keydown@BODY
+  down: act=BODY focus=0 value=a scroll=730 keydown@BODY
+  enter: act=BODY focus=0 value=a scroll=731 keydown@BODY
+  tab: act=#after value=a scroll=278 keydown@BODY ev=[focus@#after,focusin@#after]
+select/click
+  before: act=#select focus=1 value=a ev=[focus@#select,focusin@#select,click@#select]
+  afterDisable: act=BODY focus=0 value=a ev=[--disabled--,blur@#select,focusout@#select]
+  tab: act=#multiple value=a keydown@BODY ev=[focus@#multiple,focusin@#multiple]
+date/click
+  before: act=#date focus=1 ev=[focus@#date,focusin@#date,click@#date]
+  afterDisable: act=BODY focus=0 ev=[--disabled--,blur@#date,focusout@#date]
+  tab: act=#number keydown@BODY ev=[focus@#number,focusin@#number]
+base/click
+  before: act=#base focus=1 value=a open=True ev=[focus@#base,focusin@#base,click@#base]
+  afterDisable: act=BODY focus=0 value=a ev=[--disabled--,blur@#base,focusout@#base]
+  tab: act=#after value=a keydown@BODY ev=[focus@#after,focusin@#after]
+button/click
+  before: act=#button focus=1 ev=[focus@#button,focusin@#button,click@#button]
+  afterDisable: act=BODY focus=0 ev=[--disabled--,blur@#button,focusout@#button]
+  tab: act=#submit keydown@BODY ev=[focus@#submit,focusin@#submit]
+text/click
+  before: act=#text focus=1 value=x ev=[focus@#text,focusin@#text,click@#text]
+  afterDisable: act=BODY focus=0 value=x ev=[--disabled--,blur@#text,focusout@#text]
+  tab: act=#textarea value=x keydown@BODY ev=[focus@#textarea,focusin@#textarea]

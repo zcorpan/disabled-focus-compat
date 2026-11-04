@@ -1,0 +1,49 @@
+group enter-024: 1 pages on 1 hosts
+example URL: https://playitagainsports.com/login.php?from=wishlist.php%3Faction%3Daddwishlist%26product_id%3D2787664
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+       e.stopPropagation();
+                    closeFlyout({});
+                }
+            }
+        });
+
+        function closeFlyout(event) {
+            if (event.type === "keydown" && !(event.keyCode === 13 || event.key === "Enter")) return;
+            body.style.overflow = "auto";
+            storeLocatorFlyout.style.visibility = "hidden";
+            storeLocatorFlyout.setAttribute("aria-hidden", "true");
+            zipInput.value = null;
+            stateSelectInput.selectedIndex = 0;
+            stateSelectInput.removeAttribute("disabled");
+            radiusSelectInput.selectedIndex = 0;
+            radiusSelectInput.setAttribute("disabled", "disabled");
+            submitButton.setAttribute("disabled", "disabled");
+            storeResults.innerHTML = "";
+            storeResultsStatus.innerHTML = "";
+            if (rpApiMiddleware) {
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+       e.stopPropagation();
+                    closeFlyout({});
+                }
+            }
+        });
+
+        function closeFlyout(event) {
+            if (event.type === "keydown" && !(event.keyCode === 13 || event.key === "Enter")) return;
+            body.style.overflow = "auto";
+            storeLocatorFlyout.style.visibility = "hidden";
+            storeLocatorFlyout.setAttribute("aria-hidden", "true");
+            zipInput.value = null;
+            stateSelectInput.selectedIndex = 0;
+            stateSelectInput.removeAttribute("disabled");
+            radiusSelectInput.selectedIndex = 0;
+            radiusSelectInput.setAttribute("disabled", "disabled");
+            submitButton.setAttribute("disabled", "disabled");
+            storeResults.innerHTML = "";
+            storeResultsStatus.innerHTML = "";
+            if (rpApiMiddleware) {
+                rpApiMiddleware.resetUrlParams();
+            
+

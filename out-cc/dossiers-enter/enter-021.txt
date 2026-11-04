@@ -1,0 +1,25 @@
+group enter-021: 1 pages on 1 hosts
+example URL: https://www.saikatghosh.com/blog/choosing-the-best-design-experts-your-guide-to-the-jamshedpur-architect-name-list/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+).val().length;
+            $('#charCounter').text(currentLen + ' / 180');
+        });
+
+        // Enter key submits chat
+        $('#chatInput').on('keypress', function (e) {
+            if (e.which === 13) {
+                $('#chatSendBtn').click();
+                return false;
+            }
+        });
+
+        // Extracted AJAX function for reuse
+        function sendToAPI() {
+            $('#chatInput, #chatSendBtn').prop('disabled', true);
+            
+            // New Typing Indicator
+            let $loading = $(`
+                <div class="typing-indicator" id="typingIndicator">
+                    <span></span><span></spa
+

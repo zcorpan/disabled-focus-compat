@@ -1,0 +1,29 @@
+group enter-032: 1 pages on 1 hosts
+example URL: https://softico.ua/ru/news/uyazvimost-dannyh-kratkaya-informatsiya-ob-intsidentah-v-sfere-zdravoohraneniya-za-mart-2020-goda/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+.textContent = originalText;
+          button.classList.remove('subscribe-button--loading');
+        }, 2500);
+      } else {
+        // На всякий случай — если лимит уже достигнут
+        button.disabled = true;
+        if (textSpan) textSpan.textContent = t.limit;
+        button.classList.remove('subscribe-button--loading');
+        wrapper.classList.add('footeremailnew--limit');
+      }
+    }, extraDelay);
+  }
+
+  // ---------- Слушатели ----------
+  button.addEventListener('click', handleSubscribe);
+
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      handleSubscribe(e);
+    }
+  });
+});
+
+
+

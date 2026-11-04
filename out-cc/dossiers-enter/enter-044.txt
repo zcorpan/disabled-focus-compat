@@ -1,0 +1,41 @@
+group enter-044: 1 pages on 1 hosts
+example URL: https://www.monofe.com/urun/98924/oklar-sarj-edilebilir-bilek-tipi-akilli-tansiyon-aleti.html
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+
+	
+	$(document).ready(function(){
+
+	  $('#ara').keypress(function(e) {
+	    if (e.which == 13) 
+	    {
+	   	 	search_button();
+	    }
+	  });
+	});
+	
+	var check_eposta = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+
+	function open_mobile_uye_giris()
+	{
+		$('#login_mobile').modal('show');
+	}//end function 
+	
+	function open_mobile_register()
+	{
+		$('#register').modal('show');
+	}//end function 
+	
+	function giris_yap_mobile()
+	{
+		var rememberme='H';
+
+		$('#btn_mobil_giris').prop('disabled',true);
+
+		if($('#hatirla').is(':checked'))
+		{
+			rememberme='E';
+		}//end if
+		
+		if(document.getElementById('username').value!='' && (document.getElementById('username').value.length==15 || document.get
+

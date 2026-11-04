@@ -1,0 +1,68 @@
+group blur-002: 3 pages on 3 hosts
+example URL: https://www.meloskop.ru/collection/kosmetika/zhenshen
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+      filter_range_field_max.val(Math.floor(curMaxValue));
+
+
+
+          curMinValue > slider_min_value
+            ? filter_range_field_min.prop('disabled', false)
+            : filter_range_field_min.prop('disabled', true);
+
+          curMaxValue < slider_max_value
+            ? filter_range_field_max.prop('disabled', false)
+            : filter_range_field_max.prop('disabled', true);
+        }
+
+        filter_range_field_min.on("blur", function() {
+          filter_range_slider.noUiSlider.set(
+            [$(this)
+              .val(), filter_range_slider.noUiSlider.get()[1]
+            ]
+          );
+        });
+
+        fi
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+            : filter_range_field_min.prop('disabled', true);
+
+          curMaxValue < slider_max_value
+            ? filter_range_field_max.prop('disabled', false)
+            : filter_range_field_max.prop('disabled', true);
+        }
+
+        filter_range_field_min.on("blur", function() {
+          filter_range_slider.noUiSlider.set(
+            [$(this)
+              .val(), filter_range_slider.noUiSlider.get()[1]
+            ]
+          );
+        });
+
+        fi
+
+--- snippet 1 from a second page (https://vsenamestax.ru/collection/lisenok-2) ---
+      filter_range_field_max.val(Math.floor(curMaxValue));
+
+
+
+          curMinValue > slider_min_value
+            ? filter_range_field_min.prop('disabled', false)
+            : filter_range_field_min.prop('disabled', true);
+
+          curMaxValue < slider_max_value
+            ? filter_range_field_max.prop('disabled', false)
+            : filter_range_field_max.prop('disabled', true);
+        }
+
+        filter_range_field_min.on("blur", function() {
+          filter_range_slider.noUiSlider.set(
+            [$(this)
+              .val(), filter_range_slider.noUiSlider.get()[1]
+            ]
+          );
+        });
+
+        fi

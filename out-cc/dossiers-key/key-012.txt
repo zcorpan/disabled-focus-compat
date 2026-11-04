@@ -1,0 +1,22 @@
+group key-012: 1 pages on 1 hosts
+example URL: https://ppcexpo.com/blog/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+(\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+//END//	
+
+
+//if text empty in search box then form should not submit
+		$('#s').keyup(function () {
+			if ($(this).val() == '') {
+				$('#btn-search').prop('disabled', true);
+			} else {
+				$('#btn-search').prop('disabled', false);
+			}
+		}).keyup();		
+		
+
+
+

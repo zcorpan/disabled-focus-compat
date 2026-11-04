@@ -1,0 +1,36 @@
+group enter-006: 2 pages on 1 hosts
+example URL: https://www.prosol-farben.de/farbtoene/195/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+              currentPage = 1;
+                maxPages = 1;
+                isLoadingMore = false;
+            });
+
+            $('#ajax-search-input').on('keyup', function(e) {
+                if (e.key === 'Enter') {
+                    var query = $(this).val();
+                    $('#ajax-search-input').prop('disabled', true);
+
+                    if (query.length > 1) {
+                        currentPage = 1;
+                        maxPages = 1;
+                        runAjaxSearch(query, 1, true, false);
+           
+
+--- snippet 1 from a second page (https://www.prosol-farben.de/produktmarken/zweihorn/) ---
+              currentPage = 1;
+                maxPages = 1;
+                isLoadingMore = false;
+            });
+
+            $('#ajax-search-input').on('keyup', function(e) {
+                if (e.key === 'Enter') {
+                    var query = $(this).val();
+                    $('#ajax-search-input').prop('disabled', true);
+
+                    if (query.length > 1) {
+                        currentPage = 1;
+                        maxPages = 1;
+                        runAjaxSearch(query, 1, true, false);
+           

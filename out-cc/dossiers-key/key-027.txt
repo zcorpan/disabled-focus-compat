@@ -1,0 +1,20 @@
+group key-027: 1 pages on 1 hosts
+example URL: https://www.yieldfund.com/news/how-passive-investment-works-in-2026-a-complete-guide
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+rigeFocus.focus)vorigeFocus.focus();}
+wrap.querySelector('.yfdm-x').addEventListener('click',dicht);
+wrap.addEventListener('click',function(e){if(e.target===wrap)dicht();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&wrap.classList.contains('zichtbaar'))dicht();});
+
+function toonFout(t){err.textContent=t;err.style.display='block';}
+function hutk(){var m=document.cookie.match(/hubspotutk=([^;]+)/);return m?m[1]:undefined;}
+function verstuur(){
+  err.style.display='none';
+  var n=naam.value.trim(),e=email.value.trim();
+  if(!n){toonFout(T.naamFout);naam.focus();return;}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e)){toonFout(T.emailFout);email.focus();return;}
+  knop.disabled=true;knop.textContent=T.bezig;
+  var body={fields:[{objectTypeId:'0-1',name:'firstname',value:n},{objectTypeId:'0-1',name:'email',value:e}],context:{pageUri:location.href,pageName:document.title}};
+  var 
+

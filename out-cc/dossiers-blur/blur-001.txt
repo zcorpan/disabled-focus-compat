@@ -1,0 +1,32 @@
+group blur-001: 3 pages on 2 hosts
+example URL: https://www.pequiperfumes.com.br/produtos/page/312/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+", function (e) {
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    return false;
+                }
+            });
+
+            $(document).on("focusout", ".js-cart-quantity-input", function (e) {
+                $(".js-shipping-calculator-response").hide().empty();
+                $(".js-go-checkout-btn").prop("disabled", true);
+                var itemID = $(this).attr("data-item-id");
+                var itemVAL = $(this).val();
+                if (itemVAL == 0) {
+                    var r = confirm("Tem certeza de que d
+
+--- snippet 1 from a second page (https://www.andreasmartorelli.com.br/produtos/bowl/) ---
+", function (e) {
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    return false;
+                }
+            });
+
+            $(document).on("focusout", ".js-cart-quantity-input", function (e) {
+                $(".js-shipping-calculator-response").hide().empty();
+                $(".js-go-checkout-btn").prop("disabled", true);
+                var itemID = $(this).attr("data-item-id");
+                var itemVAL = $(this).val();
+                if (itemVAL == 0) {
+                    var r = confirm("Tem certeza de que d

@@ -1,0 +1,58 @@
+group enter-039: 1 pages on 1 hosts
+example URL: https://ceedmusic.com/track/w9ujs1eQwy2yeSJ/?lang=german
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+st('https://ceedmusic.com/endpoints/add-queue', {qdata: object});
+    }, 2000);
+}
+
+function registerBlogComment(value, id, event, element) {
+	if (!value || !id) {
+		return false;
+	}
+	if(event.which == 13) {
+		element.attr('disabled', "true");
+        $.post('https://ceedmusic.com/endpoints/register-blog-comment', {id: id, value: value}, function(data) {
+        	if (data.status == 300) {
+                $('#login_box').modal('show');
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+ed');
+        });
+    }
+
+}
+
+function registerCommentreplay(value, id, commentid, event, element) {
+    if (!value || !id || !commentid) {
+        return false;
+    }
+    //fix
+    if(event.which == 13) {
+        element.attr('disabled', "true");
+        $.post('https://ceedmusic.com/endpoints/register-comment-replay', {id: id, value: value, cid:commentid}, function(data) {
+            if (data.status == 300) {
+                $('#login_
+
+--- snippet 3 (inline script or handler attribute, +-200 chars) ---
+);
+            }
+            element.removeAttr('disabled');
+        });
+    }
+
+}
+
+function registerComment(value, id, event, element) {
+	if (!value || !id) {
+		return false;
+	}
+	if(event.which == 13) {
+		element.attr('disabled', "true");
+		time = "";
+		timeSeconds = "";
+		if (Amplitude.getActiveSongMetadata().id == id) {
+			time = Amplitude.audio().currentTime;
+		    timeSeconds = $('.amplitude-song-played-progress').val();
+	
+

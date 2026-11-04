@@ -1,0 +1,8 @@
+group active-003: 3 pages on 3 hosts
+example URL: https://www.aceticket.com/bon-jovi-tickets/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+.test(e)}},{key:"ShowLogin",value:function(e,t){ShowLSUWindow(!(this.ADA.currentModalId="signIn"),e,t),addDisabledToLoginButton();try{turnstile.reset(),addDisabledToLoginButton()}catch(e){}e=document.activeElement||document.getElementById("searchText");this.ADA.FocusDialog("signIn","loginEmail",e,"lsOverlay")}},{key:"ShowSignUp",value:function(){if(this.SetOTPLoginStep(0),this.ADA.currentModalId="signUp",ShowLSUWindow(!0),CLIENTOBJECT.turnstileEnabled){document.querySelectorAll("#sign-up-btn").forEach(function(e){e.disabled=!0});try{var e=document.querySelector("#signupTurnstileWrapper");e&&window.turnstile&&window.turnstile.reset(e)}catch(e){}}e=document.activeElement||document.getElementById("searchText");this.ADA.FocusD
+
+--- snippet 1 from a second page (https://www.ticketiq.com/concerts/archie-hamilton-tickets/) ---
+.test(e)}},{key:"ShowLogin",value:function(e,t){ShowLSUWindow(!(this.ADA.currentModalId="signIn"),e,t),addDisabledToLoginButton();try{turnstile.reset(),addDisabledToLoginButton()}catch(e){}e=document.activeElement||document.getElementById("searchText");this.ADA.FocusDialog("signIn","loginEmail",e,"lsOverlay")}},{key:"ShowSignUp",value:function(){if(this.SetOTPLoginStep(0),this.ADA.currentModalId="signUp",ShowLSUWindow(!0),CLIENTOBJECT.turnstileEnabled){document.querySelectorAll("#sign-up-btn").forEach(function(e){e.disabled=!0});try{var e=document.querySelector("#signupTurnstileWrapper");e&&window.turnstile&&window.turnstile.reset(e)}catch(e){}}e=document.activeElement||document.getElementById("searchText");this.ADA.FocusD

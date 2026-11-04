@@ -1,0 +1,17 @@
+group active-018: 1 pages on 1 hosts
+example URL: https://horrorcult.com/fr/movie/new-jersey-devil-2026
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+        document.getElementById('report-notes-d68ccfd7').value = '';
+        document.getElementById('report-confirm-btn-d68ccfd7').disabled = true;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        modal._previousFocus = document.activeElement;
+        modal.querySelector('input[type="radio"]').focus();
+    };
+
+    window['closeReportModal_d68ccfd7'] = function() {
+        const modal = document.getElementById('report-modal-d6
+

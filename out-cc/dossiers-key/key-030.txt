@@ -1,0 +1,27 @@
+group key-030: 1 pages on 1 hosts
+example URL: https://rechnoy.fitland.pro/poleznoy/pochemu-ves-stoit-a-obemy-menyayutsya/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+eyForm.$element.find('button').prop('disabled', false);
+    });
+
+    $.listen('parsley:form:error', function(ParsleyForm) {
+        console.log('parsley3');
+        ParsleyForm.$element.find('button').prop('disabled', true);
+    });
+
+
+    // Обработчик события input
+    // Находите родительский элемент, содержащий все ваши поля ввод
+    let typingTimer;
+    const doneTypingInterval = 1000; // 1000 миллисекунд (1 секунда)
+
+
+    // $("form :input").on("keyup", function(e) {
+    //     $(this).closest('form').parsley().validate();
+    // })
+
+    $("form :input").on("keyup", function(e) {
+        //$(this).closest('form').parsley().validate();
+      
+

@@ -1,0 +1,27 @@
+group active-015: 1 pages on 1 hosts
+example URL: https://andersonuniversity.edu/news/2024-homecoming-and-family-day-is-november-8-and-9/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+tn.addEventListener('click', function () { updateClicked = true; }, { capture: true });
+    });
+
+    form.addEventListener('submit', function (ev) {
+      var submitter = ev.submitter || document.activeElement;
+      var isUpdate = updateClicked ||
+        (submitter && ((submitter.classList && submitter.classList.contains('gv-button-update')) || submitter.name === 'save'));
+
+      // Only hijack the Update action
+      if (!isUpdate) return;
+
+      ev.preventDefault();
+
+      // Light UI feedback
+      if (submitter && submitter.value) submitter.value = 'Updating…';
+      if (submitter) submitter.disabled = true;
+
+      var action = form.getAttribute('action') || location.href;
+      var fd = new FormData(form);
+
+      // Ensure the shared key rides along
+      if (SHARED_KEY && !fd.has(KEY_PARAM)) fd.
+

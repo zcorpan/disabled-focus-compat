@@ -1,0 +1,5 @@
+group ha-003: script body https://assure.ameli.fr/PortailAS/js/fr/cnamts/as/css.js
+on 2 root pages: https://assure.ameli.fr/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+t.parentElement.getElementsByClassName("resultatPrecedent");for(b=0;b<resultatPrecedent.length;b++){resultatPrecedent[b].style.display="none"}}});document.getElementById(a).parentElement.parentElement.getElementById(getIdBtnRadioResultatRechercheOrg(e,d)).addEventListener("keydown",function(m){if(m.keyCode===13){m.preventDefault();this.click()}})}var h=document.getElementById(a).parentElement.parentElement.getElementsByClassName("recherchePlus")[0];h.onclick=function(){feedResults(a,c,g+3,true);$(context+"suivant").disabled=true};if(c[d+1]!==undefined){h.style.display="flex"}else{h.style.display="none"}}function getIdBtnRadioResultatRechercheOrg(a,b){return"radio_resultat_"+a+"_"+b}function appelActionRecherche(d,c){var b={}

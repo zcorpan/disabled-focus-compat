@@ -1,0 +1,29 @@
+group key-028: 1 pages on 1 hosts
+example URL: https://fromrussiawithloveor.com/register
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+   chgEleShowSuccess(element);
+                    }else{
+                        chgEleShowSuccess(element);
+            }
+    },
+    submitHandler: function (form) {
+        $('button[type=submit]').prop('disabled', true);
+
+        var curr_stage=parseInt($("#stage_val").val());
+
+        if(   formSteps ==  curr_stage){
+
+                        form.submit();
+                 }
+        else {
+            $('button[type=submit]').prop('disabled', false);
+        }
+    }
+});
+
+            $('#mobile_no').keyup(function () {
+                if($('#mobile_no').hasClass('pending')){
+                    $('#mobile_no-error').text("Memvalidasi nomor ponsel...");
+                    $('#mobile-validate-loa
+

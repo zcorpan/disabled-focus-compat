@@ -1,0 +1,18 @@
+group key-029: 1 pages on 1 hosts
+example URL: https://omdiic.com/training-course/%D8%AF%D8%A8%D9%84%D9%88%D9%85%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D9%82%D8%AF%D9%85-%D9%81%D9%8A-%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%B1%D8%AF-%D8%A7%D9%84%D8%A8%D8%B4%D8%B1-2/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+get === overlay) close(); });
+        var closeBtn = overlay.querySelector('[data-eflco-reg-close]');
+        if(closeBtn) closeBtn.addEventListener('click', close);
+        document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+        if(form){
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                if(msg){msg.className='eflco-reg-message';msg.textContent='';}
+                var submit = form.querySelector('.eflco-reg-submit');
+                if(submit){submit.disabled = true; submit.dataset.oldText = submit.textContent; submit.textContent = 'جاري الإرسال...';}
+                var fd = new FormData(form);
+                fd.append('action', 'ef_fr_submit');
+              
+

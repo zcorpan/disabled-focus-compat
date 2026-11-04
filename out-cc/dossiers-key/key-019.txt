@@ -1,0 +1,65 @@
+group key-019: 1 pages on 1 hosts
+example URL: https://www.workaway.info/pt/workawayer/Wayne23
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+           else {
+                        $this.addPost(post);
+                    }
+                }
+                return false;
+            });
+
+            $($this.selectors['messageField']).on('keyup', function () {
+                if ($(this).val() == '')
+                {
+                    $($this.selectors['submitBtn']).attr('disabled', 'disabled');
+                }
+                else
+                {
+                    $($this.selectors['submitBtn']).removeAttr('disabled', 'disabled');
+                }
+            });
+        },
+       
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+    {
+                $($this.selectors.reportModalInfoText).html($this.langtext['report_modal_info_report_comment']);
+            }
+
+            $($this.selectors.reportMessageInput).off('click').on('keyup', function(){
+                if ($(this).val() != '')
+                {
+                    $(confirmButton).removeAttr('disabled');
+                }
+                else
+                {
+                    $(confirmButton).attr('disabled', 'disabled');
+                }
+            });
+
+            confirmButton.click(function (event) {
+                event.preventDefault();
+                confirmButton.off('click');
+                let message
+
+--- snippet 3 (inline script or handler attribute, +-200 chars) ---
+lick(function () {
+                $('.label-select-checkbox').attr('checked', false);
+                $this.handlePersonalNoteHint();
+            });
+
+            tagModal.find('#favorite-host-note').keydown(function () {
+                $this.handlePersonalNoteHint();
+            });
+
+            if (isInMyFavorites == false) {
+                tagModal.find('.list-checkbox').change(function () {
+                    if (tagModal.find('.list-checkbox:checked').length < 1) {
+                        tagModal.find('[data-button="confirm"]').attr('disabled', 'disabled');
+                    } else {
+                        tagModal.find('[data-button="confirm"]').removeAttr('disabled');
+                    }
+                    $this.handlePersonalNoteHint();
+     
+

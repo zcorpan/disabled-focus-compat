@@ -1,0 +1,6 @@
+group ha-011: script body https://www.mothercare.co.id/static/version1741963345/frontend/Codilar/mothercare/id_ID/Swissup_Breeze/js/components/quick-search.min.js
+on 2 root pages: https://rabanlupin.com/, https://rabanpurple.com/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+;default:this.element.focus();break;}},canUseNavKeys:function(){return this.isVisibleAutocomplete();},isVisibleAutocomplete:function(){var autocomplete=this.autoComplete.not(':empty').visible();return autocomplete.length>0&&autocomplete.css('visibility')!=='hidden';},_onEnterKeyDown:function(e){if(e.key==='Enter'&&this.element.val().length>=this.options.minSearchLength){e.preventDefault();this.searchForm.submit();}},sendRequest:function(){var value=this.element.val();this.submitBtn.prop('disabled',true);if(value.length<this.options.minSearchLength){return this.resetAutocomplete();}
+this.submitBtn.prop('disabled',false);return $.request.get({url:this.options.url,type:'json',data:{q:value}}).then(fun

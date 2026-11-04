@@ -1,0 +1,36 @@
+group active-012: 1 pages on 1 hosts
+example URL: https://www.yardnique.com/resources/tag/Landscapers
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ agree = document.getElementById('yn-confirm-agree');
+    const confirmButton = document.getElementById('yn-confirm-submit');
+
+    if (!modal) {
+      return;
+    }
+
+    lastFocusedElement = document.activeElement;
+
+    if (agree) {
+      agree.checked = false;
+    }
+
+    /* Keep the stored Squarespace authorization false until final confirmation. */
+    setSquarespaceAuthorization(false);
+
+    if (confirmButton) {
+      confirmButton.disabled = true;
+    }
+
+    modal.hidden = false;
+    document.body.classList.add('yn-confirm-open');
+
+    window.requestAnimationFrame(function () {
+      if (agree) {
+        agree.focus();
+      }
+    });
+  }
+
+  
+

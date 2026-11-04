@@ -1,0 +1,45 @@
+group key-032: 1 pages on 1 hosts
+example URL: https://topdisc.ru/catalog/udlinitel_jack/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+gth==11)
+                    //		$("#sendsms-request-price").attr("data-number", phone).removeAttr("disabled");
+                    //    else
+                    //    	$("#sendsms-request-price").attr("disabled", "disabled").removeAttr("data-number");
+                    //});
+
+                    // $('#request-price input[name=NAME]').on('keyup',function() {
+                    //     var name = this.value;
+                    //     if (name.length > 0)
+                    // 		$("#sendsms-request-price").attr("data-name", name)
+
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+gth==11)
+                    //		$("#sendsms-request-price").attr("data-number", phone).removeAttr("disabled");
+                    //    else
+                    //    	$("#sendsms-request-price").attr("disabled", "disabled").removeAttr("data-number");
+                    //});
+
+                    // $('#request-price input[name=NAME]').on('keyup',function() {
+                    //     var name = this.value;
+                    //     if (name.length > 0)
+                    // 		$("#sendsms-request-price").attr("data-name", name)
+
+
+--- snippet 3 (inline script or handler attribute, +-200 chars) ---
+
+       			$(document).ready(function() {
+       				$('#find-low-price input[name=PHONE]').on('keyup',function() {
+                        var phone = this.value.replace(/\D/g,'');
+                        //console.log (phone.length);
+                        if (phone.length==11)
+        					$("#sendsms-low").attr("data-number", phone).removeAttr("disabled");
+                        else
+                        	$("#sendsms-low").attr("disabled", "disabled").removeAttr("data-number");
+                    });
+
+       				$('#find-low-price input[name=NAME]').on('keyup',function() {
+                        var name = this.value;
+                     
+

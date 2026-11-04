@@ -1,0 +1,55 @@
+group active-007: 1 pages on 1 hosts
+example URL: https://www.cronoshare.it/quanto-costa/servizio-trucco-domicilio/legnano
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+
+        if (version != null)
+            params = params + '&version=' + version;
+
+        if (question != null)
+            params = params + '&question=' + question;
+
+        $('#popupback').prop('disabled', true);$('#popupnext').prop('disabled', true);jQuery.ajax({type:'POST',data:params, url:'/globalActions/showTaskWizardModal',success:function(data,textStatus){jQuery('#taskWizardContent').html(data);},error:function(XMLHttpRequest,textStatus,errorThrown){},complete:function(XMLHttpRequest,textStatus){$('#popupback').prop('disabled', false);$('#popupnext').prop('disabled', false)}});;
+
+    }
+
+    function showModal() {
+
+        $('body').css('overflow', 'hidden');
+        $('html').css('overflow', 'hidden');
+
+        document.activeElement.blur();
+
+        document.getElementById("taskWizardOverlay").classList.add("dark-overlay");
+
+    }
+
+    function closeTaskWizardModal() {
+
+        document.getElementById("taskW
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+     params = params + '&version=' + version;
+
+        if (question != null)
+            params = params + '&question=' + question;
+
+        $('#popupback').prop('disabled', true);$('#popupnext').prop('disabled', true);jQuery.ajax({type:'POST',data:params, url:'/globalActions/showTaskWizardModal',success:function(data,textStatus){jQuery('#taskWizardContent').html(data);},error:function(XMLHttpRequest,textStatus,errorThrown){},complete:function(XMLHttpRequest,textStatus){$('#popupback').prop('disabled', false);$('#popupnext').prop('disabled', false)}});;
+
+    }
+
+    function showModal() {
+
+        $('body').css('overflow', 'hidden');
+        $('html').css('overflow', 'hidden');
+
+        document.activeElement.blur();
+
+        document.getElementById("taskWizardOverlay").classList.add("dark-overlay");
+
+    }
+
+    function closeTaskWizardModal() {
+
+        document.getElementById("taskW
+

@@ -1,0 +1,30 @@
+group key-006: 2 pages on 1 hosts
+example URL: https://artofvedas.ch/pages/pitta-ungleichgewicht-anzeichen-ursachen-gleichgewicht-wiederherstellen
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+se').addEventListener('click', () => { clearTimeout(tmr); close(); });
+    ov.addEventListener('click', (e) => { if (e.target === ov) { clearTimeout(tmr); close(); } });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && ov.classList.contains('np-show')) { clearTimeout(tmr); close(); } });
+    $('np-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = ($('np-email').value || '').trim(); if (!email.includes('@')) { $('np-email').focus(); return; }
+      const btn = $('np-submit'); btn.disabled = true;
+      let code = '';
+      try {
+        const hpEl = $('np-hp-url');
+        const token = await tsToken($('np-form'));
+        const r = await fetch('/api/checkout/newsletter', { method: 'POST', h
+
+--- snippet 1 from a second page (https://artofvedas.ch/pages/die-geschichte-und-herkunft-des-ayurveda-enthullen) ---
+se').addEventListener('click', () => { clearTimeout(tmr); close(); });
+    ov.addEventListener('click', (e) => { if (e.target === ov) { clearTimeout(tmr); close(); } });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && ov.classList.contains('np-show')) { clearTimeout(tmr); close(); } });
+    $('np-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = ($('np-email').value || '').trim(); if (!email.includes('@')) { $('np-email').focus(); return; }
+      const btn = $('np-submit'); btn.disabled = true;
+      let code = '';
+      try {
+        const hpEl = $('np-hp-url');
+        const token = await tsToken($('np-form'));
+        const r = await fetch('/api/checkout/newsletter', { method: 'POST', h

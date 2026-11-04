@@ -1,0 +1,6 @@
+group blur-018: 1 pages on 1 hosts
+example URL: https://www.homeover.com/Mid-America-Shutters-00021471001
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+tener("input", fetchAndRenderSuggestions);searchInput.addEventListener("focus", fetchAndRenderSuggestions);searchInput.addEventListener("keydown", navigateSuggestions);searchInput.addEventListener("blur", () => {suggestionsBox.classList.remove("x-search-preview--open");});}function showLoadingOverlay(btnLoadOverlayElement){btnLoadOverlayElement.style.display = "block";jQuery(btnLoadOverlayElement).parent().find('button').attr('disabled', 'true');}function hideLoadingOverlay(btnLoadOverlayElement){btnLoadOverlayElement.style.display = "none";jQuery(btnLoadOverlayElement).parent().find('button').removeAttr('disabled');}$.fn.loading=fun
+

@@ -1,0 +1,38 @@
+group enter-058: 1 pages on 1 hosts
+example URL: https://www.adhamster.com/where-should-businesses-focus-in-2026-tiktok-vs-instagram-vs-youtube-shorts-strategy/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+toh script yahin ruk jaye
+        if (!urlInput || !utmFields) {
+            return; 
+        }
+
+        const utmInputs = utmFields.querySelectorAll('input');
+        utmInputs.forEach(input => input.disabled = true);
+
+        urlInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                validateUrl(event);
+            }
+        });
+
+        urlInput.addEventListener('click', function() {
+            if (validateButton) validateButton.style.display 
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+const utmInputs = utmFields.querySelectorAll('input');
+        utmInputs.forEach(input => input.disabled = true);
+
+        urlInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                validateUrl(event);
+            }
+        });
+
+        urlInput.addEventListener('click', function() {
+            if (validateButton) validateButton.style.display = 'block';
+            utmInputs.forEach(input => input.disabled = true);
+        });
+    });
+    
+

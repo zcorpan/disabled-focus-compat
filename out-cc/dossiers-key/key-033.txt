@@ -1,0 +1,26 @@
+group key-033: 1 pages on 1 hosts
+example URL: https://www.fiarebancaetica.coop/gl/evento/asamblea-git-valencia-alicante-y-castellon-enero-2018/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+);
+
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            emailInput.on("keyup", function() {
+                if (isValidEmail(emailInput.val())) {
+                    button.prop('disabled', false);
+                    errorResponse.hide();
+                } else {
+                    button.prop('disabled', true);
+                }
+            });
+
+            form.on('submit', function (e) {
+                e.preventDefault();
+                
+                var user_email = emailInput.val();
+             
+

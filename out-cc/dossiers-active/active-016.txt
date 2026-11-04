@@ -1,0 +1,9 @@
+group active-016: 1 pages on 1 hosts
+example URL: https://www.matalan.co.uk/p/home-accessories/catherine-lansfield-cosy-diamond-faux-fur-soft-130x170cm-blanket-throw-navy-blue/14624218/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+.setAttribute("aria-label",s)}const d=document.getElementById("modal-close-form"),n=d?.querySelector("button"),a=document.getElementById("modal-clickaway-button");o==="minimum-age-confirmation"?(n&&n.setAttribute("disabled","true"),d?.classList.add("hidden"),a?.setAttribute("disabled","true")):(n&&n.removeAttribute("disabled"),d?.classList.remove("hidden"),a?.removeAttribute("disabled"));const m=new Event("modal");window.dispatchEvent(m),document.body.classList.add("scrollBlock"),document.activeElement&&document.activeElement!==document.body&&document.activeElement.blur(),e?.showModal(),e?.setAttribute("aria-modal","true"),document.querySelector("#modal-close-form button")?.focus()},cl
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+"modal-close-form"),n=d?.querySelector("button"),a=document.getElementById("modal-clickaway-button");o==="minimum-age-confirmation"?(n&&n.setAttribute("disabled","true"),d?.classList.add("hidden"),a?.setAttribute("disabled","true")):(n&&n.removeAttribute("disabled"),d?.classList.remove("hidden"),a?.removeAttribute("disabled"));const m=new Event("modal");window.dispatchEvent(m),document.body.classList.add("scrollBlock"),document.activeElement&&document.activeElement!==document.body&&document.activeElement.blur(),e?.showModal(),e?.setAttribute("aria-modal","true"),document.querySelector("#modal-close-form button")?.focus()},cl
+

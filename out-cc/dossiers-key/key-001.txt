@@ -1,0 +1,22 @@
+group key-001: 2 pages on 1 hosts
+example URL: http://arquivo.bienal.org.br/pawtucket/index.php/Detail/documento/217509/lang/pt_BR
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+
+					$(document).ready(function() {
+						$('#headerSearchButton').prop('disabled', true);
+						$('#headerSearchInput').on('keyup', function() {
+							$('#headerSearchButton').prop('disabled', this.value == "" ? true : false);
+						})
+					});
+				
+
+--- snippet 1 from a second page (http://arquivo.bienal.org.br/pawtucket/index.php/Detail/entidade/78921) ---
+
+					$(document).ready(function() {
+						$('#headerSearchButton').prop('disabled', true);
+						$('#headerSearchInput').on('keyup', function() {
+							$('#headerSearchButton').prop('disabled', this.value == "" ? true : false);
+						})
+					});
+				

@@ -1,0 +1,6 @@
+group ha-004: script body https://bot.tomshardware.com/dist/js/main-d6061bbee6cf13bd73765faaea7cdd0af1323e4b125342ac346047f7c4bda1fc.js
+on 2 root pages: https://www.tomshardware.com/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+St){r.innerHTML=h,te(()=>s.disabled=!1,ie);let T=I("p",[Rn,Ze],g.message);i.appendChild(T),Q(i)}Oe(ie,jn)}}else{l.disabled=!1;let T=I("p",Se,g.message===`
+`?"<br/>":g.message),y=At("You:",[Ge,Ht],[T]);i.appendChild(y),Q(i)}},t},ls=(o,e)=>{let{chatForm:n,input:t,sendButton:i}=e,r=l=>vt(l,o,e),s=l=>{l.key==="Enter"&&!l.shiftKey&&(l.preventDefault(),i.disabled||vt(l,o,e))};return n.addEventListener("submit",r),t.addEventListener("keypress",s),()=>{n.removeEventListener("submit",r),t.removeEventListener("keypress",s)}},as=o=>{let{input:e,messages:n,chatFooter:t}=o;Je(e),rs(t,n),st()},Rt=(o,e,n=!0)=>{let{chatClearButton:t,messages:i,sendButton:r}=e,s=os(o,e),l=ls(s,e);r.disabled=!1,n&&as(e),t.addEventListener("click",()=>{for(r.disabled=!0,t.disabled=!0,l();i.firstChild;)i.firstChild.remove();s.close(1e3,"user action"),Rt(o,e,!1)})},Mt=o=>{o.ws_addr=o.ws_addr.length<1?Qn:o.ws_addr;let e=document.querySelector(".chat");if(!e){console.lo

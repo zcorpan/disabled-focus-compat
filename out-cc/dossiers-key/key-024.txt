@@ -1,0 +1,28 @@
+group key-024: 1 pages on 1 hosts
+example URL: https://lemonshop.vn/chi-tiet-san-pham/7328-sticker-nhu-vang-1-tam.html
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+.keyCode ? event.keyCode : event.which);
+               if (keycode == '13') {
+                   $('form#jaxHLogin').trigger('submit');
+               }
+           });
+           $('.log-h-tel').keypress(function (event) {
+               var keycode = (event.keyCode ? event.keyCode : event.which);
+               if (keycode == '13') {
+                   $('form#jaxHLogin').trigger('submit');
+               }
+           });
+           $(".log-h-tel").change(function () {
+               if ($(this).val().toString() != "") {
+                   $(".chk_log_account").val(2);
+                   $(".log-h-username").val('');
+                   $(".log-h-password").val('');
+                   //$(".log_username").prop('disabled', true); 
+               }
+           });
+           $(".log-h-username").change(function () {
+               if ($(this).val().toString() != "") {
+                   $(".chk_log_account").val(1);
+   
+

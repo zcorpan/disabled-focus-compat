@@ -1,0 +1,5 @@
+group ha-008: script body https://static.locanto.info/assets/261013_0749482/js/bundle/main.js
+on 2 root pages: https://www.locanto.com.mx/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+ile.snh.values_object.hasOwnProperty("l1")&&yalwa.mobile.snh.values_object.l1!==yalwa.v.l1};let ze=Ie=>{let Ge=_.values_object.query?_.values_object.query:"";_.values_object.query=Ge.toLowerCase()};function gt(){_.can_be_searched(),yalwa.basics.toggle(Qe,jQuery(this).val())}function Le(Ie){if($t=Ie.which===13,$t&&Y.autocomplete().isExactMatch(Y.autocomplete().currentValue)){z=!1,Y.autocomplete("select",0);return}$t&&Y.autocomplete().selectedIndex===-1&&_.fire(null,!1)}function Ke(){return Object.keys(yalwa.mobile.snh.new_search_filter_data).length||yalwa.v.filter_data&&Object.keys(yalwa.mobile.snh.new_search_filter_data).length!==Object.keys(yalwa.v.filter_data).length}function At(){wt.prop("disabled",!0),ht.addClass("disabled")}function Jt(){wt.prop("disabled",!1),ht.removeClass("disabled")}function ii(){let Ie=Y.val();return n!==Ie}function aa(){return Bt!==wt.val()}function ai(){return!(ia===Ze.da

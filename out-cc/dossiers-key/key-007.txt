@@ -1,0 +1,44 @@
+group key-007: 2 pages on 1 hosts
+example URL: https://banou.shop/product/%D8%AA%D9%8A%D8%B4%D8%B1%D8%AA-%D9%88%D8%B1%D8%B2%D8%B4%D9%8A-%D8%B2%D9%86%D8%A7%D9%86%D9%87-%D9%85%D8%AF%D9%84-%D8%AE%D8%B7%D9%8A-%DA%A9%D8%AF-11271/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+              }
+            }
+        });
+
+        return false;
+    });
+
+    var phone_pattern = /^(\+98|0098|98|0)?9\d{9}$/;
+    var email_pattern = /^[a-zA-Z-' ]*$/;
+
+    jQuery('#phone').keyup(function() {
+        if (phone_pattern.test(jQuery(this).val()) == false && !Array.isArray(validateEmail(jQuery(this).val()))) {
+            jQuery(this).parent().css('height', 'auto');
+            jQuery('#send').attr('disabled', 'disabled');
+            jQuery(this).css('borderColor', '#ee5a66');
+        } else {
+            jQuery(this).parent().css('height', '65px');
+            jQuery('#send').removeAttr('disabled');
+          
+
+--- snippet 1 from a second page (https://banou.shop/product/%D8%B3%D8%AA-%D8%B3%D9%88%D9%8A%D8%B4%D8%B1%D8%AA-%D9%88-%D8%B4%D9%84%D9%88%D8%A7%D8%B1-%D8%B2%D9%86%D8%A7%D9%86%D9%87-%D9%86%D8%A7%D9%8A%DA%A9%D9%8A-%DA%A9%D8%AF-10952/) ---
+              }
+            }
+        });
+
+        return false;
+    });
+
+    var phone_pattern = /^(\+98|0098|98|0)?9\d{9}$/;
+    var email_pattern = /^[a-zA-Z-' ]*$/;
+
+    jQuery('#phone').keyup(function() {
+        if (phone_pattern.test(jQuery(this).val()) == false && !Array.isArray(validateEmail(jQuery(this).val()))) {
+            jQuery(this).parent().css('height', 'auto');
+            jQuery('#send').attr('disabled', 'disabled');
+            jQuery(this).css('borderColor', '#ee5a66');
+        } else {
+            jQuery(this).parent().css('height', '65px');
+            jQuery('#send').removeAttr('disabled');
+          

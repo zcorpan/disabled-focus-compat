@@ -1,0 +1,29 @@
+group enter-050: 1 pages on 1 hosts
+example URL: https://undergroundlandlord.com/legal-resources/landlord-tenant-law/ok/harmon-county/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+er("input", function() {
+        this.value = this.value.replace(/\D/g, "").slice(0, 5);
+        errorDiv.classList.remove("show");
+    });
+    zipInput.addEventListener("keydown", function(e) { if (e.key === "Enter") goBtn.click(); });
+    goBtn.addEventListener("click", function() { doLookup(zipInput.value); });
+
+    function doLookup(zip) {
+        zip = (zip || "").replace(/\D/g, "").slice(0, 5);
+        if (zip.length !== 5) {
+            errorDiv.textContent = "Please enter a valid 5-digit zip code.";
+            errorDiv.classList.add("show");
+            return;
+        }
+        errorDiv.classList.remove("show");
+        searchDiv.style.display = "none";
+        loadingDiv.style.display = "";
+        resultsDiv.style.display = "none";
+        goBtn.disabled = true;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", ajaxUrl + "?action=ul_evl_lookup&zip=" + encodeURIComponent(zip));
+        xhr.onload = function() {
+            goBtn.disabled = fal
+

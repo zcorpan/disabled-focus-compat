@@ -1,0 +1,28 @@
+group key-020: 1 pages on 1 hosts
+example URL: https://community.pdma.org/network/members/profile?UserKey=5d80a994-aaca-4d03-b2ad-019b2f33bb03
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+#MainCopy_ctl26_modalTermsAndConditions_Continue').prop('disabled', false);
+                            } else {
+                                $('#MainCopy_ctl26_modalTermsAndConditions_Continue').prop('disabled', true);
+                            }
+                        });
+
+                        $('#MainCopy_ctl26_modalImpersonation_tbImpersonationDescription').keyup(function () {
+                            if (this.value == '') {
+                                $('#MainCopy_ctl26_modalImpersonation_StartSession').prop('disabled', true);
+               
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+dConditions_Continue').prop('disabled', true);
+                            }
+                        });
+
+                        $('#MainCopy_ctl26_modalImpersonation_tbImpersonationDescription').keyup(function () {
+                            if (this.value == '') {
+                                $('#MainCopy_ctl26_modalImpersonation_StartSession').prop('disabled', true);
+                            } else {
+                                $('#MainCopy_ctl26_modalImpersonation_StartSession').prop('disabled', false);
+                            }
+                
+

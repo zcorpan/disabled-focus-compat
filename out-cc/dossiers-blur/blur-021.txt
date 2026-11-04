@@ -1,0 +1,50 @@
+group blur-021: 1 pages on 1 hosts
+example URL: https://ilioupolisonline.gr/ilioselides/%CE%BA%CE%B1%CF%84%CE%B1%CF%87%CF%89%CF%81%CE%B9%CF%83%CE%B5%CE%B9%CF%83.html?categoryId=54
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+on('focus', function ()
+		{
+			var el = jQuery(this);
+
+			if (el.val() === 'Αναζήτηση...')
+			{
+				el.val('');
+			}
+		});
+
+		// If the current value is empty, set the previous value.
+		searchword.on('blur', function ()
+		{
+			var el = jQuery(this);
+
+			if (!el.val())
+			{
+				el.val(value);
+			}
+		});
+
+		jQuery('#mod-finder-searchform285').on('submit', function (e)
+		{
+			e.stopPropagation();
+			var advanced = jQuery('#mod-finder-advanced285');
+
+			// Disable select boxes with no value selected.
+			if (advanced.length)
+			{
+				advanced.find('select').each(function (index, el)
+				{
+					var el = jQuery(el);
+
+					if (!el.val())
+					{
+						el.attr('disabled', 'disabled');
+					}
+				});
+			}
+		});});jQuery(function($) {
+			 $('.hasTip').each(function() {
+				var title = $(this).attr('title');
+				if (title) {
+					var parts = title.split('::', 2);
+					var mtelemen
+

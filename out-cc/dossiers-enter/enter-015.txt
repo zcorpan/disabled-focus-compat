@@ -1,0 +1,8 @@
+group enter-015: 2 pages on 1 hosts
+example URL: https://kamo.com/catalog/p/86225710/Windsor-Bearing-Handle-Adj-Washer/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+if(event.keyCode==13){ var val = document.getElementById(&#39;ctl00_ctl00_cphMainContent_ctlHeader_Navigation_SearchBox_txtSearch&#39;).value; if(val.length > 0) {    document.getElementById(&#39;ctl00_ctl00_cphMainContent_ctlHeader_Navigation_SearchBox_txtSearch&#39;).disabled = true;    document.getElementById(&#39;search-box-button&#39;).innerHTML = &#39;&lt;i class=&quot;glyphicon glyphicon-refresh fa-spin&quot;>&lt;/i>&#39;;    window.location.href=&#39;/Catalog/CatalogSearch
+
+--- snippet 1 from a second page (https://kamo.com/catalog/p/98404720/Karcher-BDS-51-175-300-C-Floor-Machine-20-/) ---
+if(event.keyCode==13){ var val = document.getElementById(&#39;ctl00_ctl00_cphMainContent_ctlHeader_Navigation_SearchBox_txtSearch&#39;).value; if(val.length > 0) {    document.getElementById(&#39;ctl00_ctl00_cphMainContent_ctlHeader_Navigation_SearchBox_txtSearch&#39;).disabled = true;    document.getElementById(&#39;search-box-button&#39;).innerHTML = &#39;&lt;i class=&quot;glyphicon glyphicon-refresh fa-spin&quot;>&lt;/i>&#39;;    window.location.href=&#39;/Catalog/CatalogSearch

@@ -1,0 +1,22 @@
+group enter-027: 1 pages on 1 hosts
+example URL: https://langthorns.com/index.php?route=product/category&path=53&page=11
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ssButton($(this))');
+			if (!$(this).text()) {
+				$(this).addClass('image-only');
+			}
+		});
+	});
+	
+	// Filtering functions
+	$('.filter-module input[type="text"]').keyup(function(event){
+		if (event.which == 13) $('.filter-module .button').click();
+	});
+	
+	$('.filter-module .button').click(function(){
+		$('.filter-module :input, .filter-module .button-choice').attr('disabled', 'disabled');
+		
+		var page = ($('.filter-module').find('input[name="search"]').val() && 0) ? 'product/search' : 'extension/filter';
+		var url = 'https://langthorns.com/index.php?route=' + page + '&module_id=89'
+

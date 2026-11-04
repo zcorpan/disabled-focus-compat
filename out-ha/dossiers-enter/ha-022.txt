@@ -1,0 +1,32 @@
+group ha-022: script body https://pimpbunny.com/static/v2/js/main.a1b6c9.js
+on 1 root pages: https://pimpbunny.com/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+cial');
+            toggleApplyButton(block);
+        });
+
+        $(document).on('click', '.apply-icon[data-active]', function () {
+            applySocialBlock($(this));
+        });
+
+        $(document).on('keydown', '.edit-creator-model-categories:not(:disabled)', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const applyButton = $(this).closest('.pb-creator-model-social').find('.apply-icon[data-active]');
+                if (applyButton.length) {
+                    applySocialBlock(applyButton);
+                }
+            }
+        });
+
+        function applySocialBlock(button) {
+            const currentBlock = button.closest('.pb-creator-model-social');
+            const input = currentBlock.find('.edit-creator-model-categories');
+
+            input.prop('disabled', true);
+            currentBlock.find('.remove-icon').attr('data-active', '1');
+            button.removeAttr('data-active');
+
+            const lastBlock = $('.pb-creator-model-social').last();
+          

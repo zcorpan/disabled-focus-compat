@@ -1,0 +1,17 @@
+group active-010: 1 pages on 1 hosts
+example URL: https://projectum.es/profesionales/licencia-de-actividad-de-cine/malaga/mijas
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ponseType = 'text') {
+        let submitButton = withValidationForm && withValidationForm.querySelector('button[type="submit"]') ? withValidationForm.querySelector('button[type="submit"]') : document.activeElement;
+        let spinner = submitButton && submitButton.type === 'submit' ? submitButton.querySelector('.indicator-progress') : null;
+
+        if (spinner) {
+            submitButton.disabled = true;
+            spinner.style.display = 'inline-block';
+        }
+
+        let csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+        let response = await fetch(
+
+

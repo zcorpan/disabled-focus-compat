@@ -1,0 +1,45 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>impl scenarios</title>
+<style>body { height: 4000px; } .base, .base::picker(select) { appearance: base-select; }</style>
+<div id="root"></div>
+<script>
+window.log = [];
+const TYPES = ["focus", "blur", "focusin", "focusout", "change", "input", "beforeinput", "click",
+  "keydown", "keyup", "keypress", "submit", "cancel", "toggle", "beforetoggle", "command"];
+function nm(t) {
+  if (!t) return String(t);
+  if (t === window) return "window";
+  if (t.nodeType === 9) return "document";
+  return t.id ? "#" + t.id : t.nodeName.toLowerCase();
+}
+window.installLog = (doc, prefix = "") => {
+  for (const type of TYPES) {
+    doc.addEventListener(type, e => {
+      let s = `${prefix}${type}@${nm(e.composedPath()[0])}`;
+      if (type.startsWith("key")) s += `:${e.key}`;
+      log.push(s);
+      if (type === "submit") e.preventDefault();
+    }, true);
+  }
+};
+installLog(document);
+window.setup = (html) => { document.getElementById("root").innerHTML = html; };
+window.frames2 = () => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(r, 50))));
+window.snap = (ids) => {
+  const out = { active: nm(document.activeElement), scrollY: Math.round(scrollY), log: log.splice(0),
+    cnt: { ...(window.cnt || {}) } };
+  for (const id of ids) {
+    const el = document.getElementById(id);
+    if (!el) continue;
+    const s = {};
+    for (const k of ["value", "checked", "selectedIndex"]) if (k in el) s[k] = el[k];
+    for (const p of [":focus", ":focus-visible", ":focus-within", ":disabled", ":open", ":user-invalid"]) {
+      try { if (el.matches(p)) s[p] = true; } catch {}
+    }
+    if (el.popover !== undefined && el.matches?.("[popover]")) s.popoverOpen = el.matches(":popover-open");
+    out[id] = s;
+  }
+  return out;
+};
+</script>

@@ -1,0 +1,9 @@
+group active-019: 1 pages on 1 hosts
+example URL: https://www.obsenza.com/it/sextoy/anale/plug-anale
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+abindex",e.isIntersecting?"0":"-1")});let{isAtStart:t,isAtEnd:i,hasNoOverflow:r}=this.getInViewItems();if(this.navBtns.forEach(e=>{e.hasAttribute("data-next")&&(e.style.visibility=r?"hidden":null,i?e.setAttribute("disabled",""):e.removeAttribute("disabled")),e.hasAttribute("data-prev")&&(e.style.visibility=r?"hidden":null,t?e.setAttribute("disabled",""):e.removeAttribute("disabled"))}),this.pager&&(this.pager.style.visibility=r?"hidden":null),this.initialLoad?this.initialLoad=!1:this.el.dispatchEvent(new CustomEvent("slideChange",{detail:this.getInViewItems()})),document.activeElement.parentElement.hasAttribute("data-pager")){let e=this.pager.querySelectorAll('[tabindex="0"]');e.length&&e[0].focus({preventScroll:!0})}}getSlides(){return this.track?Array.from(this.trac
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+=>{e.hasAttribute("data-next")&&(e.style.visibility=r?"hidden":null,i?e.setAttribute("disabled",""):e.removeAttribute("disabled")),e.hasAttribute("data-prev")&&(e.style.visibility=r?"hidden":null,t?e.setAttribute("disabled",""):e.removeAttribute("disabled"))}),this.pager&&(this.pager.style.visibility=r?"hidden":null),this.initialLoad?this.initialLoad=!1:this.el.dispatchEvent(new CustomEvent("slideChange",{detail:this.getInViewItems()})),document.activeElement.parentElement.hasAttribute("data-pager")){let e=this.pager.querySelectorAll('[tabindex="0"]');e.length&&e[0].focus({preventScroll:!0})}}getSlides(){return this.track?Array.from(this.trac
+

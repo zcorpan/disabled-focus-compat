@@ -1,0 +1,38 @@
+group ha-013: script body https://www.trenitalia.com/etc.clientlibs/trenitalia/clientlibs/clientlib-site.lc-3dcd5d3c305f0149b2eddeaa6bc2d391-lc.min.js
+on 2 root pages: https://www.trenitalia.com/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+) {
+    this.buoniScontoForm.addEventListener('input', () => {
+      const input = this.getCurrentInput();
+      const isEmpty = !input || input.value.trim() === '';
+  
+      this.btnInsert.disabled = isEmpty;
+    });
+
+    this.buoniScontoForm.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' && event.target.tagName === 'INPUT') {
+        event.preventDefault();
+      }
+    });
+  }
+
+  initCtaBuoniSconto() {
+    this.btnBuoniSconto.addEventListener('click', () => { 
+
+      if (this.codes.length > 0) { //se presenti buoni salvati
+        this.getAllBuoni().forEach(div => div.remove());
+
+        this.codes.forEach((code, index) => {
+          this.createBuono(this.buonoScontoWrapper, code);
+
+        });
+        
+        this.btnInsert.classList.add('d-none');
+        this.btnInsert.disabled = true;
+        
+        if (this.codes.length >= this.maxBuoni) {
+          this.btnAdd.classList.add('d-none');
+        } else {
+          this.btnAdd.classList.remove('d-none');
+          this.btnAdd.dis

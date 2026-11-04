@@ -1,0 +1,6 @@
+group key-038: 1 pages on 1 hosts
+example URL: https://static.icecreamapps.com/pt/PDF-Editor/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+{if(n.closeOnOutsideClick&&e.target===o.modal)try{n.onCancel&&n.onCancel("outside")}finally{d("outside")}})),m=function(){!function(e){document.body.appendChild(e)}(o.modal),document.addEventListener("keydown",u),window.setTimeout((function(){o.modal.classList.add("is-visible"),o.buttons.length&&o.buttons[0].focus()}),0)},document.body?m():document.addEventListener("DOMContentLoaded",m,{once:!0}),{close:d,dialog:o.dialog,element:o.modal,result:l}};document.addEventListener("DOMContentLoaded",()=>{const e=async e=>{e.preventDefault();const t=e.target,n=e.target.querySelector("input[name=EMAIL]").value;t.classList.remove("error"),(e=>/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(e))(n)?(await(async e=>{const t=new FormData(e);(e=>{e.querySelectorAll("input, button").forEach(e=>e.disabled=!0)})(e);try{await fetch(e.action,{method:"POST",body:t})}catch(e){}finally{(e=>{e.querySelectorAll("input, button").forEach(e=>e.disabled=!1)})(e)}})(t),c(t.dataset.successMessage,{header:t.dataset.suc
+

@@ -1,0 +1,8 @@
+group enter-002: 12 pages on 7 hosts
+example URL: https://news.detik.com/berita/d-8268829/wn-belanda-ancam-warga-pakai-airsoft-gun-hasil-beli-online-kini-deportasi
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+.preventDefault();currentIndex=(currentIndex+1)%items.length;updateFocus()}else if(e.key==="ArrowUp"){e.preventDefault();currentIndex=(currentIndex-1+items.length)%items.length;updateFocus()}else if(e.key==="Enter"&&currentIndex>-1){document.getElementById('search-text').disabled=!0;items[currentIndex].click()}});function updateFocus(){items.forEach((item,index)=>{item.classList.toggle("focused",index===currentIndex);if(index===currentIndex){item.scrollIntoView({block:"nearest"}
+
+--- snippet 1 from a second page (https://oto.detik.com/mobil/d-6464422/daftar-mobil-hybrid-yang-berpotensi-dapat-subsidi-rp-40-juta) ---
+.preventDefault();currentIndex=(currentIndex+1)%items.length;updateFocus()}else if(e.key==="ArrowUp"){e.preventDefault();currentIndex=(currentIndex-1+items.length)%items.length;updateFocus()}else if(e.key==="Enter"&&currentIndex>-1){document.getElementById('search-text').disabled=!0;items[currentIndex].click()}});function updateFocus(){items.forEach((item,index)=>{item.classList.toggle("focused",index===currentIndex);if(index===currentIndex){item.scrollIntoView({block:"nearest"}

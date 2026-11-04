@@ -1,0 +1,25 @@
+group active-009: 1 pages on 1 hosts
+example URL: https://petition.e-dem.ua/vinnytsia/petitions/1283
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+f (!focusable.length) return;
+                var first = focusable[0];
+                var last  = focusable[focusable.length - 1];
+                if (e.shiftKey) {
+                    if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+                } else {
+                    if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+                }
+            });
+
+            // Form submit.
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var submitBtn = form.querySelector('button[type=submit]');
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Надсилання…';
+
+                // Clear prior error banner.
+                var oldErr = body.querySelector('.fb-widget__error');
+                if (oldErr)
+

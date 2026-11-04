@@ -1,0 +1,28 @@
+group blur-007: 2 pages on 1 hosts
+example URL: https://www.thiesinfo.com/Hausse-inquietante-des-cas-de-noyade-au-Senegal-au-premier-semestre-2025_a9319.html
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+stomValidity(status.textContent);});
+   input.addEventListener('input',function(){input.setCustomValidity('');input.removeAttribute('aria-invalid');status.textContent='';});
+   input.addEventListener('blur',function(){input.value=input.value.trim();});
+   form.addEventListener('submit',function(event){
+    if(pending){event.preventDefault();return;}
+    input.value=input.value.trim();
+    if(!form.checkValidity()){event.preventDefault();form.reportValidity();return;}
+    pending=true;form.setAttribute('aria-busy','true');status.textContent='Envoi de votre demande…';
+    // Le serveur WMaker affiche lui-même le résultat ; aucune réussite n’est simulée.
+    setTimeout(function(){if(pending){button.disabled=true;button.textContent='Envoi en cours…';}},0);
+    resetTimer=setTimeout(function(){reset();status.textContent='Si aucune confirmation ne s’affiche, ouvrez « Inscription et aide » ci-dessous.';},15000);
+
+--- snippet 1 from a second page (https://www.thiesinfo.com/THIES-Mor-Diouf-denonce-les-agissements-de-Ndiaga-Diaw-et-celebre-le-renouveau-du-PDS-en-prevision-de-son-expansion-a_a1312.html) ---
+stomValidity(status.textContent);});
+   input.addEventListener('input',function(){input.setCustomValidity('');input.removeAttribute('aria-invalid');status.textContent='';});
+   input.addEventListener('blur',function(){input.value=input.value.trim();});
+   form.addEventListener('submit',function(event){
+    if(pending){event.preventDefault();return;}
+    input.value=input.value.trim();
+    if(!form.checkValidity()){event.preventDefault();form.reportValidity();return;}
+    pending=true;form.setAttribute('aria-busy','true');status.textContent='Envoi de votre demande…';
+    // Le serveur WMaker affiche lui-même le résultat ; aucune réussite n’est simulée.
+    setTimeout(function(){if(pending){button.disabled=true;button.textContent='Envoi en cours…';}},0);
+    resetTimer=setTimeout(function(){reset();status.textContent='Si aucune confirmation ne s’affiche, ouvrez « Inscription et aide » ci-dessous.';},15000);

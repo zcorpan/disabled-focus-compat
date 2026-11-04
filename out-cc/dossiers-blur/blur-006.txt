@@ -1,0 +1,14 @@
+group blur-006: 2 pages on 2 hosts
+example URL: https://www.buyinginoc.com/presentations/tag/totalSections%7C25
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+,folderName)}}),$addToFolderdialog.dialog("option","title","Move to Folder").dialog("option","buttons",buttonOptions).dialog("open"),$addToFolderdialog.find("input").toArray().forEach(o=>$(o).trigger("blur")),$addToFolderdialog.find("input[type=radio]").toArray().forEach(o=>$(o).prop("checked",!1)),$addToFolderdialog.parent().find(".ui-dialog-buttonpane button:last").prop("disabled",!0),$addToFolderdialog.find(".existing-folders-list .existing-folder, .existing-folders-list input[type=radio]").on("click",function(evt){ const $this=$(this),$radio=$this.parent().find("input[type=radi
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+value",$this.val()),0<$this.val().length?$addToFolderdialog.parent().find(".ui-dialog-buttonpane button:last").prop("disabled",!1):$addToFolderdialog.parent().find(".ui-dialog-buttonpane button:last").prop("disabled",!0)}).on("focus",function(evt){ const $this=$(this);$this.parent().find("input[type=radio]").attr("value",$this.val()).prop("checked",!0),0<$this.val().length?$addToFolderdialog.parent().find(".ui-dialog-buttonpane button:last").prop("disabled",!1):$addToFolderdialog.parent().find(".ui-dialog-buttonpane button:last").prop("disabled",!0)}).on("blur",function(evt){ const $this=$(this);$this.parent().find("input[type=radio]").attr("value",$this.val())}),$addToFolderdialog.find(".new-folder-name input[type=radio]").on("click",function(evt){ c
+
+--- snippet 3 (inline script or handler attribute, +-200 chars) ---
+.prop("checked",!0),0<$this.val().length?$addToFolderdialog.parent().find(".ui-dialog-buttonpane button:last").prop("disabled",!1):$addToFolderdialog.parent().find(".ui-dialog-buttonpane button:last").prop("disabled",!0)}).on("blur",function(evt){ const $this=$(this);$this.parent().find("input[type=radio]").attr("value",$this.val())}),$addToFolderdialog.find(".new-folder-name input[type=radio]").on("click",function(evt){ c
+
+--- snippet 1 from a second page (https://www.williamholderrealty.com/presentations/tag/stars-user-oranjae-williamholderrealty-com-oranjae-williamholderrealty-com) ---
+,folderName)}}),$addToFolderdialog.dialog("option","title","Move to Folder").dialog("option","buttons",buttonOptions).dialog("open"),$addToFolderdialog.find("input").toArray().forEach(o=>$(o).trigger("blur")),$addToFolderdialog.find("input[type=radio]").toArray().forEach(o=>$(o).prop("checked",!1)),$addToFolderdialog.parent().find(".ui-dialog-buttonpane button:last").prop("disabled",!0),$addToFolderdialog.find(".existing-folders-list .existing-folder, .existing-folders-list input[type=radio]").on("click",function(evt){ const $this=$(this),$radio=$this.parent().find("input[type=radi

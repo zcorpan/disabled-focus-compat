@@ -1,0 +1,30 @@
+group enter-046: 1 pages on 1 hosts
+example URL: http://audicorbrindes.com/index.php?route=product/search
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+on\']:checked').prop('value');
+	
+	if (filter_description) {
+		url += '&description=true';
+	}
+
+	location = url;
+});
+
+$('#content input[name=\'search\']').bind('keydown', function(e) {
+	if (e.keyCode == 13) {
+		$('#button-search').trigger('click');
+	}
+});
+
+$('select[name=\'category_id\']').on('change', function() {
+	if (this.value == '0') {
+		$('input[name=\'sub_category\']').prop('disabled', true);
+	} else {
+		$('input[name=\'sub_category\']').prop('disabled', false);
+	}
+});
+
+$('select[name=\'category_id\']').trigger('change');
+-->
+

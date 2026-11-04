@@ -1,0 +1,78 @@
+group enter-020: 1 pages on 1 hosts
+example URL: https://www.asc-toner.com/catalog/category/view/id/141242
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+                       });
+                    }
+
+                }
+
+            }
+        )
+        jQuery("#model-search-brand").on("change", function(){
+            jQuery("#model-search-printers").prop( "disabled", true );
+            jQuery.ajax({
+                method: "GET",
+                url: "/brands/ajax/printers",
+                data: { brand: jQuery("#model-search-brand").val(), searchmode: jQuery("#search-mode").find(":selected").attr("data-vals")}
+            })
+                .done(function( msg ) {
+                    jQuery("#model-search-printers").empty().append(msg);
+                    jQuery("#model-search-printers").prop( "disabled", false );
+                });
+        })
+        /*jQuery("#model-search-printers").on("keypress", function(e){
+            if(e.which == 13){
+                window.location = jQuery(this).find(":selected").data("url");
+            }
+        });*/
+        jQuery("#model-search-printers").on("change", function(e){
+            i
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+
+                    jQuery("#model-search-printers").prop( "disabled", false );
+                });
+        })
+        /*jQuery("#model-search-printers").on("keypress", function(e){
+            if(e.which == 13){
+                window.location = jQuery(this).find(":selected").data("url");
+            }
+        });*/
+        jQuery("#model-search-printers").on("change", function(e){
+            if (jQuery(this).find(":selected").val() != '') {
+                window.location = jQuery(this).find(":selected").data("url")+"?searchmode="+jQuery("#search-mode").find(":selected").val();
+            }
+        });
+        jQuery("#search-mode").on("change", function(e){
+
+            jQuery("#model-search-printers").prop( "disabled", true );
+            jQuery("#model-search-brand").prop( "disabled", true );
+            jQuery("#model-search-brand").prop("selectedIndex", 0);
+            jQuery("#model-search-printers").prop("selectedI
+
+--- snippet 3 (inline script or handler attribute, +-200 chars) ---
+
+                    jQuery("#model-search-printers").prop( "disabled", false );
+                });
+        })
+        /*jQuery("#model-search-printers").on("keypress", function(e){
+            if(e.which == 13){
+                window.location = jQuery(this).find(":selected").data("url");
+            }
+        });*/
+        jQuery("#model-search-printers").on("change", function(e){
+            if (jQuery(this).find(":selected").val() != '') {
+                window.location = jQuery(this).find(":selected").data("url")+"?searchmode="+jQuery("#search-mode").find(":selected").val();
+            }
+        });
+        jQuery("#search-mode").on("change", function(e){
+
+            jQuery("#model-search-printers").prop( "disabled", true );
+            jQuery("#model-search-brand").prop( "disabled", true );
+            jQuery("#model-search-brand").prop("selectedIndex", 0);
+            jQuery("#model-search-printers").prop("selectedIndex", 0);
+            jQuery.ajax({
+                method: "GET",
+
+

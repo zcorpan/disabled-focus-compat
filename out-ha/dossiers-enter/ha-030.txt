@@ -1,0 +1,9 @@
+group ha-030: html body https://www.loquosex.com/
+on 1 root pages: https://www.loquosex.com/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+odal);headerCategory.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '||e.key==='ArrowDown')openModal(e);});
+    headerLocation.addEventListener('pointerdown',openModal);headerLocation.addEventListener('click',openModal);headerLocation.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '||e.key==='ArrowDown')openModal(e);});
+    if(openButton)openButton.addEventListener('click',openModal);modal.querySelectorAll('[data-lqs-close]').forEach(function(el){el.addEventListener('click',closeModal);});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('is-open'))closeModal();});
+    category.addEventListener('change',function(){message('');syncHeaderCategory();reset(city,'Primero selecciona una provincia',true);reset(neighborhood,'Primero selecciona una ciudad',true);submit.disabled=true;if(!category.value){reset(province,'Primero selecciona una categoria',true);return;}fill(province,GEO.provinces,'Selecciona una provincia');});
+    province.addEventListener('change',function(){messa

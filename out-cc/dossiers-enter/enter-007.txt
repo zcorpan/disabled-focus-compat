@@ -1,0 +1,42 @@
+group enter-007: 2 pages on 1 hosts
+example URL: https://olgadursun.com/collection/rozovyypudra
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ current + 1;
+
+      if (isFinite(max) && next > max) return;
+
+      $input.val(next);
+      $content.find('[data-counter-minus]').prop('disabled', false);
+      if (isFinite(max) && next >= max) $btn.prop('disabled', true);
+    });
+
+    $content.on('keydown', 'input[name="quantity"], input[data-quantity-input]', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        $(this).trigger('change');
+      }
+    });
+
+    $content.on('change', 'input[name="quantity"], input[data-quantity-input]', function () {
+      
+
+--- snippet 1 from a second page (https://olgadursun.com/product/tutto-bene-night-250g) ---
+ current + 1;
+
+      if (isFinite(max) && next > max) return;
+
+      $input.val(next);
+      $content.find('[data-counter-minus]').prop('disabled', false);
+      if (isFinite(max) && next >= max) $btn.prop('disabled', true);
+    });
+
+    $content.on('keydown', 'input[name="quantity"], input[data-quantity-input]', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        $(this).trigger('change');
+      }
+    });
+
+    $content.on('change', 'input[name="quantity"], input[data-quantity-input]', function () {
+      

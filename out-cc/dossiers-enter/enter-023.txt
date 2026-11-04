@@ -1,0 +1,18 @@
+group enter-023: 1 pages on 1 hosts
+example URL: https://klickkiste.com/upcycling-kuechen-abfaelle-7-kreative-ideen-fuer-zuhause/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+on(r){return r.json().catch(function(){return {};});})
+    .then(function(d){
+      if(d&&d.ok){say("Fast geschafft! Bitte bestätige die Anmeldung über den Link in deiner E-Mail.","ok");
+        email.disabled=true;btn.style.display="none";}
+      else{say((d&&d.error)?d.error:"Das hat nicht geklappt – bitte später erneut versuchen.","err");btn.disabled=false;}
+    })
+    .catch(function(){say("Netzwerkfehler – bitte später erneut versuchen.","err");btn.disabled=false;});
+  }
+  btn.addEventListener("click",submit);
+  email.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();submit();}});
+ }
+ function init(){var b=document.querySelectorAll(".kk-nl-inline");for(var i=0;i<b.length;i++){wire(b[i]);}}
+ if(document.readyState!=="loading"){ini
+

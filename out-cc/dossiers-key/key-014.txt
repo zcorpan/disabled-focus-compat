@@ -1,0 +1,19 @@
+group key-014: 1 pages on 1 hosts
+example URL: https://elitehockey.com.au/collections/all
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ument.getElementById('ehNoThanks');
+  if(noThanks)noThanks.addEventListener('click',close);
+  overlay.addEventListener('click',function(e){if(e.target===overlay)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+
+  var form=document.getElementById('ehPopupForm');
+  if(form){
+    form.addEventListener('submit',function(){
+      var btn=document.getElementById('ehSubmitBtn');
+      if(btn){btn.disabled=true;btn.textContent='Subscribing...'}
+    });
+  }
+})();
+
+

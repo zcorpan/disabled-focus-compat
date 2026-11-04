@@ -1,0 +1,73 @@
+group blur-003: 2 pages on 2 hosts
+example URL: https://www.briddflorist.co.uk/design-201320076/open-gates-of-heaven..htm
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ue;}
+	 	//    }, "Sorry we do not deliver to this postcode" )
+
+		//$.validator.addClassRules("pcInRange",{pcInRangeMethod: true});
+		$(".delTypeVal").addClass( "pcInRange");
+	    $('.delTypeVal').focusout(function() {
+	    	
+	    	$.ajax({
+	            type: "POST",
+	            data: "postCode="+$(this).val(),
+	            url: "/postCodeCheck.jx",
+	    	    success: function(data) { 
+	            
+	            	if (data.result=="ok") {
+	            		$(".errorMessage1").remove();
+	            		$(".btnGo").prop('disabled', false);
+	            		$(".updateDelDetails").prop('disabled', false);
+	            	} else {
+	            		$(".btnGo").prop('disabled', true);
+	            		$(".updateDelDetails").prop('disabled', true);
+	            		$(".delTypeVal").after('<span id="delPostCode-error" class="errorMessage1 errorMessage">Sorry, we do not deliver to th
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+ue;}
+	 	//    }, "Sorry we do not deliver to this postcode" )
+
+		//$.validator.addClassRules("pcInRange",{pcInRangeMethod: true});
+		$(".delTypeVal").addClass( "pcInRange");
+	    $('.delTypeVal').focusout(function() {
+	    	
+	    	$.ajax({
+	            type: "POST",
+	            data: "postCode="+$(this).val(),
+	            url: "/postCodeCheck.jx",
+	    	    success: function(data) { 
+	            
+	            	if (data.result=="ok") {
+	            		$(".errorMessage1").remove();
+	            		$(".btnGo").prop('disabled', false);
+	            		$(".updateDelDetails").prop('disabled', false);
+	            	} else {
+	            		$(".btnGo").prop('disabled', true);
+	            		$(".updateDelDetails").prop('disabled', true);
+	            		$(".delTypeVal").after('<span id="delPostCode-error" class="errorMessage1 errorMessage">Sorry, we do not deliver to this post code.</span>');
+	            	}
+	            },error:
+
+--- snippet 1 from a second page (https://www.bloomsandcandy.co.uk/design-20160015/carnation-and-daisy-teardrop.htm) ---
+ue;}
+	 	//    }, "Sorry we do not deliver to this postcode" )
+
+		//$.validator.addClassRules("pcInRange",{pcInRangeMethod: true});
+		$(".delTypeVal").addClass( "pcInRange");
+	    $('.delTypeVal').focusout(function() {
+	    	
+	    	$.ajax({
+	            type: "POST",
+	            data: "postCode="+$(this).val(),
+	            url: "/postCodeCheck.jx",
+	    	    success: function(data) { 
+	            
+	            	if (data.result=="ok") {
+	            		$(".errorMessage1").remove();
+	            		$(".btnGo").prop('disabled', false);
+	            		$(".updateDelDetails").prop('disabled', false);
+	            	} else {
+	            		$(".btnGo").prop('disabled', true);
+	            		$(".updateDelDetails").prop('disabled', true);
+	            		$(".delTypeVal").after('<span id="delPostCode-error" class="errorMessage1 errorMessage">Sorry, we do not deliver to th

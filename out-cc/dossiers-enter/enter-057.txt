@@ -1,0 +1,22 @@
+group enter-057: 1 pages on 1 hosts
+example URL: https://vero.fi/henkiloasiakkaat/maksaminen/veronpalautukset/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+ window.boost.chatPanel.sendMessage(textarea.value);
+                    textarea.value = '';
+                    counter.textContent = `0 / ${110} ${charMaxLengthText}`;
+                    button.disabled = true;
+                }
+            }
+
+            textarea.addEventListener("focus", () => { inputGroup.classList.add("is-active"); });
+            textarea.addEventListener("blur", () => { inputGroup.classList.remove("is-active"); });
+            textarea.addEventListener("input", handleInput);
+            textarea.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+            button.addEventListener('click', sendMe
+

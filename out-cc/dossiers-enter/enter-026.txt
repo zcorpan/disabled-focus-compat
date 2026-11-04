@@ -1,0 +1,31 @@
+group enter-026: 1 pages on 1 hosts
+example URL: https://kolejarz.lublin.pl/rada-nadzorcza-i-rady-osiedli/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+kend_login-3-loginform"),
+                    d = document.getElementById("aam-login-password-widget-aam_backend_login-3-loginform");
+
+                if (b) b.addEventListener("keyup", function(a) { 13 === a.which && c.click() });
+                if (d) d.addEventListener("keyup", function(a) { 13 === a.which && c.click() });
+
+                c && c.addEventListener("click", function() {
+                    c.disabled = !0;
+                    var a = new XMLHttpRequest;
+                    a.addEventListener("readystatechange", function() {
+                        if (4 === this.readyState) {
+                         
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+kend_login-2-loginform"),
+                    d = document.getElementById("aam-login-password-widget-aam_backend_login-2-loginform");
+
+                if (b) b.addEventListener("keyup", function(a) { 13 === a.which && c.click() });
+                if (d) d.addEventListener("keyup", function(a) { 13 === a.which && c.click() });
+
+                c && c.addEventListener("click", function() {
+                    c.disabled = !0;
+                    var a = new XMLHttpRequest;
+                    a.addEventListener("readystatechange", function() {
+                        if (4 === this.readyState) {
+                         
+

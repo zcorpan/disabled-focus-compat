@@ -1,0 +1,42 @@
+group enter-047: 1 pages on 1 hosts
+example URL: https://events.eao.omsystem.com/all-things-fungi-festival
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+odification-email-error').hide();
+                $('#btn-request-modification-link').prop("disabled", false);
+            })
+
+            $(window).keydown(function(event){
+                if((event.keyCode == 13) && $('#modalRequestConfirmationEmail').is(':visible')) {
+                    event.preventDefault();
+                    $('#btn-request-confirmation-email').click();
+                    $('#btn-request-confirmation-email').prop("disabled", true);
+
+                    return false;
+                } else if((event.keyCode == 13) && $('#modalRequestModificationLink').is(':visible')){
+                    event.preventDefault();
+               
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+odification-email-error').hide();
+                $('#btn-request-modification-link').prop("disabled", false);
+            })
+
+            $(window).keydown(function(event){
+                if((event.keyCode == 13) && $('#modalRequestConfirmationEmail').is(':visible')) {
+                    event.preventDefault();
+                    $('#btn-request-confirmation-email').click();
+                    $('#btn-request-confirmation-email').prop("disabled", true);
+
+                    return false;
+                } else if((event.keyCode == 13) && $('#modalRequestModificationLink').is(':visible')){
+                    event.preventDefault();
+                    $('#btn-request-modification-link').click();
+                    $('#btn-request-modification-link').prop("disabled", true);
+
+                    return false;
+                }
+            });
+        });
+    
+

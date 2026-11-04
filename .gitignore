@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+out*/shots/
+out*/review-nsfw/
+*.log
+.publish-terms
+*.err
+live/sanity.jsonl

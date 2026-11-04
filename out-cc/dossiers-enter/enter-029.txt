@@ -1,0 +1,16 @@
+group enter-029: 1 pages on 1 hosts
+example URL: https://www.klairs.com/?ref=kbeautybook.com
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+Email(withPhone){
+    var em=document.getElementById('klp-email'), btn=document.getElementById('klp-submit'), err=document.getElementById('klp-err');
+    em.addEventListener('keydown',function(e){if(e.key==='Enter')btn.click();});
+    btn.onclick=function(){
+      var v=(em.value||'').trim();
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){err.style.display='block';em.focus();return;}
+      err.style.display='none';btn.disabled=true;btn.textContent='Submitting…';
+      ga('klp_submit',{variant:V,skin_concern:concern||undefined});
+      lastEmail=v;
+      /* C안: 전화가 채워져 있고 동의 체크가 되어 있으면 SMS 도 같이 보낸다.
+         ⛔ 둘 중 하나라도 없으면 **조용히
+

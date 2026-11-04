@@ -1,0 +1,63 @@
+group active-021: 1 pages on 1 hosts
+example URL: https://proforto.be/clique-flexifit-cap
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+d, hasNoOverflow } = this.getInViewItems();
+this.navBtns.forEach((btn) => {
+if (btn.hasAttribute("data-next")) {
+btn.style.visibility = hasNoOverflow ? "hidden" : null;
+isAtEnd && !this.useLoop ? btn.setAttribute("disabled", "") : btn.removeAttribute("disabled");
+}
+if (btn.hasAttribute("data-prev")) {
+btn.style.visibility = hasNoOverflow ? "hidden" : null;
+isAtStart && !this.useLoop ? btn.setAttribute("disabled", "") : btn.removeAttribute("disabled");
+}
+});
+if (this.pager) {
+this.pager.style.visibility = hasNoOverflow ? "hidden" : null;
+this.pager.toggleAttribute("inert", hasNoOverflow);
+}
+if (!this.initialLoad) {
+this.el.dispatchEvent(
+new CustomEvent("slideChange", {
+detail: this.getInViewItems()
+})
+);
+} else {
+this.initialLoad = false;
+}
+if (document.activeElement.parentElement.hasAttribute("data-pager")) {
+const activeItems = this.pager.querySelectorAll('[tabindex="0"]');
+if (activeItems.length) {
+activeItems[0].focus({ preventScroll: true });
+}
+
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+p ? btn.setAttribute("disabled", "") : btn.removeAttribute("disabled");
+}
+if (btn.hasAttribute("data-prev")) {
+btn.style.visibility = hasNoOverflow ? "hidden" : null;
+isAtStart && !this.useLoop ? btn.setAttribute("disabled", "") : btn.removeAttribute("disabled");
+}
+});
+if (this.pager) {
+this.pager.style.visibility = hasNoOverflow ? "hidden" : null;
+this.pager.toggleAttribute("inert", hasNoOverflow);
+}
+if (!this.initialLoad) {
+this.el.dispatchEvent(
+new CustomEvent("slideChange", {
+detail: this.getInViewItems()
+})
+);
+} else {
+this.initialLoad = false;
+}
+if (document.activeElement.parentElement.hasAttribute("data-pager")) {
+const activeItems = this.pager.querySelectorAll('[tabindex="0"]');
+if (activeItems.length) {
+activeItems[0].focus({ preventScroll: true });
+}
+
+

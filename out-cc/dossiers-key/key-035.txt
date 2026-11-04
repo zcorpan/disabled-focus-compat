@@ -1,0 +1,6 @@
+group key-035: 1 pages on 1 hosts
+example URL: https://www.dxzone.com/dx3550/the-microwave-journal.html
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+password";ic.classList.replace("fa-eye-slash","fa-eye");}};document.addEventListener("click",function(e){if(e.target===document.getElementById("dxuModal"))dxuCloseModal();});document.addEventListener("keydown",function(e){if(e.key==="Escape")dxuCloseModal();});function sa(p,m){var el=document.getElementById("dxu"+cap(p)+"Alert");if(el){el.innerHTML=m;el.style.display="block";}}function ha(p){var el=document.getElementById("dxu"+cap(p)+"Alert");if(el)el.style.display="none";}window.dxuSubmitLogin=function(e){e.preventDefault();ha("login");var btn=document.getElementById("dxuLoginBtn");btn.disabled=true;btn.textContent="Logging in...";var fd=new FormData(document.getElementById("dxuLoginForm"));fd.append("ajax","1");fetch("/user/login.php",{method:"POST",body:fd}).then(function(r){return r.json();})
+

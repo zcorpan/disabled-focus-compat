@@ -1,0 +1,43 @@
+group ha-020: html body https://passbook.epfindia.gov.in/MemberPassBook/login
+on 1 root pages: https://passbook.epfindia.gov.in/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+).on('keypress', function (e) {
+            if (e.which === 13) {
+                checkLogin($('#login'));
+            }
+        });
+
+        $("#login").click(function () {
+            checkLogin($('#login'));
+        });
+
+
+    
+        $('#captcha').on('keypress', function (e) {
+            if (e.which === 13) {
+                checkLogin($('#login'));
+            }
+        });
+
+        $("#new_cap").click(function () {
+            getcap();
+        });
+
+    
+
+
+    });
+
+
+
+    (function ($) {
+        $.fn.button = function (action) {
+            if (action === 'loading' && this.data('loading-text')) {
+                this.data('original-text', this.html()).html(this.data('loading-text')).prop('disabled', true);
+            }
+            if (action === 'reset' && this.data('original-text')) {
+                this.html(this.data('original-text')).prop('disabled', false);
+            }
+        };
+    }(jQuer

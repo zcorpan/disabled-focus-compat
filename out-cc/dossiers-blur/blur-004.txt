@@ -1,0 +1,83 @@
+group blur-004: 2 pages on 2 hosts
+example URL: https://www.eishockey-statistiken.de/index.php/127-sonstige/596-weitere-eishockey-ligen
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+archword.on('focus', function()
+		{	var $el = $(this);
+			if ($el.val() === 'Suche ...')
+			{
+				$el.val('');
+			}
+		});
+
+		// If the current value is empty, set the previous value.
+		$searchword.on('blur', function()
+		{	var $el = $(this);
+			if (!$el.val())
+			{
+				$el.val(value);
+			}
+		});
+
+		$('#mod-finder-searchform').on('submit', function(e){
+			e.stopPropagation();
+			var $advanced = $('#mod-finder-advanced');
+			// Disable select boxes with no value selected.
+			if ( $advanced.length)
+			{
+				 $advanced.find('select').each(function(index, el) {
+					var $el = $(el);
+					if(!$el.val()){
+						$el.attr('disabled', 'disabled');
+					}
+				});
+			}
+		});
+
+		/*
+		 * This segment of code sets up the autocompleter.
+		 */
+		
+	});
+//]]>
+
+
+--- snippet 1 from a second page (https://www.theprogressiveaccountant.com/index.php/specialreports/itemlist/tag/Barry%20Sloane) ---
+rchword.on('focus', function()
+		{	var $el = $(this);
+			if ($el.val() === 'Search ...')
+			{
+				$el.val('');
+			}
+		});
+
+		// If the current value is empty, set the previous value.
+		$searchword.on('blur', function()
+		{	var $el = $(this);
+			if (!$el.val())
+			{
+				$el.val(value);
+			}
+		});
+
+		$('#mod-finder-searchform').on('submit', function(e){
+			e.stopPropagation();
+			var $advanced = $('#mod-finder-advanced');
+			// Disable select boxes with no value selected.
+			if ( $advanced.length)
+			{
+				 $advanced.find('select').each(function(index, el) {
+					var $el = $(el);
+					if(!$el.val()){
+						$el.attr('disabled', 'disabled');
+					}
+				});
+			}
+		});
+
+		/*
+		 * This segment of code sets up the autocompleter.
+		 */
+			});
+//]]>
+

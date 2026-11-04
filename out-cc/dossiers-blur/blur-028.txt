@@ -1,0 +1,33 @@
+group blur-028: 1 pages on 1 hosts
+example URL: https://www.dragarwal.com/kn/book-appointment/?loc_id=39376&doc_id=39379
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+kn/wp-admin/admin-ajax.php";
+var preSelectLoc = "39376";
+var preSelectDoc = "39379";
+var online_consultation_link = "https://eyeconnect.dragarwal.com/";
+function formBookingSubmit(){
+	$('#initSubmit').prop('disabled', true);
+	$("#booking_submit").trigger( "click" );
+};
+jQuery(document).ready(function($){
+	const currentUrl = window.location.href;
+	$('input[name="page_url"]').val(currentUrl);
+	$('.primary-form .form-control').focus(function(){
+		$(this).parents('.form-group').addClass('focused');
+	});
+	
+	$('.primary-form .form-control').on('change', function(){
+		$(this).parents('.form-group').addClass('focused');
+	});
+
+	$('.primary-form .form-control').blur(function(){
+		var inputValue = $(this).val();
+		if ( inputValue == "" ) {
+			$(this).parents('.form-group').removeClass('focused');  
+		}
+	});
+	
+	$( "#datepicker" ).datepicker({
+		dayNamesMin: [
+

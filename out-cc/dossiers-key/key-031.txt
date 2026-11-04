@@ -1,0 +1,19 @@
+group key-031: 1 pages on 1 hosts
+example URL: https://rkb12.ru/tag/zabolevanie
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+const isMsgValid = msgInput.value.trim().length > 0;
+
+            if (isTelValid && isMsgValid) {
+                submitBtn.removeAttribute('disabled');
+            } else {
+                submitBtn.setAttribute('disabled', 'true');
+            }
+        }
+
+        if(telInput && msgInput && submitBtn) {
+            telInput.addEventListener('keydown', onPhoneKeyDown);
+            telInput.addEventListener('input', onPhoneInput, false);
+            telInput.addEventListener('paste', onPhoneInput, false);
+            msgInput.addEventListe
+

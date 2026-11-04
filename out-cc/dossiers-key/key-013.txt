@@ -1,0 +1,76 @@
+group key-013: 1 pages on 1 hosts
+example URL: https://what-we-do.nacsj.or.jp/2016/09/1419/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+.フリーワード & 検索条件
+		btn_search_cond_control();
+		// if ( check_cnt > 0 || $('#text_freeword').val() ) {
+		// 	$('.btn_search_cond').prop('disabled', false);
+		// }
+		// else {
+		// 	$('.btn_search_cond').prop('disabled', true);
+		// }
+
+		// 2.フリーワード
+		// if ( $('#text_freeword').val() ) {
+		// 	$('#btn_search_freeword').prop('disabled', false);
+		// } else {
+		// 	$('#btn_search_freeword').prop('disabled', true);
+		// }
+
+
+		// フリーワードテキストボックス変更イベント
+		$('#text_freeword').keyup(function(e) {
+			btn_search_cond_control();
+			// if ( $(this).val() ) {
+			// 	$('#btn_search_freeword').prop('disabled', false);
+			// }
+        	// else {
+			// 	$('#btn_search_freeword').pr
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+arch_cond').prop('disabled', true);
+		// }
+
+		// 2.フリーワード
+		// if ( $('#text_freeword').val() ) {
+		// 	$('#btn_search_freeword').prop('disabled', false);
+		// } else {
+		// 	$('#btn_search_freeword').prop('disabled', true);
+		// }
+
+
+		// フリーワードテキストボックス変更イベント
+		$('#text_freeword').keyup(function(e) {
+			btn_search_cond_control();
+			// if ( $(this).val() ) {
+			// 	$('#btn_search_freeword').prop('disabled', false);
+			// }
+        	// else {
+			// 	$('#btn_search_freeword').pr
+
+--- snippet 3 (inline script or handler attribute, +-200 chars) ---
+word').val() ) {
+		// 	$('#btn_search_freeword').prop('disabled', false);
+		// } else {
+		// 	$('#btn_search_freeword').prop('disabled', true);
+		// }
+
+
+		// フリーワードテキストボックス変更イベント
+		$('#text_freeword').keyup(function(e) {
+			btn_search_cond_control();
+			// if ( $(this).val() ) {
+			// 	$('#btn_search_freeword').prop('disabled', false);
+			// }
+        	// else {
+			// 	$('#btn_search_freeword').prop('disabled', true);
+			// }
+		});
+
+		// フリーワードテキストボックス変更イベント
+		$('#text_freeword').click(function(e) {
+			btn_search_cond_control();
+			// if ( $(this).val() ) {
+			// 	$('#btn_search_freeword').prop('disabled', false
+

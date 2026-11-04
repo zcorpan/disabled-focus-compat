@@ -1,0 +1,31 @@
+group enter-045: 1 pages on 1 hosts
+example URL: https://laboria.app/salario/auditor/alcala/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+t('.index-search')) searchDropdown.classList.remove('open');
+    });
+    searchInput.addEventListener('keydown', e => {
+      if(e.key === 'Escape') searchDropdown.classList.remove('open');
+      if(e.key === 'Enter'){
+        const first = searchDropdown.querySelector('.search-result');
+        if(first) first.click();
+      }
+    });
+  }
+
+  updateNavUI();
+})();
+
+async function subscribeNewsletter(source) {
+  const email = document.getElementById('nl-email')?.value?.trim();
+  const msg   = document.getElementById('nl-msg');
+  const btn   = document.getElementById('nl-btn');
+  if (!email || !email.includes('@')) {
+    msg.textContent = 'Introduce un email válido.'; msg.style.color='#ef4444'; msg.style.display='block'; return;
+  }
+  btn.disabled = true; btn.textContent = '...';
+  try {
+    if (window.__SUPA_URL__ && window.__SUPA_KEY__ && window.supabase) {
+      const _s = window.supabase.createClient(window.__SUPA_URL__, window.__SUPA_KEY__);
+   
+

@@ -1,0 +1,86 @@
+group enter-030: 1 pages on 1 hosts
+example URL: https://yado.knt.co.jp/areamap/1090204/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+で今日の日付を設定する
+	$('#data_y').val(2026);
+	$('#data_m').val(09);
+	$('#data_d').val(16);
+	$('#stay_ymd').val(20260916);
+	// KNT-401 デフォルト日付未指定とする
+	$('#no_date').attr('checked', 'checked');
+	$('.datepicker').attr('disabled', 'disabled');
+	
+	$('.datepicker_button').click(function() { $('.datepicker:enabled').focus(); });
+	
+	$('#kw_web').keydown(function(evt) {
+		if (!evt) {
+			evt = window.event;
+		}
+		if (evt.keyCode == 13) {
+			window.AP.SearchGadget_onsubmit();
+		}
+	});
+	ShowBlock('#add-condition','#add-condition-btn','#add-condition p.close a','#add-condition p.add-search-btn a','add-condition');
+	
+	$('
+
+--- snippet 2 (inline script or handler attribute, +-200 chars) ---
+'disabled', 'disabled');
+	
+	$('.datepicker_button').click(function() { $('.datepicker:enabled').focus(); });
+	
+	$('#kw_web').keydown(function(evt) {
+		if (!evt) {
+			evt = window.event;
+		}
+		if (evt.keyCode == 13) {
+			window.AP.SearchGadget_onsubmit();
+		}
+	});
+	ShowBlock('#add-condition','#add-condition-btn','#add-condition p.close a','#add-condition p.add-search-btn a','add-condition');
+	
+	$('#no_date').click(function() {
+		if (this.checked) {
+			$('.datepicker').attr('disabled', 'disabled');
+		} else {
+			$('.datepicker').removeAttr('disabled');
+		}
+	});
+	
+	// 戻った場合に日帰りにラジオボタンの値が残った時のための処理
+	if ($('input[name=use_kbn]:checked').val() == '2') {
+		$('#StayCount').val('-').attr('disabled',
+
+--- snippet 3 (inline script or handler attribute, +-200 chars) ---
+'disabled', 'disabled');
+	
+	$('.datepicker_button').click(function() { $('.datepicker:enabled').focus(); });
+	
+	$('#kw_web').keydown(function(evt) {
+		if (!evt) {
+			evt = window.event;
+		}
+		if (evt.keyCode == 13) {
+			window.AP.SearchGadget_onsubmit();
+		}
+	});
+	ShowBlock('#add-condition','#add-condition-btn','#add-condition p.close a','#add-condition p.add-search-btn a','add-condition');
+	
+	$('#no_date').click(function() {
+		if (this.checked) {
+			$('.datepicker').attr('disabled', 'disabled');
+		} else {
+			$('.datepicker').removeAttr('disabled');
+		}
+	});
+	
+	// 戻った場合に日帰りにラジオボタンの値が残った時のための処理
+	if ($('input[name=use_kbn]:checked').val() == '2') {
+		$('#StayCount').val('-').attr('disabled', 'disabled');
+	}
+	$('input[name=use_kbn]').bind('click', function() {
+		if (this.checked && this.value === '2') {
+			$('#StayCount').val('-').attr('disabled', 'disabled');
+		} else if (this.checked && this.value
+

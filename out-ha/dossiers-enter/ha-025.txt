@@ -1,0 +1,28 @@
+group ha-025: script body https://webshop.montbell.jp/all_common/js/rwd_header-footer.js?ver=20240823
+on 1 root pages: https://webshop.montbell.jp/
+
+--- snippet (up to 300 chars before the Enter check, then up to 600 to the disabling, +200) ---
+s();
+            }
+            else
+            {
+              $categoryLink.first().focus();
+            }
+          }
+        }
+      })
+    }
+
+    // Enter押下後、検索ボタンを5秒間「disabled」にする
+    $(".header-site-search__form").find(".header-site-search__textbox").on("keyup", function(ev)
+    {
+      if(ev.key == "Enter")
+      {
+        $(".header-site-search__form.is-active").find(".header-site-search__button").prop("disabled", true);
+        setTimeout(function(){
+          $(".header-site-search__form.is-active").find(".header-site-search__button").prop("disabled", false);
+        }, 5000)
+      }
+    })
+
+    // 検索ボタン押下時、5秒間「d

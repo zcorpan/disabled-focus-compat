@@ -1,0 +1,33 @@
+group key-022: 1 pages on 1 hosts
+example URL: https://inboll.com/product/detail/482
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+	$.ajax({
+				url: "/product_notify/save",
+				type: "POST",
+				data: {skuId: skuId, email: $productNotifyEmail.val()},
+				dataType: "json",
+				beforeSend: function() {
+					$addProductNotify.prop("disabled", true);
+				},
+				success: function(data) {
+					$addProductNotify.val("到货通知我");
+					$productNotify.hide();
+				},
+				complete: function() {
+					$addProductNotify.prop("disabled", false);
+				}
+			});
+		}
+	});
+	
+	// 购买数量
+	$quantity.keypress(function(event) {
+		return (event.which >= 48 && event.which <= 57) || event.which == 8;
+	});
+	
+	// 增加购买数量
+	$increase.click(function() {
+		var quantity = $quantity.val();
+		if (/^\d*[
+

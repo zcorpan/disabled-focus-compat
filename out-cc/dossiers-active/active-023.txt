@@ -1,0 +1,38 @@
+group active-023: 1 pages on 1 hosts
+example URL: https://groupfinder.gg/players/joseph-144fd98733
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+
+        }
+
+        var $f = focusables();
+        if (!$f.length) {
+            return;
+        }
+        var first = $f[0];
+        var last = $f[$f.length - 1];
+
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    });
+
+    // A fresh token per submit: a reCAPTCHA v3 token expires two minutes after it is issued.
+    $modal.on('submit', '.auth-gate-form', function (e) {
+        var form = this;
+        if (!captchaV3 || $(form).data('auth-ready')) {
+            return;
+        }
+
+        e.preventDefault();
+        $(form).find('.auth-gate-submit').prop('disabled', true);
+
+        fetchToken($(form).data('auth-action')).then(function (token) {
+            $(form).find('.auth-gate-token-field').val(token);
+            $(form).data('auth-ready', true);
+            for
+

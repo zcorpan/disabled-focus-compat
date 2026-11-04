@@ -1,0 +1,6 @@
+group blur-016: 1 pages on 1 hosts
+example URL: https://www.ecslimited.com/resources/ecs-thought-leaders-kelly-clawson-pe-leed-ap/
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+dEventListener("paste",this._onPaste),this.element.addEventListener("input",this._onInput,{passive:!0}),this.element.addEventListener("focus",this._onFocus,{passive:!0}),this.element.addEventListener("blur",this._onBlur,{passive:!0})},s.removeEventListeners=function(){this.element.removeEventListener("input",this._onInput,{passive:!0}),this.element.removeEventListener("paste",this._onPaste),this.element.removeEventListener("focus",this._onFocus,{passive:!0}),this.element.removeEventListener("blur",this._onBlur,{passive:!0})},s.enable=function(){this.element.removeAttribute("disabled"),this.isDisabled=!1},s.disable=function(){this.element.setAttribute("disabled",""),this.isDisabled=!0},s.focus=function(){this.isFocussed||this.element.focus()},s.blur=function(){this.isFocussed&&this.element.blur()},s.clear=function(e){return void 0===e&&(e=!0),this.element.va
+

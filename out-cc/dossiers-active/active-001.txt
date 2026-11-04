@@ -1,0 +1,46 @@
+group active-001: 6 pages on 6 hosts
+example URL: https://www.haarshoppro.nl/weleda-mama-tepelzalf-25-gr
+
+--- snippet 1 (inline script or handler attribute, +-200 chars) ---
+         }
+                        if (btn.hasAttribute("data-prev")) {
+                            btn.style.visibility = hasNoOverflow ? "hidden" : null;
+                            isAtStart ? btn.setAttribute("disabled", "") : btn.removeAttribute("disabled");
+                        }
+                    });
+                    if (pager) {
+                        pager.style.visibility = hasNoOverflow ? "hidden" : null;
+                    }
+                    if (!initialLoad) {
+                        el.dispatchEvent(
+                            new CustomEvent("slideChange", { detail: getInViewItems() })
+                        );
+                    } else {
+                        initialLoad = false;
+                    }
+                    if (document.activeElement.parentElement.hasAttribute("data-pager")) {
+                        const activeItems = pager.querySelectorAll('[tabindex="0"]');
+                        if (activeItems.length) {
+      
+
+--- snippet 1 from a second page (https://www.slangenboer.nl/zeca-al83-10-lucht-waterhaspel) ---
+         }
+                        if (btn.hasAttribute("data-prev")) {
+                            btn.style.visibility = hasNoOverflow ? "hidden" : null;
+                            isAtStart ? btn.setAttribute("disabled", "") : btn.removeAttribute("disabled");
+                        }
+                    });
+                    if (pager) {
+                        pager.style.visibility = hasNoOverflow ? "hidden" : null;
+                    }
+                    if (!initialLoad) {
+                        el.dispatchEvent(
+                            new CustomEvent("slideChange", { detail: getInViewItems() })
+                        );
+                    } else {
+                        initialLoad = false;
+                    }
+                    if (document.activeElement.parentElement.hasAttribute("data-pager")) {
+                        const activeItems = pager.querySelectorAll('[tabindex="0"]');
+                        if (activeItems.length) {
+      

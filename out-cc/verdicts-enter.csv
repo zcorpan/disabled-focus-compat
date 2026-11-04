@@ -1,0 +1,62 @@
+group,verdict,note
+enter-002,double-action,search suggestions: Enter disables the input and clicks the link; repeat = same navigation
+enter-006,double-action,AJAX search input disables itself on keyup Enter; repeat = second search request
+enter-015,double-action,search box disables itself and sets location.href; repeat = same navigation
+enter-021,double-action,"chat input: Enter clicks send, which disables input and button; repeat = second send (not live-tested: chat)"
+enter-023,double-action,newsletter email disabled on success; repeat = second subscribe (not live-tested: form submission)
+enter-025,double-action,comment input disabled on Enter while POSTing; repeat = duplicate comment (not live-tested)
+enter-027,double-action,filter module: Enter clicks a button that disables all inputs and navigates; repeat = same navigation
+enter-031,double-action,search input disables itself and sets location.href; repeat = same navigation
+enter-039,double-action,"same functions as enter-025, re-enabled after response; repeat = duplicate comment while pending"
+enter-008,guarded,browser blocks repeat on the disabled button
+enter-011,guarded,disable/re-enable within one handler
+enter-055,focus-loss-dependent,"quantity field disabled for 1s on Enter, apparently to drop focus/close keyboard; now keeps focus"
+enter-016,unclear,AI question textarea; not live-tested (chat)
+enter-041,unclear,quantity text field; branch disables and hides it
+enter-056,unclear,chat input; not live-tested
+enter-000,not-focused,
+enter-010,not-focused,
+enter-014,not-focused,
+enter-018,not-focused,
+enter-024,not-focused,
+enter-026,not-focused,
+enter-028,not-focused,
+enter-029,not-focused,
+enter-032,not-focused,
+enter-036,not-focused,
+enter-040,not-focused,
+enter-042,not-focused,
+enter-047,not-focused,
+enter-048,not-focused,
+enter-049,not-focused,
+enter-050,not-focused,
+enter-054,not-focused,
+enter-057,not-focused,
+enter-058,not-focused,
+enter-001,unrelated,
+enter-003,unrelated,
+enter-004,unrelated,
+enter-005,unrelated,
+enter-007,unrelated,
+enter-009,unrelated,
+enter-012,unrelated,
+enter-013,unrelated,
+enter-017,unrelated,
+enter-019,unrelated,
+enter-020,unrelated,
+enter-022,unrelated,
+enter-030,unrelated,
+enter-033,unrelated,
+enter-034,unrelated,
+enter-035,unrelated,
+enter-037,unrelated,
+enter-038,unrelated,
+enter-043,unrelated,
+enter-044,unrelated,
+enter-045,unrelated,
+enter-046,unrelated,
+enter-051,unrelated,
+enter-052,unrelated,
+enter-053,unrelated,
+enter-059,unrelated,
+enter-060,unrelated,
