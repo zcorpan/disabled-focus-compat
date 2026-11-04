@@ -153,13 +153,23 @@ disabled form control (only click events from the user interaction task source a
 the control's own key listeners run, and the event bubbles from it. Before the change this
 couldn't happen: focus had moved to the body, so later key events targeted the body.
 
-Gecko does the same. `nsGenericHTMLFormElement::IsElementDisabledForEvents`
-(`dom/html/nsGenericHTMLElement.cpp`) returns false for trusted `keydown`/`keypress`/`keyup` and
-focus events while `dom.forms.always_allow_key_and_focus_events.enabled` is on (default true, bug
-1818287). If that pref is off, the switch falls through to the pointer-event case and still returns
-false while `dom.forms.always_allow_pointer_events.enabled` is on (default true, bug 1799565). D338542
-only calls `preventDefault()` on keyboard events at a disabled input, which stops the browser's
-default actions but not page listeners.
+The repeated action isn't a browser default action, so suppressing default actions on a disabled
+target doesn't change it. The browser already doesn't activate the control:
+`button-onclick-self-disable` gets 1 click from 2 Enters on the disabled button. In each live case,
+the page's own key listener does the work: a jQuery `keyup` handler on the input
+(prosol-farben.de), an inline key event handler attribute (kamo.com), and a `keypress` handler
+delegated from `document` (masutabe.info). The same holds for the double-action groups in section 1.
+
+The case is rare and mild (section 1), and it can be resolved in the spec; one option is below.
+
+Gecko also fires key events at the disabled control.
+`nsGenericHTMLFormElement::IsElementDisabledForEvents` (`dom/html/nsGenericHTMLElement.cpp`) returns
+false for trusted `keydown`/`keypress`/`keyup` and focus events while
+`dom.forms.always_allow_key_and_focus_events.enabled` is on (default true, bug 1818287). If that
+pref is off, the switch falls through to the pointer-event case and still returns false while
+`dom.forms.always_allow_pointer_events.enabled` is on (default true, bug 1799565). D338542 only
+calls `preventDefault()` on keyboard events at a disabled input, which stops the browser's default
+actions but not page listeners.
 
 Blocking these events isn't a fix. With both prefs off (`impl/k-on-nokeyevents.jsonl`), the repeat
 is gone, but the key event reaches no listener at all, not even on `document`. Focus events are
