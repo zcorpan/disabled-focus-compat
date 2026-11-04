@@ -3,6 +3,7 @@
 Usage: run_impl.py firefox <binary> <on|off> | run_impl.py chrome <binary> <chromedriver>
 """
 import json
+import os
 import pathlib
 import sys
 import time
@@ -185,6 +186,9 @@ def make_driver():
         o.binary_location = binary
         o.add_argument("-headless")
         o.set_preference("dom.forms.retain_focus_on_disabled.enabled", sys.argv[3] == "on")
+        for kv in filter(None, os.environ.get("DFC_EXTRA_PREFS", "").split(",")):
+            k, v = kv.split("=")
+            o.set_preference(k, {"true": True, "false": False}.get(v, v))
         return webdriver.Firefox(options=o)
     o = webdriver.ChromeOptions()
     o.binary_location = binary

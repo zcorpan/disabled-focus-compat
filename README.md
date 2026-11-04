@@ -144,6 +144,38 @@ D338544, D338545 from Phabricator) applied on top. Only the three fixes above di
 still go to the focused disabled control, so page key handlers on it still run (2 sends from 2
 Enters in `keydown-self-disable-textarea`).
 
+## 4. Why a second Enter repeats the page's action
+
+Under the PR, the user agent must not perform control-specific keyboard actions on a focused
+disabled control, but the key event is still fired. The PR's key event steps fire it at the
+focused area's DOM anchor, which is the disabled control, and nothing in HTML stops dispatch to a
+disabled form control (only click events from the user interaction task source are blocked). So
+the control's own key listeners run, and the event bubbles from it. Before the change this
+couldn't happen: focus had moved to the body, so later key events targeted the body.
+
+Gecko does the same. `nsGenericHTMLFormElement::IsElementDisabledForEvents`
+(`dom/html/nsGenericHTMLElement.cpp`) returns false for trusted `keydown`/`keypress`/`keyup` and
+focus events while `dom.forms.always_allow_key_and_focus_events.enabled` is on (default true, bug
+1818287). If that pref is off, the switch falls through to the pointer-event case and still returns
+false while `dom.forms.always_allow_pointer_events.enabled` is on (default true, bug 1799565). D338542
+only calls `preventDefault()` on keyboard events at a disabled input, which stops the browser's
+default actions but not page listeners.
+
+Blocking these events isn't a fix. With both prefs off (`impl/k-on-nokeyevents.jsonl`), the repeat
+is gone, but the key event reaches no listener at all, not even on `document`. Focus events are
+blocked too, so a later Tab fires no `blur`/`focusout`/`change` and user validity isn't kept.
+It would also go against `html/semantics/disabled-elements/event-propagate-disabled-keyboard.tentative.html`,
+which expects key events from focused descendants of disabled `fieldset`, `button` and
+`delegatesFocus` form-associated custom elements to propagate.
+
+What avoided the repeat in the live comparison (setup C) is retargeting. While the focused area's
+DOM anchor is itself an actually disabled form control, fire key events at the body, as when
+focus had moved there. Focus is kept, focus events and the later `change` still fire, and focused
+descendants of disabled ancestors aren't affected. This needs a change to the PR's key event steps
+as well as to Gecko. `live/variant.js` approximates it with a script and checks the event target
+rather than the innermost focused element. That differs only for focus inside a disabled
+`delegatesFocus` custom element, which none of the tested pages had.
+
 ## Not covered
 
 Native pickers (headless can't show them); logged-in flows; mobile and soft keyboards; external
