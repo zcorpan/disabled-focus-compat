@@ -197,7 +197,7 @@ only as baselines (`baseline/`).
 
 | Query | Bytes processed |
 |---|---|
-| `queries/sample10k_hits.sql` (2026-11-04) | 73,219,512,166 (upper bound from dry run) |
+| `queries/sample10k_hits.sql` (2026-11-04) | 0.067 TiB (upper bound from dry run) |
 
 ## Reproduce
 
