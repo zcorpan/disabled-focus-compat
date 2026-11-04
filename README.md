@@ -36,9 +36,10 @@ Nothing in the reviewed code depends on `blur`/`focusout` firing, or on `activeE
 the body, when a focused control is disabled. Several modal focus traps and "refocus after
 re-enable" helpers get better.
 
-The Gecko patch deviates from the PR in four ways: implicit submission from disabled checkboxes and
-radios, arrow keys on a disabled radio, an open `base-select` picker that stays open, and Space no
-longer scrolling.
+The two landed Gecko commits deviate from the PR in three ways: implicit submission from disabled
+checkboxes and radios, arrow keys on a disabled radio, and an open `base-select` picker that stays
+open. The rest of the patch series (D338542-D338545, not yet landed) fixes all three. Space no
+longer scrolling from a disabled control remains either way; the PR doesn't say.
 
 ## 1. Common Crawl and HTTP Archive
 
@@ -129,11 +130,19 @@ edit fires `change` on the later Tab, and user validity is kept. Disabled contro
 toggle, select, reset, submit, or open popovers/commands. Deviations from the PR:
 
 - Enter on a focused disabled checkbox or radio still does implicit submission (`submit` fires).
+  Fixed by D338542.
 - ArrowDown/ArrowRight on a focused disabled radio moves focus to the next radio and checks it.
+  Fixed by D338542.
 - An open `appearance: base-select` picker stays open after its `select` is disabled (`:open`
-  still matches); the PR hides it.
+  still matches); the PR hides it. Fixed by D338544.
 - Space on a focused disabled button (or checkbox, select) no longer scrolls the page; PageDown
   still does. The PR doesn't say either way; before, focus was on the body, so Space scrolled.
+  Unchanged with the full series.
+
+`impl/fx-on-series.jsonl` reruns all scenarios with the rest of the series (D338542, D338543,
+D338544, D338545 from Phabricator) applied on top. Only the three fixes above differ; key events
+still go to the focused disabled control, so page key handlers on it still run (2 sends from 2
+Enters in `keydown-self-disable-textarea`).
 
 ## Not covered
 
