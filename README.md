@@ -23,7 +23,7 @@ Gecko's two landed commits deviate from the PR in three ways, all fixed by the r
 series (not yet landed). Space no longer scrolling from a disabled control is a question for the
 PR (section 4).
 
-## Scope (agreed at kickoff, 2026-11-04)
+## Scope
 
 - Implementation: Gecko bug 2087206 (two commits, cherry-picked onto `main` at dcafde486e11),
   behind `dom.forms.retain_focus_on_disabled.enabled`; before = pref off, after = pref on, same
