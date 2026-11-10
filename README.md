@@ -188,6 +188,8 @@ only as baselines (`baseline/`).
 
 ## Reproduce
 
+This run was done with the [`httparchive` skill](https://github.com/zcorpan/web-platform-skills/blob/main/docs/httparchive.md). The steps below are standalone and rerun the same analysis without the skill.
+
 ```sh
 python3 -m venv .venv && .venv/bin/pip install selenium warcio
 .venv/bin/python scan_cc.py out-cc/hits.jsonl ~/git/commoncrawl/cc-data/CC-MAIN-2026-39/*.warc.gz
